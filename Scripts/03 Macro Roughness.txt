@@ -1,0 +1,25 @@
+
+macro "Roughness Metrics" {
+    dir = getDirectory("Choose a Directory ");
+    list = getFileList(dir);
+    setBatchMode(true);
+    print("ID,","Rq,","Ra,","Rsk,","Rku,");
+    for (i=0; i<list.length; i++) {
+        path = dir+list[i];
+        showProgress(i, list.length);
+        if (!endsWith(path,"/")) open(path);
+        if (nImages>=1) {
+            run("Roughness calculation");
+            rq = getResult("Rq"); 
+            ra = getResult("Ra");
+            rsk = getResult("Rsk");
+            rku = getResult("Rku"); 
+            print(list[i],",",rq,",",ra,",",rsk,",",rku);
+			run("Clear Results");
+			
+			selectWindow("Results"); 
+			run("Close");
+
+        }
+    }
+}
