@@ -8,6 +8,8 @@ Catalunya 35, 43002 Tarragona, Spain.
 
  
 
+<div align="justify">
+
 **Abstract**
 
 Lithic artifacts are some of the most common and numerous remains from
@@ -19574,6 +19576,8 @@ although range is not considered ([Bietti,
 1996](#ref-bietti_image_1996)).
 
 ## References
+
+</div>
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 

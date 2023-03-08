@@ -34,6 +34,8 @@ $^3$Àrea de Prehistoria, Universitat Rovira i Virgili (URV), Avinguda de Catalu
 
 \ 
    
+<div align="justify">    
+   
 **Abstract**   
 
 Lithic artifacts are some of the most common and numerous remains from paleolithic archaeological sites. However, their deposition into the archaeological record can be the result of multiple and distant episodes of discard which can undergo a series of post depositional alterations. Because the numerous amounts of lithic remains, a quick, flexible, and effective method for identifying degrees of alteration in the surface of lithic implements is highly desirable. This would favor the analysis of complete lithic assemblages, inferring their overall integrity, identify different episodes of alteration, and even identify post-depositional alterations of different nature (such as rounding, dragging or wind erosion). This study examines the use gray scale level images to obtain quantitative measures from the surface of flint artifacts and determine if they capture changes due to post-depositional alterations. An experimental collection of flints was subjected to sequential episodes of rounding in a tumbling machine. After each episode, photographs with a Dino-Lite Edge 3.0 AM73915MZT USB microscope were taken, allowing to obtain quantitative values of surface using gray scale level values. The surface quantitative values were employed as variables in machine learning models to determine degree of exposure time and the most important variables for discrimination. Results indicate that the extraction of metrics from gray scale level images successfully capture changes in the surface of flint artifacts caused by post-depositional alterations. Additional results provide insights into which areas to sample in search for post-depositional alterations, and underline the importance of particle size causing the damage.      
@@ -164,3 +166,5 @@ The proof of concept sample is composed of 23 images corresponding to geological
 The GLCM requires to test for several distances between the reference pixel and the neighboring pixel on which the spatial relationships are established. The present work tests for five different sequences of distances (Table \@ref(tab:distances)). The first sequence composes the GLCM based on pixels located at distances 1, 2 3 and 4 from the reference pixel. Sequence 2 composes the GLCM based on pixels located at distances 2, 4, 6 and 8 from the reference pixel (Table \@ref(tab:distances). All sequences of intervals are tested in the four cardinal directions (north, east, south and west). This results in 16 (four per each cardinal direction) values of @haralick_textural_1973 textural metrics. Final values are obtained by averaging the different values of each of the variables although range is not considered [@bietti_image_1996].   
 
 ## References
+
+</div>   
