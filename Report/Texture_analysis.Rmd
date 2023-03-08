@@ -69,7 +69,7 @@ All flakes were submitted to three cumulative cycles of tumbling with times set 
 ```{r}
 # Load and inspect the data
 load("Data/Sequential Data v1.01.RData")
-kableExtra::kable(Sequential.Data)
+kableExtra::kable(head(Sequential.Data))
 ```
 ```{r, message=FALSE, warning=FALSE}
 #load packages
