@@ -728,22 +728,68 @@ library(tidyverse)
 ``` r
 # Counts of number of images per time of exposure
 # (sequential images taken after the first episode of abrasion are not included)
-Sequential.Data %>% 
+kableExtra::kable(Sequential.Data %>% 
   filter(Photo.Type != "Sequential" | Flake.Time ==  "Fresh" ) %>% 
   group_by(Flake.Time) %>% 
   summarise(
     N.by.Flakes = n()
-  )
+  ))
 ```
 
-    ## # A tibble: 5 × 2
-    ##   Flake.Time N.by.Flakes
-    ##   <fct>            <int>
-    ## 1 Fresh               42
-    ## 2 One.Hour            68
-    ## 3 Five.Hours          68
-    ## 4 Ten.Hours           68
-    ## 5 Neocortex           23
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Flake.Time
+</th>
+<th style="text-align:right;">
+N.by.Flakes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Fresh
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+One.Hour
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Five.Hours
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ten.Hours
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Neocortex
+</td>
+<td style="text-align:right;">
+23
+</td>
+</tr>
+</tbody>
+</table>
 
 ### **2.2 Cleaning protocol, image acquisition and processing**
 

@@ -80,12 +80,12 @@ library(tidyverse)
 ```{r}
 # Counts of number of images per time of exposure
 # (sequential images taken after the first episode of abrasion are not included)
-Sequential.Data %>% 
+kableExtra::kable(Sequential.Data %>% 
   filter(Photo.Type != "Sequential" | Flake.Time ==  "Fresh" ) %>% 
   group_by(Flake.Time) %>% 
   summarise(
     N.by.Flakes = n()
-  )
+  ))
 ```
 
 
