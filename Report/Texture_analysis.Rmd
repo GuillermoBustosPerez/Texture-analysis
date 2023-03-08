@@ -2,15 +2,15 @@
 title: "Lithic artifacts and texture analysis: a low magnification approach"
 author: "Guillermo Bustos-Pérez$^{1,2,3}"
 output: 
+  md_document:
+    variant: gfm
+  pdf_document: default
   bookdown::html_document2: 
     toc: true
     toc_float: true
     toc_depth: 4
     fig_caption: yes
     number_sections: FALSE
-  pdf_document: default
-  md_document:
-    variant: gfm
   bookdown::word_document2:
     reference_docx: "References_Styles/word-styles-reference.docx"
     fig_caption: yes
@@ -65,7 +65,25 @@ In order to simulate sedimentary abrasion, the flakes were introduced by pairs i
 All flakes were submitted to three cumulative cycles of tumbling with times set to 1h, 5h and 10h. Prior to their introduction into the tumbling machine, 6 photographs (3 per each side) of the surface of each flake were taken in order to have references of texture metrics from flint flakes. Previous research [@chu_micro-abrasion_2015; @bustos-perez_experimental_2019] suggests that, for the development of post depositional alterations, a decrease in particle size increases the heterogeneity in the speed, intensity and location of their development. Thus, after the first cycle of rounding (1h), each flint flake was screened using the Dino-Lite Edge 3.0 AM73915MZT USB microscope in order to determine and photograph areas which had developed sedimentary abrasion. These areas were photographed in the subsequent rounding cycles, allowing to obtain sequential images and data of surface change for cumulative times of 1h, 5h and 10h. The dataset of images was supplemented by the inclusion of sample photographs of macroscopically recognizable geological neocortex of flints from the same formation, providing a total of 269 photographs.    
 
 ```{r}
+# Load and inspect the data
+load("Data/Sequential Data v1.01.RData")
+kableExtra::kable(Sequential.Data)
+```
+```{r, message=FALSE, warning=FALSE}
+#load packages
+library(tidyverse)
+```
 
+
+```{r}
+# Counts of number of images per time of exposure
+# (sequential images taken after the first episode of abrasion are not included)
+Sequential.Data %>% 
+  filter(Photo.Type != "Sequential" | Flake.Time ==  "Fresh" ) %>% 
+  group_by(Flake.Time) %>% 
+  summarise(
+    N.by.Flakes = n()
+  )
 ```
 
 
@@ -92,10 +110,6 @@ The present work takes a series of steps prior to realizing any analysis and ext
 Multiple works emphasize the need of cleaning protocols to remove modern contaminants prior to analysis [@pedergnana_modern_2016; @asryan_results_2020; @olle_use_2014; @fernandez-marchena_microscopic_2016]. Figure \@ref(fig:Figure-01) shows the effect of manual manipulation on the texture of a surface. Because of this, a multi-step procedure based on previous studies was adopted [@pedergnana_modern_2016]. This multi-step procedure included a sonic bath in 2% neutral soap (Derquim) solution during 10 to 15 minutes. This was followed by a second sonic bath in pure acetone during another 10 to 15 minutes. After each step the lithic artefacts were introduced in a water bath and finally dried using pressure air. During the cleaning protocol and microscopic analysis all artefacts were manipulated using surgical gloves.     
 \ 
 
-```{r Figure-01, echo=FALSE, fig.cap="Effects of manual manipulation without protection on flint surface. Left: surface photographed after the aplication of cleaning protocol and manipulation of the artefact using protection. Right: same surface after manual manipulation without protection."}
-knitr::include_graphics(
-  path = "Figures/01_Figure.png")
-```
 
 #### **2.2.2 Image capture**
 
@@ -110,11 +124,6 @@ vertical stand
 
 A common problem of images obtained from USB microscopes is the lack of detail due to saturation in one of the grey level values and effects of different lightning. This saturation is often observed as a general glaze in one of the grey level values and results in a low quality image with poor detail. To increase detail and quality prior to the analysis, all images were subjected to a two-step process. First, the Fiji pluging *Substract background* was employed to avoid effects of different lightning. Second, the function *enhance contrast* was employed to desaturize the images by normalizing their histograms (Figure \@ref(fig:Figure3)).   
 \ 
-
-```{r Figure3, echo=FALSE, fig.cap="Two examples of image enhancemnt. Left: original images taken by a digital microscope. Center: images after retrieving the background to avoid effects of different lightning. Right: after normalizing the histogram to avoid saturation and increase detail.Top row: geological neocortex. Bottom row: fresh surface of experimentally knapped flake. "}
-knitr::include_graphics(
-  path = "Figures/Image-Enhance.jpg")
-```
 
 
 ### **2.3 Image statistical analysis**   
@@ -131,10 +140,6 @@ The implementation of these measures is done in ImageJ software [@schneider_nih_
 
 A problem exists when images are analyzed through the intensity distribution of pixels and using descriptive statistics and roughness metrics. Figure \@ref(fig:Figure2) illustrates the problem. Figure \@ref(fig:Figure2) shows a series of pattern images with similar values of intensity, but with different spatial distribution. Regarding descriptive statistics, all images present similar values of mean (127), standard deviation (125), sk (0.01) and kurtosis (-1.99). Regarding measures of roughness, all images present similar values of Rq (180), Ra (127), Rsk (1.42), and Rku (2).    
 
-```{r Figure2, echo=FALSE, fig.cap="Pattern figures presenting similar intensity distribution values, but a different spatial distribution"}
-knitr::include_graphics(
-  path = "Figures/Pattern-Figures.png")
-```
 \ 
 
 Analysis of intensity values through the Gray Level Co-occurrence Matrix (GLCM; @haralick_textural_1973) takes into consideration the spatial distribution of intensity values. The GLCM works in two steps [@haralick_textural_1973]. First, using a given distance and direction (\@ref(fig:Scheme-GLCM)), it builds a matrix which captures the relationship of intensity between pairs of pixels (reference and neighbor). Second, for every *x* and *y* it considers the co-occurrence of values, forming a new matrix. From this new matrix, a series of statistical descriptors are derived [@haralick_textural_1973].  
@@ -145,65 +150,7 @@ Analysis of intensity values through the Gray Level Co-occurrence Matrix (GLCM; 
   * **Inverse Different Moment (IDM)** also referred as **homogeneity**. It obtains the measures of the closeness of the distribution of the GLCM elements to the GLCM diagonal.   
   * **Entropy (ENT)**: is a measure of the amount of irremediable chaos or disorder in an image. High values of entropy indicate values of similar magnitude, while low values indicate unequal entries.   
 
-```{r Scheme-GLCM, echo=FALSE, fig.cap="Basic representation of how the GLCM takes into consideration the spatial relationships of pixels and intensity value. The spatial relationships are considered given a reference pixel (I,J), a direction (north, east, south or west), and a distance (one pixel, two pixels)", fig.align="center"}
-knitr::include_graphics(
-  path = "Figures/GLCM-distance-direction.jpg")
-```
-\ 
 
-Figure \@ref(fig:PatternFig-Box) shows results from the application of @haralick_textural_1973 textural features to the same pattern images. \ 
-
-```{r Pattern-GLCM-results}
-library(tidyverse)
-# GLCM of sequential data
-GLCM.txt <- read.delim("Data/Pattern_GLCM.txt", sep = ",")
-
-GLCM.txt <- GLCM.txt %>% filter(
-  !grepl("#", X.)) %>% 
-  mutate(Angular.Second.Moment = as.numeric(Angular.Second.Moment),
-         Contrast = as.numeric(Contrast),
-         Correlation = as.numeric(Correlation),
-         Inverse.Difference.Moment = as.numeric(Inverse.Difference.Moment),
-         Entropy = as.numeric(Entropy)
-  ) %>% 
-  rename(ID = X.) %>% 
-  select(-c(X)) %>% 
-  group_by(ID) %>% 
-  summarise(
-    ASM = mean(Angular.Second.Moment),
-    CONT = mean(Contrast),
-    CORR = mean(Correlation),
-    IDM = mean(Inverse.Difference.Moment),
-    ENT = mean(Entropy)
-  ) %>% 
-  mutate(
-    ID = substring(ID, 3)) %>% 
-  mutate(
-    ID = substring(ID, 1, nchar(ID)-5))
-```
-```{r PatternFig-Box, fig.cap="Values of pattern images using Haralick et al 1973 GLCM and second order statistics"}
-GLCM.txt %>% pivot_longer(
-  cols = ASM:ENT,
-  names_to = "Variable",
-  values_to = "values") %>% 
-  
-  ggplot(aes("Variable", values, label = ID)) +
-  facet_wrap(~ Variable, scales = "free",
-             ncol = 2) +
-  xlab(NULL) +
-  ylab(NULL) +
-  geom_jitter(aes(color = ID), 
-              width = 0.1, shape = 18, size = 3) +
-  ggrepel::geom_text_repel() +
-  ggsci::scale_color_jco() +
-  theme_light() +
-  theme(
-    axis.text.x = element_blank(),
-    strip.text = element_text(color = "black", face = "bold", size = 11),
-    strip.background = element_rect(fill = "white", colour = "black", size = 1),
-    axis.text = element_text(color = "black"),
-    legend.position = "none")
-```
 \ 
 
 The present work implements @haralick_textural_1973 analysis and metrics in ImageJ software [@schneider_nih_2012]. Calculation of GLCM and second order statistics is done through @cabrera_texture_2006 plugin.   
@@ -216,24 +163,4 @@ The proof of concept sample is composed of 23 images corresponding to geological
 
 The GLCM requires to test for several distances between the reference pixel and the neighboring pixel on which the spatial relationships are established. The present work tests for five different sequences of distances (Table \@ref(tab:distances)). The first sequence composes the GLCM based on pixels located at distances 1, 2 3 and 4 from the reference pixel. Sequence 2 composes the GLCM based on pixels located at distances 2, 4, 6 and 8 from the reference pixel (Table \@ref(tab:distances). All sequences of intervals are tested in the four cardinal directions (north, east, south and west). This results in 16 (four per each cardinal direction) values of @haralick_textural_1973 textural metrics. Final values are obtained by averaging the different values of each of the variables although range is not considered [@bietti_image_1996].   
 
-```{r include=FALSE}
-Distance <- tibble(
-  Sequence = c(1:5),
-  `Pixel Distances` = c("1-2-3-4",
-                       "2-4-6-8",
-                       "5-10-15-20",
-                       "10-20-30-40",
-                       "50-100-150-200"))
-```
-
-```{r distances, echo=FALSE}
-knitr::kable(Distance, caption = "Sequences and distance of pixels considerder.")
-```
-
-```{r}
-load("Data/PoC Data.RData")
-```
-
-
-
-## **References**      
+## References

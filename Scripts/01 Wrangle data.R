@@ -1,7 +1,7 @@
 library(tidyverse)
 #### Load Sequential data from the three files and unite them ####
 # GLCM of sequential data
-GLCM.txt <- read.delim("12 Data Flints/GLCM.txt", sep = ",")
+GLCM.txt <- read.delim("Report/Data/Raw Data/GLCM.txt", sep = ",")
 
 GLCM.txt <- GLCM.txt %>% filter(
   !grepl("#", X.)) %>% 
@@ -23,11 +23,11 @@ GLCM.txt <- GLCM.txt %>% filter(
   ) 
 
 # Roughness data
-Roughness.Control <- read.delim("12 Data Flints/Roughness.txt", sep = ",") %>% 
+Roughness.Control <- read.delim("Report/Data/Raw Data/Roughness.txt", sep = ",") %>% 
   select(-c(X))
 
 # Load descriptive data
-Descriptive.Control <- read.delim("12 Data Flints/Descriptive.txt", sep = ",") %>% 
+Descriptive.Control <- read.delim("Report/Data/Raw Data/Descriptive.txt", sep = ",") %>% 
   select(-c(X))
 
 # Put all data frames into list
@@ -75,12 +75,9 @@ Sequential.Data <- Sequential.Data %>%
   mutate(
     Flake.Time = case_when(
       Flake.Moment == "00" ~ "Fresh",
-      Flake.Moment == "01" ~ "Ten.Minutes",
       Flake.Moment == "02" ~ "One.Hour",
       Flake.Moment == "03" ~ "Five.Hours",
       Flake.Moment == "04" ~ "Ten.Hours",
-      Flake.Moment == "05" ~ "Ten.Hours",
-      Flake.Moment == "06" ~ "Fifteen.Hours",
       Flake.Moment == "Neocortex" ~ "Neocortex"),
     Photo.Type = case_when(
       Photo.Type == "a" ~ "Sequential",
@@ -108,5 +105,5 @@ Sequential.Data <- Sequential.Data %>%
                           )))
         l
 save(Sequential.Data, 
-     file = "12 Data Flints/Sequential Data.RData")
+     file = "Report/Data/Sequential Data v1.01.RData")
 rm(list = ls())
