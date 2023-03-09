@@ -972,9 +972,13 @@ were:
 - **Naïve Bayes classifier:** computes class probabilities using Bayes’
   rule ([Weihs et al., 2005](#ref-weihs_klar_2005)).
 
-![“Example of the”one versus all” approach in order to obtain ROC curves
-and AUC values in the case of multiclass
-problems”](Figures/04-Thresholds-multiple-categories.png)
+<figure>
+<img src="Figures/04-Thresholds-multiple-categories.png" width="250"
+alt="“Example of the”one versus all” approach in order to obtain ROC curves and AUC values in the case of multiclass problems”" />
+<figcaption aria-hidden="true">“Example of the”one versus all” approach
+in order to obtain ROC curves and AUC values in the case of multiclass
+problems”</figcaption>
+</figure>
 
 All models are evaluated using 10×100 k-fold cross validation (10 folds
 and 100 cycles), providing measures of accuracy. Using a 10-fold
@@ -1005,6 +1009,23 @@ visually analyze model performance and calculate the AUC, which ranges
 from 1 (perfect classifier) to 0.5 (random classifier). The ROC and AUC
 are commonly applied in two-class problems and their extension to
 multiclass problems is usually done through pairwise analysis.
+
+``` r
+# Check for collinearity of the data
+r <- cor(Sequential.Data[,2:16], use="complete.obs")^2
+
+ggcorrplot::ggcorrplot(r, 
+           hc.order = TRUE, 
+           type = "lower",
+           lab_size = 2,
+           tl.cex = 8,
+           lab = TRUE) +
+  ggsci::scale_fill_gsea(reverse = FALSE) +
+  theme(legend.position = "none",
+        axis.text = element_text(color = "black"))
+```
+
+![](Texture_analysis_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ## References
 

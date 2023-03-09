@@ -135,12 +135,28 @@ Data from descriptive statistics, roughness and texture were employed as variabl
   * **Supported vector machines (SVM):** fit hyperplanes into a multidimensional space with the objective of creating homogeneous partitions [@cortes_support-vector_1995; @frey_letter_1991]. The present study tests SVM with linear, radial and polynomial kernels.   
   * **Naïve Bayes classifier:** computes class probabilities using Bayes’ rule [@weihs_klar_2005].   
   
-!["Example of the "one versus all" approach in order to obtain ROC curves and AUC values in the case of multiclass problems"](Figures/04-Thresholds-multiple-categories.png)
+!["Example of the "one versus all" approach in order to obtain ROC curves and AUC values in the case of multiclass problems"](Figures/04-Thresholds-multiple-categories.png){width=250px}
 
 All models are evaluated using 10×100 k-fold cross validation (10 folds and 100 cycles), providing measures of accuracy. Using a 10-fold division, each fold will have 43 data points. Each fold serves subsequently as test set for a trained model. Although computationally more expensive, this guarantees that all data points will serve as test sets.  The 100 cycles provide a random shuffling of the dataset prior to fold division, thus ensuring that the composition of the folds varies in each cycle and it does not play a significant role in the evaluation of the models.   
 
 Machine Learning models commonly use a 0.5 classification threshold to assign categories. However, classification thresholds can be modified to balance the ability of model to detect true positives and avoid false positives which are respectively referred as sensitivity and specificity. The receiver operating characteristic (ROC) curve is employed to systematically evaluate the ratio of detected true positives while avoiding false positives [@bradley_use_1997; @spackman_signal_1989]. The ROC curve allows visually analyzing model performance and calculating the AUC, which ranges from 1 (perfect classifier) to 0.5 (random classifier). The AUC is a measure of performance derived from the receiver operating characteristic (ROC) curve. The ROC curve is used to evaluate the ratio of detected true positives while avoiding false positives [@bradley_use_1997; @spackman_signal_1989]. The ROC curve makes it possible to visually analyze model performance and calculate the AUC, which ranges from 1 (perfect classifier) to 0.5 (random classifier). The ROC and AUC are commonly applied in two-class problems and their extension to multiclass problems is usually done through pairwise analysis.   
 
+```{r, message=FALSE, warning=FALSE}
+
+# Check for collinearity of the data
+r <- cor(Sequential.Data[,2:16], use="complete.obs")^2
+
+ggcorrplot::ggcorrplot(r, 
+           hc.order = TRUE, 
+           type = "lower",
+           lab_size = 2,
+           tl.cex = 8,
+           lab = TRUE) +
+  ggsci::scale_fill_gsea(reverse = FALSE) +
+  theme(legend.position = "none",
+        axis.text = element_text(color = "black"))
+
+```
 
 
 
