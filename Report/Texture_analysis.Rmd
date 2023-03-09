@@ -236,7 +236,7 @@ summary.aov(res.man)
 
 Exploratory visual analysis shows a series of clear tendencies for the three groups of statistics employed. On general terms, as sedimentary abrasion increases, images will present increasing values of mean, median, standard deviation, Ra, Rq, contrast (CONT) and entropy (ENT). By the contrary, as sedimentary abrasion increases, images will present decreasing values of kurtosis, skewness, Rku, Rsk, angular second moment (ASM), correlation between pixels (CORR) and inverse different moment (IDM). Measures of central tendency (mean, median and modal) are the less reliable, since the three times of cumulative abrasion show important overlapping values for these statistic variables. Effects of sedimentary abrasion are especially observable in variables of data dispersion (kurtosis, skewness and standard deviation), and in the five textural features (angular second moment: ASM; contrast: CONT; correlation: CORR; entropy: ENT and inverse different moment: IDM). As sedimentary abrasion increases, images will become less homogeneous, with increasing amounts of local changes which can be related with an increasing roughness.    
 
-```{r, fig.height=800}
+```{r, fig.height=24}
 Sequential.Data  %>%
     pivot_longer(
     Mean:ENT,
