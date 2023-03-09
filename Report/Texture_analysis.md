@@ -1046,19 +1046,22 @@ Strong levels of correlation are present between the variables of the
 present study. The issue of multicollinearity in classification remains
 a matter of debate. It is commonly pointed that for multiple linear
 regressions, collinearity affects the interpretation of coefficients
-(variables), but does not affect the quality of the predictions ([James
-et al., 2013](#ref-james_introduction_2013)). Additional arguments
-indicate that if the collinearity between variables of the training set
-is also present in the test set, it should not be considered a problem.
-In the present study variables presenting perfect levels of collinearity
-(mean and Ra) are excluded from the training of machine learning models,
-and feature importance is explored among non-correlated features. After
+(variables), but does not affect the quality of the predictions ([Alin,
+2010](#ref-alin_multicollinearity_2010); [Chan et al.,
+2022](#ref-chan_mitigating_2022); [James et al.,
+2013](#ref-james_introduction_2013)). Additional arguments indicate that
+if the collinearity between variables of the training set is also
+present in the test set, it should not be considered a problem. In the
+present study variables presenting perfect levels of collinearity (mean
+and Ra) are excluded from the training of machine learning models, and
+feature importance is explored among non-correlated features. After
 evaluating and determining the best model, an additional model on PCA
 values was trained in order to determine possible overfitting.
 
 ``` r
 # Check for collinearity of the data
-r <- cor(Sequential.Data[,2:16], use="complete.obs")^2
+r <- cor(Sequential.Data[,2:16], 
+         use = "complete.obs")^2
 
 ggcorrplot::ggcorrplot(r, 
            hc.order = TRUE, 
@@ -1076,6 +1079,273 @@ ggcorrplot::ggcorrplot(r,
 ## **3. Results**
 
 ### **3.1 Texture metrics**
+
+A general MANOVA considering all groups and variables shows marked
+statistically significant differences between groups.
+
+``` r
+# MANOVA on data
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, 
+                  data = Sequential.Data)
+summary(res.man)
+```
+
+    ##             Df Pillai approx F num Df den Df    Pr(>F)    
+    ## Flake.Time   4 1.3864    8.947     60   1012 < 2.2e-16 ***
+    ## Residuals  264                                            
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+MANOVA analysis comparing a category with its subsequent time of
+exposure shows marked statistical differences between fresh materials
+and one hour of rounding
+
+``` r
+# Set different groups
+x <- Sequential.Data %>% filter(Flake.Time == "Fresh" | Flake.Time == "One.Hour")
+y <- Sequential.Data %>% filter(Flake.Time == "Five.Hours" | Flake.Time == "One.Hour")
+z <- Sequential.Data %>% filter(Flake.Time == "Five.Hours" | Flake.Time == "Ten.Hours")
+t <- Sequential.Data %>% filter(Flake.Time == "Neocortex" | Flake.Time == "Ten.Hours")
+
+# MANOVA fresh vs one hour
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = x)
+summary(res.man)
+```
+
+    ##             Df  Pillai approx F num Df den Df    Pr(>F)    
+    ## Flake.Time   1 0.48852   5.9854     15     94 1.474e-08 ***
+    ## Residuals  108                                             
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+``` r
+# MANOVA one hour vs five hours
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = y)
+summary(res.man)
+```
+
+    ##             Df  Pillai approx F num Df den Df   Pr(>F)   
+    ## Flake.Time   1 0.25657    2.761     15    120 0.001092 **
+    ## Residuals  134                                           
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+``` r
+# MANOVA five hours vs Ten hours
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = z)
+summary(res.man)
+```
+
+    ##             Df  Pillai approx F num Df den Df  Pr(>F)  
+    ## Flake.Time   1 0.16226   1.5494     15    120 0.09856 .
+    ## Residuals  134                                         
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+``` r
+# MANOVA Ten hours vs Neocortex
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = t)
+summary(res.man)
+```
+
+    ##            Df  Pillai approx F num Df den Df    Pr(>F)    
+    ## Flake.Time  1 0.79838   19.799     15     75 < 2.2e-16 ***
+    ## Residuals  89                                             
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+When considering all variables, no statistical differences were found
+between images exposed to five and ten hours rounding. However,
+statistical difference between these two categories are present in the
+mean, median, standard deviation, kurtosis, skewness, Rq, Ra, Rku, ASM,
+contrast, correlation, IDM and entropy.
+
+``` r
+# MANOVA five hours vs Ten hours
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = z)
+summary(res.man)
+```
+
+    ##             Df  Pillai approx F num Df den Df  Pr(>F)  
+    ## Flake.Time   1 0.16226   1.5494     15    120 0.09856 .
+    ## Residuals  134                                         
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+``` r
+summary.aov(res.man)
+```
+
+    ##  Response Mean :
+    ##              Df Sum Sq Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1  288.7 288.719  6.3964 0.01259 *
+    ## Residuals   134 6048.5  45.138                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Median :
+    ##              Df Sum Sq Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1  215.0 215.007  4.9456 0.02783 *
+    ## Residuals   134 5825.6  43.475                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Modal :
+    ##              Df Sum Sq Mean Sq F value Pr(>F)
+    ## Flake.Time    1   69.2  69.184   2.096   0.15
+    ## Residuals   134 4422.9  33.007               
+    ## 
+    ##  Response SD :
+    ##              Df  Sum Sq Mean Sq F value   Pr(>F)   
+    ## Flake.Time    1   82.22  82.218  7.3472 0.007596 **
+    ## Residuals   134 1499.51  11.190                    
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Kurtosis :
+    ##              Df  Sum Sq Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1  15.414 15.4143  6.5362 0.01168 *
+    ## Residuals   134 316.013  2.3583                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Skewness :
+    ##              Df  Sum Sq Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1  0.4839 0.48387   6.287 0.01336 *
+    ## Residuals   134 10.3130 0.07696                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Rq :
+    ##              Df Sum Sq Mean Sq F value   Pr(>F)   
+    ## Flake.Time    1  375.4  375.38  6.9588 0.009328 **
+    ## Residuals   134 7228.4   53.94                    
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Ra :
+    ##              Df Sum Sq Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1  300.4 300.389  6.6547 0.01097 *
+    ## Residuals   134 6048.7  45.139                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Rsk :
+    ##              Df  Sum Sq   Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1 0.01760 0.0175971  3.4061 0.06716 .
+    ## Residuals   134 0.69228 0.0051663                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response Rku :
+    ##              Df Sum Sq Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1  0.671 0.67103  4.3706 0.03845 *
+    ## Residuals   134 20.573 0.15353                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response ASM :
+    ##              Df     Sum Sq    Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1 3.0660e-06 3.0656e-06  6.6698 0.01088 *
+    ## Residuals   134 6.1589e-05 4.5962e-07                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response CONT :
+    ##              Df   Sum Sq Mean Sq F value   Pr(>F)   
+    ## Flake.Time    1   798851  798851   6.851 0.009878 **
+    ## Residuals   134 15624866  116603                    
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response CORR :
+    ##              Df     Sum Sq    Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1 1.5280e-08 1.5279e-08  5.5914 0.01948 *
+    ## Residuals   134 3.6616e-07 2.7326e-09                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response IDM :
+    ##              Df    Sum Sq    Mean Sq F value  Pr(>F)   
+    ## Flake.Time    1 0.0005599 0.00055986  6.8698 0.00978 **
+    ## Residuals   134 0.0109206 0.00008150                   
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ##  Response ENT :
+    ##              Df  Sum Sq Mean Sq F value  Pr(>F)  
+    ## Flake.Time    1  1.3302  1.3302  6.8043 0.01013 *
+    ## Residuals   134 26.1966  0.1955                  
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Exploratory visual analysis shows a series of clear tendencies for the
+three groups of statistics employed. On general terms, as sedimentary
+abrasion increases, images will present increasing values of mean,
+median, standard deviation, Ra, Rq, contrast (CONT) and entropy (ENT).
+By the contrary, as sedimentary abrasion increases, images will present
+decreasing values of kurtosis, skewness, Rku, Rsk, angular second moment
+(ASM), correlation between pixels (CORR) and inverse different moment
+(IDM). Measures of central tendency (mean, median and modal) are the
+less reliable, since the three times of cumulative abrasion show
+important overlapping values for these statistic variables. Effects of
+sedimentary abrasion are especially observable in variables of data
+dispersion (kurtosis, skewness and standard deviation), and in the five
+textural features (angular second moment: ASM; contrast: CONT;
+correlation: CORR; entropy: ENT and inverse different moment: IDM). As
+sedimentary abrasion increases, images will become less homogeneous,
+with increasing amounts of local changes which can be related with an
+increasing roughness.
+
+``` r
+Sequential.Data  %>%
+    pivot_longer(
+    Mean:ENT,
+    names_to = "Variables",
+    values_to = "values"
+  ) %>% 
+  mutate(Flake.Time = factor(Flake.Time, labels = c("Fresh", "1h", "5h",
+                                                    "10h", "Neocort.")),
+         
+         Variables = factor(Variables, levels = c("Mean", "Median", "Modal", "SD",
+                                                      "Kurtosis", "Skewness",
+                                                    "Ra", "Rq", "Rku", "Rsk",
+                                                    "ASM", "CONT", "CORR", "ENT",
+                                                    "IDM"
+                                                      ))) %>% 
+  
+  ggplot(aes(Flake.Time, values, fill = Flake.Time)) +
+  geom_violin(alpha = 0.4) +
+  geom_boxplot(outlier.shape = NA,  width = 0.4) +
+  geom_jitter(width = 0.1, shape = 23, size = 0.75, aes(fill = Flake.Time)) +
+  scale_fill_brewer(palette = "Oranges") +
+  ylab("Metrics") +
+  xlab("Time under sedimentary abrassion") +
+  facet_wrap(~ Variables, scales = "free", ncol = 3) +
+  theme_light() +
+  theme(
+    legend.position = "none",
+    strip.text = element_text(color = "black", face = "bold", size = 8),
+    strip.background = element_rect(fill = "white", colour = "black", linewidth = 1),
+    axis.title = element_text(color = "black", size = 8),
+    axis.text.x = element_text(color = "black", size = 6.5),
+    axis.text.y = element_text(color = "black", size = 7)
+  )
+```
+
+![](Texture_analysis_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ## References
 
@@ -1097,6 +1367,13 @@ Alhusban, Z., Valyrakis, M., 2021. Assessing and modelling the
 interactions of instrumented particles with bed surface at low transport
 conditions. Applied Sciences 11, 7306.
 <https://doi.org/10.3390/app11167306>
+
+</div>
+
+<div id="ref-alin_multicollinearity_2010" class="csl-entry">
+
+Alin, A., 2010. Multicollinearity. Wiley Interdisciplinary Reviews:
+Computational Statistics 2, 370–374. <https://doi.org/10.1002/wics.84>
 
 </div>
 
@@ -1202,6 +1479,15 @@ Reports 46, 103692. <https://doi.org/10.1016/j.jasrep.2022.103692>
 Chambers, J.C., 2003. Like a rolling stone? The identification of
 fluvial transportation damage signatures on secondary context bifaces.
 Lithics 24, 66–77.
+
+</div>
+
+<div id="ref-chan_mitigating_2022" class="csl-entry">
+
+Chan, J.Y.-L., Leow, S.M.H., Bea, K.T., Cheng, W.K., Phoong, S.W., Hong,
+Z.-W., Chen, Y.-L., 2022. Mitigating the multicollinearity problem and
+its machine learning approach: A review. Mathematics 10, 1283.
+<https://doi.org/10.3390/math10081283>
 
 </div>
 

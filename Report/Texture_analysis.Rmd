@@ -154,12 +154,13 @@ In the case of multiclass problems, the AUC provides two groups of values: first
   * 0.6 to 0.7: poor    
   * 0.5 to 0.6: no discrimination     
   
-Strong levels of correlation are present between the variables of the present study. The issue of multicollinearity in classification remains a matter of debate. It is commonly pointed that for multiple linear regressions, collinearity affects the interpretation of coefficients (variables), but does not affect the quality of the predictions [@james_introduction_2013]. Additional arguments indicate that if the collinearity between variables of the training set is also present in the test set, it should not be considered a problem. In the present study variables presenting perfect levels of collinearity (mean and Ra) are excluded from the training of machine learning models, and feature importance is explored among non-correlated features. After evaluating and determining the best model, an additional model on PCA values was trained in order to determine possible overfitting.    
+Strong levels of correlation are present between the variables of the present study. The issue of multicollinearity in classification remains a matter of debate. It is commonly pointed that for multiple linear regressions, collinearity affects the interpretation of coefficients (variables), but does not affect the quality of the predictions [@james_introduction_2013; @alin_multicollinearity_2010; @chan_mitigating_2022]. Additional arguments indicate that if the collinearity between variables of the training set is also present in the test set, it should not be considered a problem. In the present study variables presenting perfect levels of collinearity (mean and Ra) are excluded from the training of machine learning models, and feature importance is explored among non-correlated features. After evaluating and determining the best model, an additional model on PCA values was trained in order to determine possible overfitting.    
 
 ```{r, message=FALSE, warning=FALSE}
 
 # Check for collinearity of the data
-r <- cor(Sequential.Data[,2:16], use="complete.obs")^2
+r <- cor(Sequential.Data[,2:16], 
+         use = "complete.obs")^2
 
 ggcorrplot::ggcorrplot(r, 
            hc.order = TRUE, 
@@ -177,12 +178,99 @@ ggcorrplot::ggcorrplot(r,
 
 ### **3.1 Texture metrics**   
 
+A general MANOVA considering all groups and variables shows marked statistically significant differences between groups.    
 
+```{r}
+# MANOVA on data
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, 
+                  data = Sequential.Data)
+summary(res.man)
+```
 
+MANOVA analysis comparing a category with its subsequent time of exposure shows marked statistical differences between fresh materials and one hour of rounding 
+```{r}
 
+# Set different groups
+x <- Sequential.Data %>% filter(Flake.Time == "Fresh" | Flake.Time == "One.Hour")
+y <- Sequential.Data %>% filter(Flake.Time == "Five.Hours" | Flake.Time == "One.Hour")
+z <- Sequential.Data %>% filter(Flake.Time == "Five.Hours" | Flake.Time == "Ten.Hours")
+t <- Sequential.Data %>% filter(Flake.Time == "Neocortex" | Flake.Time == "Ten.Hours")
 
+# MANOVA fresh vs one hour
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = x)
+summary(res.man)
 
+# MANOVA one hour vs five hours
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = y)
+summary(res.man)
 
+# MANOVA five hours vs Ten hours
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = z)
+summary(res.man)
+
+# MANOVA Ten hours vs Neocortex
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = t)
+summary(res.man)
+```
+
+When considering all variables, no statistical differences were found between images exposed to five and ten hours rounding. However, statistical difference between these two categories are present in the mean, median, standard deviation, kurtosis, skewness, Rq, Ra, Rku, ASM, contrast, correlation, IDM and entropy.    
+
+```{r}
+# MANOVA five hours vs Ten hours
+res.man <- manova(cbind(Mean, Median, Modal, SD, Kurtosis, Skewness, 
+                        Rq, Ra, Rsk, Rku,
+                        ASM, CONT, CORR, IDM, ENT) ~ Flake.Time, data = z)
+summary(res.man)
+summary.aov(res.man)
+```
+
+Exploratory visual analysis shows a series of clear tendencies for the three groups of statistics employed. On general terms, as sedimentary abrasion increases, images will present increasing values of mean, median, standard deviation, Ra, Rq, contrast (CONT) and entropy (ENT). By the contrary, as sedimentary abrasion increases, images will present decreasing values of kurtosis, skewness, Rku, Rsk, angular second moment (ASM), correlation between pixels (CORR) and inverse different moment (IDM). Measures of central tendency (mean, median and modal) are the less reliable, since the three times of cumulative abrasion show important overlapping values for these statistic variables. Effects of sedimentary abrasion are especially observable in variables of data dispersion (kurtosis, skewness and standard deviation), and in the five textural features (angular second moment: ASM; contrast: CONT; correlation: CORR; entropy: ENT and inverse different moment: IDM). As sedimentary abrasion increases, images will become less homogeneous, with increasing amounts of local changes which can be related with an increasing roughness.    
+
+```{r, fig.height=800}
+Sequential.Data  %>%
+    pivot_longer(
+    Mean:ENT,
+    names_to = "Variables",
+    values_to = "values"
+  ) %>% 
+  mutate(Flake.Time = factor(Flake.Time, labels = c("Fresh", "1h", "5h",
+                                                    "10h", "Neocort.")),
+         
+         Variables = factor(Variables, levels = c("Mean", "Median", "Modal", "SD",
+                                                      "Kurtosis", "Skewness",
+                                                    "Ra", "Rq", "Rku", "Rsk",
+                                                    "ASM", "CONT", "CORR", "ENT",
+                                                    "IDM"
+                                                      ))) %>% 
+  
+  ggplot(aes(Flake.Time, values, fill = Flake.Time)) +
+  geom_violin(alpha = 0.4) +
+  geom_boxplot(outlier.shape = NA,  width = 0.4) +
+  geom_jitter(width = 0.1, shape = 23, size = 0.75, aes(fill = Flake.Time)) +
+  scale_fill_brewer(palette = "Oranges") +
+  ylab("Metrics") +
+  xlab("Time under sedimentary abrassion") +
+  facet_wrap(~ Variables, scales = "free", ncol = 3) +
+  theme_light() +
+  theme(
+    legend.position = "none",
+    strip.text = element_text(color = "black", face = "bold", size = 8),
+    strip.background = element_rect(fill = "white", colour = "black", linewidth = 1),
+    axis.title = element_text(color = "black", size = 8),
+    axis.text.x = element_text(color = "black", size = 6.5),
+    axis.text.y = element_text(color = "black", size = 7)
+  )
+```
 
 
 ## References
