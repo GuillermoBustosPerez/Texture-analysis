@@ -177,8 +177,7 @@ flints shows that they present a fine opaque homogeneous surface, with
 colors being blue/grey and reddish/ocher. There is also a relative
 absence of opal, although geodes and pseudo-morphs can be observed. From
 these two blocks three flakes were selected from Type 1, and four flakes
-were selected from Type 2.
-
+were selected from Type 2.  
 ![“Experimental sample of flint flakes (photographs by M. D.
 Guillén).”](Figures/01-Presenting-materials.png)
 
@@ -732,8 +731,7 @@ kableExtra::kable(Sequential.Data %>%
   filter(Photo.Type != "Sequential" | Flake.Time ==  "Fresh" ) %>% 
   group_by(Flake.Time) %>% 
   summarise(
-    N.by.Flakes = n()
-  ))
+    N.by.Flakes = n()))
 ```
 
 <table>
@@ -793,160 +791,167 @@ Neocortex
 
 ### **2.2 Cleaning protocol, image acquisition and processing**
 
-### **2.2 Image capturing workflow**
-
-The present work takes a series of steps prior to realizing any analysis
-and extracting data form images. These steps are: the cleaning protocol
-to remove contaminants, image capture, and image enhancement.  
- 
-
-#### **2.2.1 Cleaning protocol**
+Workflow developed in the present study includes a series of steps prior
+to extracting quantitative data from the images. These steps are:
+cleaning protocol to remove contaminants from the stone tool surface,
+image capture, and image enhancement.
 
 Multiple works emphasize the need of cleaning protocols to remove modern
 contaminants prior to analysis ([Asryan and Ollé,
 2020](#ref-asryan_results_2020); [Fernández-Marchena and Ollé,
 2016](#ref-fernandez-marchena_microscopic_2016); [Ollé and Vergès,
 2014](#ref-olle_use_2014); [Pedergnana et al.,
-2016](#ref-pedergnana_modern_2016)). Figure @ref(fig:Figure-01) shows
-the effect of manual manipulation on the texture of a surface. Because
-of this, a multi-step procedure based on previous studies was adopted
-([Pedergnana et al., 2016](#ref-pedergnana_modern_2016)). This
-multi-step procedure included a sonic bath in 2% neutral soap (Derquim)
-solution during 10 to 15 minutes. This was followed by a second sonic
-bath in pure acetone during another 10 to 15 minutes. After each step
-the lithic artefacts were introduced in a water bath and finally dried
-using pressure air. During the cleaning protocol and microscopic
-analysis all artefacts were manipulated using surgical gloves.  
- 
+2016](#ref-pedergnana_modern_2016)). A multi-step procedure based on
+previous studies was adopted ([Pedergnana et al.,
+2016](#ref-pedergnana_modern_2016)) in order to retrieve possible
+contaminants. This multi-step procedure included a sonic bath in 2%
+neutral soap (Derquim) solution during 10 to 15 minutes, followed by a
+second sonic bath in pure acetone during another 10 to 15 minutes. After
+each step the lithic artefacts were introduced in a water bath and
+finally dried using pressure air. During the cleaning protocol and
+microscopic analysis all artefacts were manipulated using surgical
+gloves.
 
-#### **2.2.2 Image capture**
+![“Effects of manual manipulation without protection on flint surface.
+Left: surface photographed after the application of cleaning protocol
+and manipulation of the artefact using protection. Right: same surface
+after manual manipulation without
+protection”](Figures/02-Effects-of-grease.png)
 
-Dino-Lite Edge 3.0 AM73915MZT USB microscope
-
--capsule vertical stand -pelota esa  
- 
-
-#### **2.2.3 Image enhancement**
+All surface photographs were taken using a Dino-Lite Edge 3.0 AM73915MZT
+USB microscope at 120 magnifications with a field of view (FOV) of 3.28
+x 2.46 mm and a pixel ratio of 2548 x 1918. The USB microscope was
+mounted in a Dino-Lite RK-06-AE stand in order to ensure verticality,
+and a N3C-D2 diffuser cap was used to ensure homogeneous distribution of
+light. During the realization of each photograph, the region of interest
+of the flint was manually positioned as horizontal as possible
+([Calandra, 2022](#ref-calandra_workflow_2022)). To avoid problems due
+to focus variation, each surface was photographed several times at
+different heights, and the obtained sequences were mounted using Helicon
+Focus 7.7.2.
 
 A common problem of images obtained from USB microscopes is the lack of
-detail due to saturation in one of the grey level values and effects of
-different lightning. This saturation is often observed as a general
-glaze in one of the grey level values and results in a low quality image
-with poor detail. To increase detail and quality prior to the analysis,
-all images were subjected to a two-step process. First, the Fiji pluging
-*Substract background* was employed to avoid effects of different
-lightning. Second, the function *enhance contrast* was employed to
-desaturize the images by normalizing their histograms (Figure
-@ref(fig:Figure3)).  
- 
+detail due to saturation in one of the grey level values and the effects
+of different lightning or surface color. This saturation is often
+observed as a general glaze in one of the grey level values and results
+in a low-quality image with poor detail. To increase detail and quality
+prior to the analysis, all images were subjected to a two-step process.
+First, the Fiji ([Schindelin et al., 2012](#ref-schindelin_fiji_2012))
+plugging “Subtract background” was employed to minimize effects of
+different lightning and changes in flint color. Second, the function
+“Enhance contrast” was employed to desaturate the images by normalizing
+their histograms. This process provides a gray-scale level image
+employed as input for the statistical analysis.
 
-### **2.3 Image statistical analysis**
+![“Two examples of image enhancement. Left: original images taken with
+the AM73915MZT USB microscope and using a N3C-D2 diffuser cap. Center:
+images after retrieving the background to avoid effects of different
+lightning or color. Right: after normalizing the histogram to increase
+detail and avoid saturation. Top row: geological neocortex. Bottom row:
+fresh surface of an experimentally knapped
+flake.”](Figures/03-Retrieve-background-and-normalize.jpg)
+
+### **2.3 Statistical analysis**
 
 The present work uses three sets of statistical metrics to analyze
 obtained images. The first set of statistical metrics correspond to
-descriptive statistics (mean, standard deviation, mode, median and
-kurtosis). The second set of statistical measures corresponds to
-measures of roughness:
+descriptive statistics (mean, standard deviation, mode, median skewness,
+and kurtosis). The second set of statistical measures corresponds to
+measures of roughness. Surface parameters using the “R” prefix use
+profiles as input. The present work uses a Fiji/ImageJ plugging were
+R-values are obtained on the hole surface following the ISO 4287/2000
+standard ([Chinga et al., 2007](#ref-chinga_quantification_2007);
+[Chinga and Dougherty, 2002](#ref-chinga_roughness_2002)). These
+measures are:
 
-- **Root mean square deviation (Rq)**: indicator of surface roughness.  
-- **Arithmetical mean deviation (Ra)**: which indicates the deviation of
+- **Root mean square deviation/roughness (Rq):** indicator of surface
+  roughness.  
+- **Arithmetical mean deviation (Ra):** which indicates the deviation of
   a surface from a mean height.  
-- **Skewness of the assessed profile (Rsk)**: indicator of the departure
+- **Skewness of the assessed profile (Rsk):** indicator of the departure
   from surface symmetry. Negative values indicate a surface made of deep
-  valey, and positive values indicates peaks and asperities.  
-- **Kurtosis of the assessed profile (Rku)**: which indicates the
+  valleys, and positive values indicates peaks and asperities.  
+- **Kurtosis of the assessed profile (Rku):** which indicates the
   sharpness of the peaks. Low values indicate blunt peaks, while high
   values indicate sharp peaks.
 
-The implementation of these measures is done in ImageJ software
-([Schneider et al., 2012](#ref-schneider_nih_2012)) through the
-Roughness calculation plugin ([Chinga and Dougherty,
-2002](#ref-chinga_roughness_2002)).  
- 
-
-A problem exists when images are analyzed through the intensity
-distribution of pixels and using descriptive statistics and roughness
-metrics. Figure @ref(fig:Figure2) illustrates the problem. Figure
-@ref(fig:Figure2) shows a series of pattern images with similar values
-of intensity, but with different spatial distribution. Regarding
-descriptive statistics, all images present similar values of mean (127),
-standard deviation (125), sk (0.01) and kurtosis (-1.99). Regarding
-measures of roughness, all images present similar values of Rq (180), Ra
-(127), Rsk (1.42), and Rku (2).
-
- 
-
 Analysis of intensity values through the Gray Level Co-occurrence Matrix
-(GLCM; Haralick et al. ([1973](#ref-haralick_textural_1973))) takes into
-consideration the spatial distribution of intensity values. The GLCM
-works in two steps ([Haralick et al.,
+(GLCM; ([Haralick et al., 1973](#ref-haralick_textural_1973))) takes
+into consideration the spatial distribution of intensity values. The
+GLCM works in two steps ([Haralick et al.,
 1973](#ref-haralick_textural_1973)). First, using a given distance and
-direction (@ref(fig:Scheme-GLCM)), it builds a matrix which captures the
-relationship of intensity between pairs of pixels (reference and
-neighbor). Second, for every *x* and *y* it considers the co-occurrence
-of values, forming a new matrix. From this new matrix, a series of
-statistical descriptors are derived ([Haralick et al.,
-1973](#ref-haralick_textural_1973)).
+direction it builds a matrix which captures the relationship of
+intensity between pairs of pixels (reference and neighbor). Second, for
+every x and y it considers the co-occurrence of values, forming a new
+matrix. From this new matrix, a series of statistical descriptors are
+derived ([Haralick et al., 1973](#ref-haralick_textural_1973)).
 
 - **Angular Second Moment (ASM)** is measure of homogeneity in the
   image. Homogeneous images (with low gray-tone transitions) will have
-  fewer entries of large magnitude. Thus homogeneous images will have
+  fewer entries of large magnitude. Thus, homogeneous images will have
   high ASM values, while the opposite will be true for non-homogeneous
   images.  
-- **Contrast (CONT)** is a value of the amount of local variations, with
-  high values indicating a lot of local variation and low values few
-  local variation.  
+- **Contrast (CONT)** is a value of the amount of local variations. High
+  values are indicating a lot of local variation and low values indicate
+  few local variations.  
 - **Correlation (CORR)** which measures gray-tone linear-dependencies in
   the image. It indicates how a reference pixel is related to its
   neighbor. A 0 value indicates it is uncorrelated, and 1 indicates a
   perfect correlation.  
-- **Inverse Different Moment (IDM)** also referred as **homogeneity**.
-  It obtains the measures of the closeness of the distribution of the
-  GLCM elements to the GLCM diagonal.  
-- **Entropy (ENT)**: is a measure of the amount of irremediable chaos or
+- **Inverse Different Moment (IDM)** also referred as homogeneity. It
+  obtains the measures of the closeness of the distribution of the GLCM
+  elements to the GLCM diagonal.  
+- **Entropy (ENT)** is a measure of the amount of irremediable chaos or
   disorder in an image. High values of entropy indicate values of
   similar magnitude, while low values indicate unequal entries.
 
- 
+As previously mentioned, use of the GLCM requires selecting pixel
+distance between reference and neighbor, and direction on which to
+establish the distance ([Haralick et al.,
+1973](#ref-haralick_textural_1973)). For this, it is common to test for
+different combinations of distances and directions since images at
+different magnifications, different field of view and different
+resolution might require variation in pixel distance and directions
+([Bietti, 1996](#ref-bietti_image_1996); [Grace et al.,
+1985](#ref-grace_quantification_1985)). For the present study, a
+preliminary test indicated that using four distances at 5, 10, 15 and 20
+pixels in the four possible directions (north, east, south and west) to
+set the GLCM presented the best results for discrimination.
 
-The present work implements Haralick et al.
-([1973](#ref-haralick_textural_1973)) analysis and metrics in ImageJ
-software ([Schneider et al., 2012](#ref-schneider_nih_2012)).
-Calculation of GLCM and second order statistics is done through Cabrera
-([2006](#ref-cabrera_texture_2006)) plugin.
+Calculation of all metrics was done using the free software Fiji
+([Schindelin et al., 2012](#ref-schindelin_fiji_2012)). Roughness
+metrics calculation was implemented through the “Roughness calculation”
+plugin ([Chinga and Dougherty, 2002](#ref-chinga_roughness_2002)). GLCM
+and texture metrics were calculated using the “GLCM Texture” plugging
+([Cabrera, 2006](#ref-cabrera_texture_2006)).
 
-### **2.4 Proof of Concept of GLCM and texture analysis**
+### **2.4 Machine Learning models and evaluation**
 
-Prior to the application of Haralick et al.
-([1973](#ref-haralick_textural_1973)) texture metrics a proof of concept
-from a pilot study is undertaken. This proof of concept is aimed to two
-objectives. First, determine if the GLCM provides suitable variable
-values to discriminate between degrees of sedimentary abrasion. Second,
-to determine to the best interval of pixels under which the GLCM works
+Data from descriptive statistics, roughness and texture were employed as
+variable for the training of Machine Learning models in order to predict
+the time of exposure to sedimentary abrasion. The ten models tested
+were:
 
-The proof of concept sample is composed of 23 images corresponding to
-geological neocortex, 56 images corresponding to flakes undergone 10
-hours of sedimentary abrasion in a previous experimental study
-([Bustos-Pérez et al., 2019](#ref-bustos-perez_experimental_2019)) and
-42 images corresponding to fresh surfaces from experimentally knapped
-flakes. All flints correspond to South Madrid Miocen Flint (Bustillo and
-Pérez-Jiménez ([2005](#ref-bustillo_caracteristicas_2005)); Bustillo et
-al. ([2012](#ref-bustillo_caracterizacion_2012))).
-
-The GLCM requires to test for several distances between the reference
-pixel and the neighboring pixel on which the spatial relationships are
-established. The present work tests for five different sequences of
-distances (Table @ref(tab:distances)). The first sequence composes the
-GLCM based on pixels located at distances 1, 2 3 and 4 from the
-reference pixel. Sequence 2 composes the GLCM based on pixels located at
-distances 2, 4, 6 and 8 from the reference pixel (Table
-@ref(tab:distances). All sequences of intervals are tested in the four
-cardinal directions (north, east, south and west). This results in 16
-(four per each cardinal direction) values of Haralick et al.
-([1973](#ref-haralick_textural_1973)) textural metrics. Final values are
-obtained by averaging the different values of each of the variables
-although range is not considered ([Bietti,
-1996](#ref-bietti_image_1996)).
+- **Linear discriminant analysis (LDA):** reduces dimensionality for the
+  purpose of maximizing the separation between classes while decision
+  boundaries divide the predictor range into regions ([Fisher,
+  1936](#ref-fisher_use_1936); [James et al.,
+  2013](#ref-james_introduction_2013)).  
+- **K-nearest neighbor (KNN):** classifies cases by assigning the class
+  of similar known cases. The ‘k’ in KNN refers to the number of cases
+  (neighbors) to consider when assigning a class, which must be found by
+  testing different values. Given that KNN uses distance metrics to
+  compute nearest neighbors and that each variable is in different
+  scales, the data must be scaled and centered prior to fitting the
+  model ([Cover and Hart, 1967](#ref-cover_nearest_1967); [Lantz,
+  2019](#ref-lantz_machine_2019)).  
+- **Logistic regression:** essentially adapts continuous regression
+  predictions to categorical outcomes ([Cramer,
+  2004](#ref-cramer_early_2004); [Walker and Duncan,
+  1967](#ref-walker_estimation_1967)).  
+- **Decision tree with C5.0 algorithm:** an improvement on decision
+  trees for classification ([Quinlan, 2014](#ref-quinlan_c4_2014);
+  [Quinlan, 1996](#ref-quinlan_improved_1996)).
 
 ## References
 
@@ -1045,6 +1050,14 @@ analyzer](https://imagej.nih.gov/ij/plugins/texture.html).
 
 </div>
 
+<div id="ref-calandra_workflow_2022" class="csl-entry">
+
+Calandra, I., 2022. A workflow for quality control in surface texture
+analysis applied to teeth and tools. Journal of Archaeological Science:
+Reports 46, 103692. <https://doi.org/10.1016/j.jasrep.2022.103692>
+
+</div>
+
 <div id="ref-chambers_like_2003" class="csl-entry">
 
 Chambers, J.C., 2003. Like a rolling stone? The identification of
@@ -1060,12 +1073,37 @@ calculation](https://imagej.nih.gov/ij/plugins/roughness.html).
 
 </div>
 
+<div id="ref-chinga_quantification_2007" class="csl-entry">
+
+Chinga, G., Johnsen, P.O., Dougherty, R., Berli, E.L., Walter, J., 2007.
+Quantification of the 3D microstructure of SC surfaces. J Microsc 227,
+254–265. <https://doi.org/10.1111/j.1365-2818.2007.01809.x>
+
+</div>
+
 <div id="ref-chu_micro-abrasion_2015" class="csl-entry">
 
 Chu, W., Thompson, C., Hosfield, R., 2015. Micro-abrasion of flint
 artifacts by mobile sediments: A taphonomic approach. Archaeological and
 Anthropological Sciences 7, 3–11.
 <https://doi.org/10.1007/s12520-013-0157-0>
+
+</div>
+
+<div id="ref-cover_nearest_1967" class="csl-entry">
+
+Cover, T., Hart, P., 1967. Nearest neighbor pattern classification. IEEE
+Trans. Inform. Theory 13, 21–27.
+<https://doi.org/10.1109/TIT.1967.1053964>
+
+</div>
+
+<div id="ref-cramer_early_2004" class="csl-entry">
+
+Cramer, J.S., 2004. The early origins of the logit model. Studies in
+History and Philosophy of Science Part C: Studies in History and
+Philosophy of Biological and Biomedical Sciences 35, 613–626.
+<https://doi.org/10.1016/j.shpsc.2004.09.003>
 
 </div>
 
@@ -1084,6 +1122,13 @@ Fernández-Marchena, J.L., Ollé, A., 2016. Microscopic analysis of
 technical and functional traces as a method for the use-wear analysis of
 rock crystal tools. Quaternary International 424, 171–190.
 <https://doi.org/10.1016/j.quaint.2015.10.064>
+
+</div>
+
+<div id="ref-fisher_use_1936" class="csl-entry">
+
+Fisher, R.A., 1936. The use of multiple measurements in taxonomic
+problems. Annals of Eugenics 7, 179–188.
 
 </div>
 
@@ -1145,6 +1190,21 @@ Jain, V., Fryirs, K., Brierley, G., 2008. Where do floodplains begin?
 The role of total stream power and longitudinal profile form on
 floodplain initiation processes. Geological Society of America Bulletin
 120, 127–141. <https://doi.org/10.1130/B26092.1>
+
+</div>
+
+<div id="ref-james_introduction_2013" class="csl-entry">
+
+James, G., Witten, D., Hastie, T., Tibshirani, R., 2013. An introduction
+to statistical learning with applications in r, Second Edition. ed.
+Springer.
+
+</div>
+
+<div id="ref-lantz_machine_2019" class="csl-entry">
+
+Lantz, B., 2019. Machine learning with r: Expert techniques for
+predictive modeling. Packt publishing ltd.
 
 </div>
 
@@ -1243,6 +1303,19 @@ Aplicación Al Estudio de Sociedades Prehistóricas. Archaeopress, pp.
 
 </div>
 
+<div id="ref-quinlan_c4_2014" class="csl-entry">
+
+Quinlan, J.R., 2014. C4. 5: Programs for machine learning. Elsevier.
+
+</div>
+
+<div id="ref-quinlan_improved_1996" class="csl-entry">
+
+Quinlan, J.R., 1996. Improved use of continuous attributes in C4.5. jair
+4, 77–90. <https://doi.org/10.1613/jair.279>
+
+</div>
+
 <div id="ref-rust_structure_1972" class="csl-entry">
 
 Rust, B.R., 1972. Structure and process in a braided river.
@@ -1266,11 +1339,14 @@ antiq. 37, 156–165. <https://doi.org/10.2307/278203>
 
 </div>
 
-<div id="ref-schneider_nih_2012" class="csl-entry">
+<div id="ref-schindelin_fiji_2012" class="csl-entry">
 
-Schneider, C.A., Rasband, W.S., Eliceiri, K.W., 2012. NIH image to
-ImageJ: 25 years of image analysis. Nat Methods 9, 671–675.
-<https://doi.org/10.1038/nmeth.2089>
+Schindelin, J., Arganda-Carreras, I., Frise, E., Kaynig, V., Longair,
+M., Pietzsch, T., Preibisch, S., Rueden, C., Saalfeld, S., Schmid, B.,
+Tinevez, J.-Y., White, D.J., Hartenstein, V., Eliceiri, K., Tomancak,
+P., Cardona, A., 2012. Fiji: An open-source platform for
+biological-image analysis. Nat Methods 9, 676–682.
+<https://doi.org/10.1038/nmeth.2019>
 
 </div>
 
@@ -1305,6 +1381,14 @@ Anderson, P.C., Beyries, S., Otte, M., Plisson, H. (Eds.), Traces Et
 Fonction: Les Gestes Retrouvés, : E.r.a.u.l. Etudes Et Recherches
 Archéologiques de l’université de Liège. Série a. Service de
 Préhistoire, Université de Liège, Liège, pp. 459–466.
+
+</div>
+
+<div id="ref-walker_estimation_1967" class="csl-entry">
+
+Walker, S.H., Duncan, D.B., 1967. Estimation of the probability of an
+event as a function of several independent variables. Biometrika 54,
+167–179. <https://doi.org/10.2307/2333860>
 
 </div>
 

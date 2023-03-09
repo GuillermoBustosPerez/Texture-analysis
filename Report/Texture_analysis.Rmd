@@ -59,7 +59,6 @@ Use-wear studies have shown surface quantification can discriminate worked mater
 ### **2.1 Experimental sample and setting**   
 
 Two blocks of flint representing two different types (Type I and Type II) were experimentally knapped. The two types correspond to the South Madrid Miocene Flint [@bustillo_caracterizacion_2012; @bustillo_caracteristicas_2005] although from two different locations. South Madrid Miocene flints were formed by the replacement of sedimentary rocks which had filled the original basin. This replacement of the sedimentary rocks is considered to have taken place under continental conditions such as alluvial plain deposits, shallow lacustrine waters, and marshes [@bustillo_caracterizacion_2012]. Macroscopic analysis of the flints shows that they present a fine opaque homogeneous surface, with colors being blue/grey and reddish/ocher. There is also a relative absence of opal, although geodes and pseudo-morphs can be observed. From these two blocks three flakes were selected from Type 1, and four flakes were selected from Type 2.     
-
 !["Experimental sample of flint flakes (photographs by M. D. Guillén)."](Figures/01-Presenting-materials.png)
 
 In order to simulate sedimentary abrasion, the flakes were introduced by pairs into a tumbler machine (KT-3010 SUPER-TUMBLER) along with a mix of sand and water (30/40% of water with a total weight of 5 kg). Sediment was obtained from the quaternary levels of the Madrid basin and it is composed of fine sands with silt and partial carbonation.    
@@ -84,86 +83,62 @@ kableExtra::kable(Sequential.Data %>%
   filter(Photo.Type != "Sequential" | Flake.Time ==  "Fresh" ) %>% 
   group_by(Flake.Time) %>% 
   summarise(
-    N.by.Flakes = n()
-  ))
+    N.by.Flakes = n()))
 ```
 
 
 ### **2.2 Cleaning protocol, image acquisition and processing**   
 
+Workflow developed in the present study includes a series of steps prior to extracting quantitative data from the images. These steps are: cleaning protocol to remove contaminants from the stone tool surface, image capture, and image enhancement.   
 
+Multiple works emphasize the need of cleaning protocols to remove modern contaminants prior to analysis [@pedergnana_modern_2016; @asryan_results_2020; @olle_use_2014; @fernandez-marchena_microscopic_2016]. A multi-step procedure based on previous studies was adopted [@pedergnana_modern_2016] in order to retrieve possible contaminants. This multi-step procedure included a sonic bath in 2% neutral soap (Derquim) solution during 10 to 15 minutes, followed by a second sonic bath in pure acetone during another 10 to 15 minutes. After each step the lithic artefacts were introduced in a water bath and finally dried using pressure air. During the cleaning protocol and microscopic analysis all artefacts were manipulated using surgical gloves.     
 
+!["Effects of manual manipulation without protection on flint surface. Left: surface photographed after the application of cleaning protocol and manipulation of the artefact using protection. Right: same surface after manual manipulation without protection"](Figures/02-Effects-of-grease.png)
 
+All surface photographs were taken using a Dino-Lite Edge 3.0 AM73915MZT USB microscope at 120 magnifications with a field of view (FOV) of 3.28 x 2.46 mm and a pixel ratio of 2548 x 1918. The USB microscope was mounted in a Dino-Lite RK-06-AE stand in order to ensure verticality, and a N3C-D2 diffuser cap was used to ensure homogeneous distribution of light. During the realization of each photograph, the region of interest of the flint was manually positioned as horizontal as possible [@calandra_workflow_2022]. To avoid problems due to focus variation, each surface was photographed several times at different heights, and the obtained sequences were mounted using Helicon Focus 7.7.2.   
 
+A common problem of images obtained from USB microscopes is the lack of detail due to saturation in one of the grey level values and the effects of different lightning or surface color. This saturation is often observed as a general glaze in one of the grey level values and results in a low-quality image with poor detail. To increase detail and quality prior to the analysis, all images were subjected to a two-step process. First, the Fiji [@schindelin_fiji_2012] plugging “Subtract background” was employed to minimize effects of different lightning and changes in flint color. Second, the function “Enhance contrast” was employed to desaturate the images by normalizing their histograms. This process provides a gray-scale level image employed as input for the statistical analysis.   
 
+!["Two examples of image enhancement. Left: original images taken with the AM73915MZT USB microscope and using a N3C-D2 diffuser cap. Center: images after retrieving the background to avoid effects of different lightning or color. Right: after normalizing the histogram to increase detail and avoid saturation. Top row: geological neocortex. Bottom row: fresh surface of an experimentally knapped flake."](Figures/03-Retrieve-background-and-normalize.jpg)
 
+### **2.3 Statistical analysis**   
 
+The present work uses three sets of statistical metrics to analyze obtained images. The first set of statistical metrics correspond to descriptive statistics (mean, standard deviation, mode, median skewness, and kurtosis). The second set of statistical measures corresponds to measures of roughness. Surface parameters using the “R” prefix use profiles as input. The present work uses a Fiji/ImageJ plugging were R-values are obtained on the hole surface following the ISO 4287/2000 standard [@chinga_roughness_2002; @chinga_quantification_2007]. These measures are:   
 
+  * **Root mean square deviation/roughness (Rq):** indicator of surface roughness.   
+  * **Arithmetical mean deviation (Ra):** which indicates the deviation of a surface from a mean height.   
+  * **Skewness of the assessed profile (Rsk):** indicator of the departure from surface symmetry. Negative values indicate a surface made of deep valleys, and positive values indicates peaks and asperities.      
+  * **Kurtosis of the assessed profile (Rku):** which indicates the sharpness of the peaks. Low values indicate blunt peaks, while high values indicate sharp peaks.    
+  
+Analysis of intensity values through the Gray Level Co-occurrence Matrix (GLCM; [@haralick_textural_1973]) takes into consideration the spatial distribution of intensity values. The GLCM works in two steps [@haralick_textural_1973]. First, using a given distance and direction it builds a matrix which captures the relationship of intensity between pairs of pixels (reference and neighbor). Second, for every x and y it considers the co-occurrence of values, forming a new matrix. From this new matrix, a series of statistical descriptors are derived [@haralick_textural_1973].   
 
-
-
-### **2.2 Image capturing workflow**   
-
-The present work takes a series of steps prior to realizing any analysis and extracting data form images. These steps are: the cleaning protocol to remove contaminants, image capture, and image enhancement.  
-\ 
-
-#### **2.2.1 Cleaning protocol**   
-
-Multiple works emphasize the need of cleaning protocols to remove modern contaminants prior to analysis [@pedergnana_modern_2016; @asryan_results_2020; @olle_use_2014; @fernandez-marchena_microscopic_2016]. Figure \@ref(fig:Figure-01) shows the effect of manual manipulation on the texture of a surface. Because of this, a multi-step procedure based on previous studies was adopted [@pedergnana_modern_2016]. This multi-step procedure included a sonic bath in 2% neutral soap (Derquim) solution during 10 to 15 minutes. This was followed by a second sonic bath in pure acetone during another 10 to 15 minutes. After each step the lithic artefacts were introduced in a water bath and finally dried using pressure air. During the cleaning protocol and microscopic analysis all artefacts were manipulated using surgical gloves.     
-\ 
-
-
-#### **2.2.2 Image capture**
-
-Dino-Lite Edge 3.0 AM73915MZT USB microscope  
-
--capsule 
-vertical stand
--pelota esa  
-\ 
-
-#### **2.2.3 Image enhancement**   
-
-A common problem of images obtained from USB microscopes is the lack of detail due to saturation in one of the grey level values and effects of different lightning. This saturation is often observed as a general glaze in one of the grey level values and results in a low quality image with poor detail. To increase detail and quality prior to the analysis, all images were subjected to a two-step process. First, the Fiji pluging *Substract background* was employed to avoid effects of different lightning. Second, the function *enhance contrast* was employed to desaturize the images by normalizing their histograms (Figure \@ref(fig:Figure3)).   
-\ 
-
-
-### **2.3 Image statistical analysis**   
-
-The present work uses three sets of statistical metrics to analyze obtained images. The first set of statistical metrics correspond to  descriptive statistics (mean, standard deviation, mode, median and kurtosis). The second set of statistical measures corresponds to measures of roughness:   
-
-* **Root mean square deviation (Rq)**: indicator of surface roughness.   
-* **Arithmetical mean deviation (Ra)**: which indicates the deviation of a surface from a mean height.   
-* **Skewness of the assessed profile (Rsk)**: indicator of the departure from surface symmetry. Negative values indicate a surface made of deep valey, and positive values indicates peaks and asperities.   
-* **Kurtosis of the assessed profile (Rku)**: which indicates the sharpness of the peaks. Low values indicate blunt peaks, while high values indicate sharp peaks.    
-
-The implementation of these measures is done in ImageJ software [@schneider_nih_2012] through the Roughness calculation plugin [@chinga_roughness_2002].   
-\ 
-
-A problem exists when images are analyzed through the intensity distribution of pixels and using descriptive statistics and roughness metrics. Figure \@ref(fig:Figure2) illustrates the problem. Figure \@ref(fig:Figure2) shows a series of pattern images with similar values of intensity, but with different spatial distribution. Regarding descriptive statistics, all images present similar values of mean (127), standard deviation (125), sk (0.01) and kurtosis (-1.99). Regarding measures of roughness, all images present similar values of Rq (180), Ra (127), Rsk (1.42), and Rku (2).    
-
-\ 
-
-Analysis of intensity values through the Gray Level Co-occurrence Matrix (GLCM; @haralick_textural_1973) takes into consideration the spatial distribution of intensity values. The GLCM works in two steps [@haralick_textural_1973]. First, using a given distance and direction (\@ref(fig:Scheme-GLCM)), it builds a matrix which captures the relationship of intensity between pairs of pixels (reference and neighbor). Second, for every *x* and *y* it considers the co-occurrence of values, forming a new matrix. From this new matrix, a series of statistical descriptors are derived [@haralick_textural_1973].  
-
-  * **Angular Second Moment (ASM)** is measure of homogeneity in the image. Homogeneous images (with low gray-tone transitions) will have fewer entries of large magnitude. Thus homogeneous images will have high ASM values, while the opposite will be true for non-homogeneous images.  
-  * **Contrast (CONT)** is a value of the amount of local variations, with high values indicating a lot of local variation and low values few local variation.   
+  * **Angular Second Moment (ASM)** is measure of homogeneity in the image. Homogeneous images (with low gray-tone transitions) will have fewer entries of large magnitude. Thus, homogeneous images will have high ASM values, while the opposite will be true for non-homogeneous images.    
+  * **Contrast (CONT)** is a value of the amount of local variations. High values are indicating a lot of local variation and low values indicate few local variations.   
   * **Correlation (CORR)** which measures gray-tone linear-dependencies in the image. It indicates how a reference pixel is related to its neighbor. A 0 value indicates it is uncorrelated, and 1 indicates a perfect correlation.   
-  * **Inverse Different Moment (IDM)** also referred as **homogeneity**. It obtains the measures of the closeness of the distribution of the GLCM elements to the GLCM diagonal.   
-  * **Entropy (ENT)**: is a measure of the amount of irremediable chaos or disorder in an image. High values of entropy indicate values of similar magnitude, while low values indicate unequal entries.   
+  * **Inverse Different Moment (IDM)** also referred as homogeneity. It obtains the measures of the closeness of the distribution of the GLCM elements to the GLCM diagonal.   
+  * **Entropy (ENT)** is a measure of the amount of irremediable chaos or disorder in an image. High values of entropy indicate values of similar magnitude, while low values indicate unequal entries.     
+  
+As previously mentioned, use of the GLCM requires selecting pixel distance between reference and neighbor, and direction on which to establish the distance [@haralick_textural_1973]. For this, it is common to test for different combinations of distances and directions since images at different magnifications, different field of view and different resolution might require variation in pixel distance and directions [@bietti_image_1996; @grace_quantification_1985]. For the present study, a preliminary test indicated that using four distances at 5, 10, 15 and 20 pixels in the four possible directions (north, east, south and west) to set the GLCM presented the best results for discrimination.    
+
+Calculation of all metrics was done using the free software Fiji [@schindelin_fiji_2012]. Roughness metrics calculation was implemented through the “Roughness calculation” plugin [@chinga_roughness_2002]. GLCM and texture metrics were calculated using the “GLCM Texture” plugging [@cabrera_texture_2006].     
+
+### **2.4 Machine Learning models and evaluation**     
+
+Data from descriptive statistics, roughness and texture were employed as variable for the training of Machine Learning models in order to predict the time of exposure to sedimentary abrasion. The ten models tested were:   
+
+  * **Linear discriminant analysis (LDA):** reduces dimensionality for the purpose of maximizing the separation between classes while decision boundaries divide the predictor range into regions [@fisher_use_1936; @james_introduction_2013].     
+  * **K-nearest neighbor (KNN):** classifies cases by assigning the class of similar known cases. The ‘k’ in KNN refers to the number of cases (neighbors) to consider when assigning a class, which must be found by testing different values. Given that KNN uses distance metrics to compute nearest neighbors and that each variable is in different scales, the data must be scaled and centered prior to fitting the model [@cover_nearest_1967; @lantz_machine_2019].   
+  * **Logistic regression:** essentially adapts continuous regression predictions to categorical outcomes [@cramer_early_2004; @walker_estimation_1967].  
+  * **Decision tree with C5.0 algorithm:** an improvement on decision trees for classification [@quinlan_improved_1996; @quinlan_c4_2014].    
 
 
-\ 
 
-The present work implements @haralick_textural_1973 analysis and metrics in ImageJ software [@schneider_nih_2012]. Calculation of GLCM and second order statistics is done through @cabrera_texture_2006 plugin.   
 
-### **2.4 Proof of Concept of GLCM and texture analysis**   
 
-Prior to the application of @haralick_textural_1973 texture metrics a proof of concept from a pilot study is undertaken. This proof of concept is aimed to two objectives. First, determine if the GLCM provides suitable variable values to discriminate between degrees of sedimentary abrasion. Second, to determine to  the best interval of pixels under which the GLCM works
 
-The proof of concept sample is composed of 23 images corresponding to geological neocortex, 56 images corresponding to flakes undergone 10 hours of sedimentary abrasion in a previous experimental study [@bustos-perez_experimental_2019] and 42 images corresponding to fresh surfaces from experimentally knapped flakes. All flints correspond to South Madrid Miocen Flint (@bustillo_caracteristicas_2005; @bustillo_caracterizacion_2012).   
 
-The GLCM requires to test for several distances between the reference pixel and the neighboring pixel on which the spatial relationships are established. The present work tests for five different sequences of distances (Table \@ref(tab:distances)). The first sequence composes the GLCM based on pixels located at distances 1, 2 3 and 4 from the reference pixel. Sequence 2 composes the GLCM based on pixels located at distances 2, 4, 6 and 8 from the reference pixel (Table \@ref(tab:distances). All sequences of intervals are tested in the four cardinal directions (north, east, south and west). This results in 16 (four per each cardinal direction) values of @haralick_textural_1973 textural metrics. Final values are obtained by averaging the different values of each of the variables although range is not considered [@bietti_image_1996].   
+
+
 
 ## References
 
