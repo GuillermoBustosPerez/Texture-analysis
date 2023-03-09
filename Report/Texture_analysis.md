@@ -1830,6 +1830,19 @@ analysis. However, the LDA model considers them of less important,
 probably due to intense overlapping of values from different exposure
 time.
 
+The following figure best illustrates the effects of sedimentary
+abrasion on non-collinear variables. Both plots present the relationship
+between the two most important variables considered by the LDA model
+(kurtosis and contrast), and their respective most uncorrelated
+features. In both cases fresh flints presented highest ranges of
+dispersion, and as exposure to sedimentary abrasion increased, the range
+of dispersion progressively decreased. In the case of kurtosis and
+entropy, increasing time of exposure resulted in decreasing values of
+kurtosis and increasing values of entropy. In the case of contrast
+(CONT) and angular second moment (ASM), increasing sedimentary abrasion
+resulted in increasing values of the first and decreasing values of the
+later.
+
 ``` r
 ggpubr::ggarrange(
   (Sequential.Data %>% ggplot(aes(Kurtosis, ENT, color = Flake.Time)) +
@@ -1866,7 +1879,160 @@ ggpubr::ggarrange(
 
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
-## References
+## **4. Discussion**
+
+The present work shows that grayscale level images can effectively be
+used to obtain quantitative data reflecting changes in the surface of
+flint artefacts due to post-depositional alterations. The range of
+metrics employed to analyze the gray scale level images successfully
+capture the changes suffered by the surface and their directionality,
+effectively serving as discriminatory variables to differentiate between
+time of exposure to post-depositional alterations. Additional to showing
+the effectiveness of the use of gray scale level images, the set of
+experiments presented here also provided insights into the differential
+development of sedimentary abrasion due to post-depositional processes.
+The present work shows that when addressing the study of
+post-depositional alterations, convex surfaces (bulb, parts of the
+dorsal surface, or hinge terminations) and surfaces close to the ridge
+or edges will develop faster and more intensely.  
+The results presented here indicate that, when addressing the analysis
+of a lithic assemblages in which post-depositional alterations might be
+present, photographs of the surface taken using a Dino-Lite Edge 3.0
+AM73915MZT USB microscope can be employed to determine degree of
+sedimentary abrasion undergone by a surface.
+
+The general low values of precision from the machine learning models
+were expected given the heterogeneous development of sedimentary
+abrasion. After ten hours of rounding some surfaces did not develop
+abrasion (or it was very lightly developed), resulting in minimal
+changes of the texture metrics, and thus hardly distinguishable from
+fresh surfaces or surfaces undergone less exposure time under rounding.
+The general confusion in the differentiation of sedimentary abrasion
+were not caused by the analytical procedure (use of a Dino-Lite Edge 3.0
+AM73915MZT USB and statistical analysis of grayscale level images), but
+because of the heterogeneous development of sedimentary abrasion.
+
+Previous studies ([Bustos-Pérez et al.,
+2019](#ref-bustos-perez_experimental_2019)) indicate that as particle
+size of the sediment decreases, heterogeneity in the development of
+post-depositional process increases. However, this interaction remains
+unresolved. In the present study, particle size of the sediment employed
+to induce sedimentary abrasion was small, and the development of
+sedimentary abrasion was heterogeneous. This more heterogeneous
+development falls in line with previous studies ([Bustos-Pérez et al.,
+2019](#ref-bustos-perez_experimental_2019)), were more fine grained
+sediments resulted in increasing variability of ridge width measurement.
+Further research might contemplate subjecting lithic artifacts to
+similar experimental conditions, but using sediments with larger
+particle sizes. This might result in increasing information regarding
+whether if abrasion is developed in a more homogeneous way, and whether
+if the resulting surfaces present different quantifiable features. Use
+wear analysis have shown that the model of polish development results in
+quantifiable differences for different worked materials with time not
+being a factor which blurs or overlaps differences ([Bietti,
+1996](#ref-bietti_image_1996); [Ibáñez and Mazzucco,
+2021](#ref-ibanez_quantitative_2021); [Stemp et al.,
+2009](#ref-stemp_quantification_2009)). For post-depositional processes
+it remains untested, weather if different particle size, type of
+transport of particles (fluvial or aeolian), or weathering induces
+quantifiable differentiable surfaces that can be captured with the use
+of greyscale level values. Fernandes et al
+([2007](#ref-fernandes_origins_2007)) showed how different types of
+neocortex reflected various geological environments, capturing the
+evolutionary chains from the flints genetic phase until its entering
+into the archaeological record. While the use of geological neocortex in
+the present study was aimed to test if grayscale level images were able
+to separate it from images with a different condition, visualization of
+the images and data seem to indicate that different types of neocortex
+are present. However, this remains untested and requires a more
+systematic approach.
+
+Results showing the heterogeneous development of abrasion on a same
+flint artifact are indicative of the need for caution when attributing a
+post-depositional condition. If it is desirable to obtain surface
+metrics of a lithic artifact, several sampling options can be adopted,
+such as only considering metrics from areas which will had potentially
+develop faster, or averaging results from several areas of the same
+artifact. The present work employed the complete photographs for the
+analysis of post-depositional abrasion in lithic artefacts. However,
+previous research has shown that sampling images on the most developed
+areas ([Ibáñez and Mazzucco, 2021](#ref-ibanez_quantitative_2021)) can
+help improve the analysis by focusing in the areas of interest, or
+avoiding noise generated by irregularities such as fossils or geodes.
+Further research in post-depositional studies in lithic artifacts might
+benefit from applying these sampling procedures and reduce the degree of
+overlapping values observed in the present study. However, the results
+presented here outline the need to consider additional features of a
+lithic artifact, such as the width of the ridges, or the presence of
+alterations in the edges ([Burroni et al.,
+2002](#ref-burroni_surface_2002); [Bustos-Pérez et al.,
+2019](#ref-bustos-perez_experimental_2019); [Chu et al.,
+2015](#ref-chu_micro-abrasion_2015); [Panera Gallego and Rubio Jara,
+1996](#ref-panera_gallego_propuesta_1996); [Shackley,
+1974](#ref-shackley_stream_1974)).
+
+The present study has sampled only two types of flints which were
+considered similar in their surface appearance. Despite the
+heterogeneous development of abrasion within flakes, both flints reacted
+in similar ways to subsequent episodes of rounding. However, caution is
+advisable, since flints with strong imperfections in the form of geodes,
+carbonates, opals or translucid areas might difficult the obtention of
+reliable data. Digital microscopes using LED light, can reflect on the
+imperfections of the surface. The reflection results in white pixels
+which will be interpreted as having the maximum value (255), instead of
+a value corresponding to their surface height.
+
+## **5. Conclusions**
+
+Determining the degree of post-depositional alteration undergone by
+lithic materials is a key aspect when evaluating the integrity of
+paleolithic archaeological assemblages.  
+Under the presented workflow, grayscale level images can be used to
+obtain quantitative values reflecting changes in surface due to
+sedimentary abrasion. Further, the sequential experimentation shows that
+these quantitative values are also capturing the directionality in
+changes due to increasing sedimentary abrasion. However, under the
+described conditions of this experimentation, not all the surfaces of an
+artifact developed abrasion at the same rhythm. Convex surfaces and
+areas close to the edges developed the alterations faster and more
+intensely (indicating that these areas should be inspected and sampled
+first when evaluating an artifact). Although studies focusing in
+post-depositional alterations of lithic artifacts are not common, the
+present work showcases the potential of using grayscale level images and
+quantitative analysis of the surface of lithic artifacts.
+
+## **6.Acknowledgments**
+
+The following research has been possible thanks to the Program for the
+Requalification of the University System Margarita Salas
+(CA1/RSUE/2021-00743) financed through the Spanish “Recovery,
+Transformation and Resilience Plan” and managed from the Ministry of
+Universities (Ministerio de Universidades) and the Autonomous University
+of Madrid (Universidad Autónoma de Madrid).  
+This work has been carried out with the financial support of the
+Generalitat de Catalunya, AGAUR agency (2017SGR1040 Research Group), the
+Universitat Rovira i Virgili (2021PFR-URV-126), and the Spanish Ministry
+of Science and Innovation (MICINN/FEDER project
+PID2021-122355NB-C32).The Institut Català de Paleoecologia Humana i
+Evolució Social (IPHES-CERCA) has received financial support from the
+Spanish Ministry of Science and Innovation through the “María de Maeztu”
+program for Units of Excellence (CEX2019-000945-M). The research
+technical support of Maria Dolors Guillén was supported by the Spanish
+Ministry of Science and Innovation through the “María de Maeztu”
+excellence accreditation (CEX2019-000945-M).  
+This article is the result of the research projects “Como, Quien Y
+Donde?: Variabilidad De Comportamientos En La Captaci´on Y
+Transformaci´on De Los Recursos Liticos Dentro De Grupos Neandertales 2”
+(HAR2016-76760-C3-2-P) financed by Agencia Estatal de Investigaci´on
+(AEI), Fondo Europeo de Desarrollo Regional (FEDER); and “En Los Limites
+De La Diversidad: Comportamiento Neandertal En El Centro Y Sur De La
+Penisula Iberica” (ID2019- 103987 GB-C33) financed by the Programa
+Estatal de Generación de Conocimiento y Fortalecimiento Científico y
+Tecnológico del Sistema de I + D + i y de I + D + i Orientada a los
+Retos de la Sociedad, del Plan Estatal de Investigación Científica y
+Técnica y de Innovación (2017–2020).
+
+## **7.References**
 
 </div>
 
@@ -1949,6 +2115,15 @@ evaluation of machine learning algorithms. Pattern recognition 30,
 
 Breiman, L., 2001. Random forests. Machine Learning 45, 5–32.
 <https://doi.org/10.1023/A:1010933404324>
+
+</div>
+
+<div id="ref-burroni_surface_2002" class="csl-entry">
+
+Burroni, D., Donahue, R.E., Pollard, A.M., 2002. The surface alteration
+features of flint artefacts as a record of environmental processes.
+Journal of Archaeological Science 29, 1277–1287.
+<https://doi.org/10.1006/jasc.2001.0771>
 
 </div>
 
@@ -2064,6 +2239,15 @@ Evans, A.A., Donahue, R.E., 2008. Laser scanning confocal microscopy: A
 potential technique for the study of lithic microwear. Journal of
 Archaeological Science 35, 2223–2230.
 <https://doi.org/10.1016/j.jas.2008.02.006>
+
+</div>
+
+<div id="ref-fernandes_origins_2007" class="csl-entry">
+
+Fernandes, P., Le Bourdonnec, F.-X., Raynal, J.-P., Poupeau, G.,
+Piboule, M., Moncel, M.-H., 2007. Origins of prehistoric flints: The
+neocortex memory revealed by scanning electron microscopy. Compets
+Rendus Palevol 6, 557–568. <https://doi.org/10.1016/j.crpv.2007.09.015>
 
 </div>
 
@@ -2242,6 +2426,14 @@ mountain drainage basins. Geological Society of America Bulletin 109,
 Ollé, A., Vergès, J.M., 2014. The use of sequential experiments and SEM
 in documenting stone tool microwear. Journal of Archaeological Science
 48, 60–71. <https://doi.org/10.1016/j.jas.2013.10.028>
+
+</div>
+
+<div id="ref-panera_gallego_propuesta_1996" class="csl-entry">
+
+Panera Gallego, J., Rubio Jara, S., 1996. Propuesta de análisis
+tecnomorfológico para la industria lítica del pleistoceno medio.
+Espacio, tiempo y forma. Serie I, Prehistoria y Arqueología 9, 33–76.
 
 </div>
 
