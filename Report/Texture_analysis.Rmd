@@ -572,7 +572,6 @@ RF.ROCs$Class <- factor(RF.ROCs$Class,
                           "Fresh" 
                         ))
 
-
 # Plot the three ROC's and AUC's in legend
 RF.ROCs %>% 
   ggplot(aes(Speci, Sensi, color = Class)) +
@@ -594,6 +593,90 @@ RF.ROCs %>%
     legend.text = element_text(color = "black", size = 8),  
     axis.text = element_text(color = "black", size = 10),
     axis.title = element_text(color = "black", size = 11, face = "bold"))
+```
+
+The confusion matrix provides insights into the sources and directionality of the confusions. As time of exposure increased, the number of photographs being identified as fresh diminished, with a minimum portion (1.66) being identified as fresh after ten hours of rounding. In the same way, after ten hours of rounding a small portion of photographs were starting to resemble neocortex (11.91). The confusion matrix reinforces previous observations through exploratory visual analysis and direct examination of photographs that sedimentary abrasion is not being developed in a homogeneous way, with some surfaces from the same flake developing abrasion faster than others. Despite this, a clear directionality (as sedimentary abrasion increases, the number of photographs identified as fresh diminishes) is observed. Additional training of an LDA model on values from the first five PC (99% of the variance) showed little changes in general precision (0.464) or general AUC (0.817) regarding the LDA model trained with all non-perfectly collinear variables.   
+
+### **3.3. Feature importance**    
+
+The following figure presents feature importance according to exposure time to time of rounding and average importance.    
+
+```{r}
+#### Extract variable importance from LDA model ####
+Var.Importance <- data.frame(varImp(LDA.model)$importance) 
+
+Var.Importance %>% 
+  mutate(Mean.Importance = rowMeans(Var.Importance),
+         Feature = rownames(Var.Importance)) %>% 
+  arrange(-Mean.Importance) %>% 
+  
+  pivot_longer(
+    Fresh:Mean.Importance,
+    names_to = "Time",
+    values_to = "Values") %>% 
+  
+  mutate(
+    Time = factor(Time, 
+                  levels = c(
+                    "Fresh", "One.Hour","Five.Hours", 
+                    "Ten.Hours", "Neocortex", "Mean.Importance"),
+                  labels = c(
+                    "Fresh", "1h","5h", "10h", "Neocort.",
+                    "Mean Importance"))) %>% 
+  
+  ggplot(aes(Values, reorder(Feature, Values), fill = Values)) +
+  facet_wrap(~ Time, scales = "free", ncol = 2) +
+  geom_bar(stat= "identity", position = "dodge") +
+  geom_text(aes(label = round(Values, 2)), 
+            position = position_stack(vjust = 0.5), size = 2) +
+  scale_fill_gradient(low = "red", high = "blue") +
+  guides(fill = "none") +
+  ylab(NULL) +
+  xlab("Mean importance") +
+  theme_light() +
+  theme(
+    strip.text = element_text(color = "black", face = "bold", size = 8),
+    strip.background = element_rect(fill = "white", colour = "black", linewidth = 1),
+    axis.text.y = element_text(color = "black", size = 6),
+    axis.text.x = element_text(color = "black", size = 7),
+    axis.title.x = element_text(color = "black", size = 9),
+    axis.title.y = element_text(color = "black", size = 9))
+```
+
+On general terms the LDA does not favor any group of statistics over other. The three most important features considered by the LDA model relate to the distribution of values (kurtosis), texture (contrast) and roughness (Rq). Although the rest of variables present similar values of importance, it is important to consider the high levels of collinearity previously observed between features which are probably affecting the interpretation of the rest of the features. Entropy (ENT) and angular second moment (ASM) presented clear trends in the visual exploratory analysis. However, the LDA model considers them of less important, probably due to intense overlapping of values from different exposure time.   
+
+```{r}
+ggpubr::ggarrange(
+  (Sequential.Data %>% ggplot(aes(Kurtosis, ENT, color = Flake.Time)) +
+     geom_point(alpha = 0.5) +
+     stat_ellipse(aes(color = Flake.Time)) +
+     scale_color_manual(
+       name = "Expsoure time",
+       values = c("blue", "royalblue4", "darkorange1", "red", "darkred"),
+       labels = c("Fresh", "1h","5h", "10h", "Neocort.")) +
+     theme_light() +
+     theme(
+       axis.text = element_text(size = 9, color = "black"),
+       axis.title = element_text(size = 9.25, color = "black", face = "bold"))
+  ),
+  
+  (
+    Sequential.Data %>% ggplot(aes(CONT, ASM, color = Flake.Time)) +
+      geom_point(alpha = 0.5) +
+      stat_ellipse(aes(color = Flake.Time)) +
+      scale_color_manual(
+        name = "Expsoure time",
+        values = c("blue", "royalblue4", "darkorange1", "red", "darkred"),
+        labels = c("Fresh", "1h","5h", "10h", "Neocort.")) +
+      theme_light() +
+      theme(
+        axis.text = element_text(size = 9, color = "black"),
+        axis.title = element_text(size = 9.25, color = "black", face = "bold"))
+  ),
+  ncol = 2,
+  legend = "bottom",
+  common.legend = TRUE
+)
 ```
 
 
