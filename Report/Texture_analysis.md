@@ -721,7 +721,7 @@ GeoSample
 
 ``` r
 #load packages
-library(tidyverse)
+library(tidyverse); library(caret); library(pROC)
 ```
 
 ``` r
@@ -1070,6 +1070,122 @@ ggcorrplot::ggcorrplot(r,
 
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
+### **2.5 Training of Machine Learning models**
+
+The following code was set to evaluate and train the machine learning
+models described in the methods section. All resultant models are
+available in the *Data* section.
+
+``` r
+#### Train the models ####
+# Validation
+library(caret)
+trControl <- trainControl(method  = "repeatedcv",
+                          verboseIter = TRUE,
+                          number  = 10,
+                          repeats = 100,
+                          savePredictions = "final",
+                          classProbs = TRUE)
+
+Data <- Sequential.Data %>% select(-c(Mean, Ra))
+
+frmla <- as.formula(
+  paste("Flake.Time", paste(colnames(Data[,2:14]), collapse = " + "), sep = " ~ "))
+
+# LDA model
+set.seed(123)
+LDA.model <- train(frmla, 
+                   Data,
+                   method = "lda",
+                   preProc = c("center", "scale"),
+                   trControl = trControl)
+
+# Logistic regression model
+set.seed(123)
+logmod <- train(
+  frmla, 
+  Data, 
+  method = "glmnet",                 
+  family = 'multinom',
+  trControl = trControl)
+
+# KNN model
+set.seed(123)
+KNN.model <- train(
+  frmla,
+  Data2,
+  method = "knn",
+  preProc = c("center", "scale"), 
+  trControl = trControl,
+  tuneGrid = expand.grid(k = seq(1, 15, 1)))
+
+# C5.0 Tree 
+set.seed(123)
+C50_Mod <- train(frmla, 
+                 Data,
+                 method = "C5.0",
+                 trControl = trControl,
+                 preProc = c("center", "scale"), 
+                 metric = "Accuracy",
+                 importance = 'impurity')
+
+# Random Forest
+set.seed(123)
+RF.model <- train(frmla, 
+                  Data,
+                  method = "ranger",
+                  trControl = trControl,
+                  preProc = c("center", "scale"), 
+                  metric = "Accuracy",
+                  importance = 'impurity')
+
+# GBM model 
+set.seed(123)
+GBM.model <- train(frmla, 
+                   Data,
+                   method = "gbm",
+                   preProc = c("center", "scale"), 
+                   trControl = trControl,
+                   metric = "Accuracy")
+
+# SVMs
+set.seed(123)
+SVML.model <- train(frmla, 
+                    Data,
+                    method = "svmLinear",
+                    trControl = trControl,
+                    preProc =  c('center', 'scale'),
+                    metric = "Accuracy",
+                    importance = 'impurity')
+
+set.seed(123)
+SVMR.model <- train(frmla, 
+                    Data,
+                    method = "svmRadial",
+                    preProc =  c('center', 'scale'),
+                    trControl = trControl,
+                    metric = "Accuracy",
+                    importance = 'impurity')
+
+set.seed(123)
+SVMP.model <- train(frmla, 
+                    Data,
+                    method = "svmPoly",
+                    preProc =  c('center', 'scale'),
+                    trControl = trControl,
+                    metric = "Accuracy",
+                    importance = 'impurity')
+
+# Naïve Bayes
+set.seed(123)
+NB.model <- train(frmla, 
+                  Data,
+                  preProc = c("center", "scale"), 
+                  method = "nb",
+                  trControl = trControl,
+                  metric = "Accuracy")
+```
+
 ## **3. Results**
 
 ### **3.1 Texture metrics**
@@ -1337,7 +1453,7 @@ Sequential.Data  %>%
   )
 ```
 
-![](Texture_analysis_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](Texture_analysis_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 Although trends in surface change by sedimentary abrasion are clear, the
 exploratory visual analysis also indicates important overlapping between
@@ -1350,6 +1466,292 @@ developed abrasion more quickly and intensely than other areas.
 alt="Examples of differential abrasion among the same artifact. Top: images of the fresh surface. Bottom: sequential images of sedimentary abrasion: a) little or no abrasion is developed; b) sedimentary abrasion is moderately developed; c) sedimentary abrasion is heavily developed." />
 <img src="Figures/08-Differential-development2.png" data-heigh="300"
 alt="Examples of differential abrasion among the same artifact. Top: images of the fresh surface. Bottom: sequential images of sedimentary abrasion: a) sedimentary abrasion develops moderately/strongly; b) sedimentary abrasion is lightly developed; c) sedimentary abrasion is strongly developed." />
+
+### **3.2 Machine Learning models results**
+
+presents the performance metrics (general precision and AUC) for each of
+the tested machine learning models after the 100x10 fold cross
+validation. Although all models presented general precision values below
+0.5, these values were in all cases substantially higher than the
+“no-information rate” (0.296). Of the ten tested models, the logistic
+regression presented the highest general precision value (0.485), with
+the linear discriminant analysis (LDA) presenting a very similar value
+(0.479). Random Forest and decision tree with C5.0 presented the lowest
+general precision with respective values of 0.381 and 0.402. Use of the
+ROC curves for model evaluation indicates that all models presented good
+or acceptable general AUC values with the exception of the SVM with
+polynomial kernel which presented a poor general AUC (0.68). The linear
+discriminant analysis (LDA) presented the highest AUC value (0.83), and
+substantially higher than the logistic regression (0.819). Thus, it can
+be considered that the LDA model performed the best when differentiating
+degree of sedimentary abrasion.
+
+``` r
+# Get Precision and AUC of each model
+data.frame(
+  "Model" = c("LDA", "KNN", "Log. Reg.", "SVML", "SVMP", "SVMR",
+              "C5.0", "Rand. Forest", "GBM", "Naïve Bayes"),
+  "Accuracy" =
+    rbind(
+      round(confusionMatrix(LDA.model$pred$pred, LDA.model$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(KNN.model$pred$pred, KNN.model$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(logmod$pred$pred, logmod$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(SVML.model$pred$pred, SVML.model$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(SVMP.model$pred$pred, SVMP.model$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(SVMR.model$pred$pred, SVMR.model$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(C50_Mod$pred$pred, C50_Mod$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(RF.model$pred$pred, RF.model$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(GBM.model$pred$pred, GBM.model$pred$obs)[[3]][c(1)],3),
+      round(confusionMatrix(NB.model$pred$obs, NB.model$pred$pred)[[3]][c(1)],3)),
+  "AUC" =
+    rbind(
+      round(pROC::multiclass.roc(LDA.model$pred$obs, LDA.model$pred[,4:8])$auc[[1]],3),
+      round(pROC::multiclass.roc(KNN.model$pred$obs, KNN.model$pred[,4:8])$auc[[1]], 3),
+      round(pROC::multiclass.roc(logmod$pred$obs, logmod$pred[,6:10])$auc[[1]], 3),
+      round(pROC::multiclass.roc(SVML.model$pred$obs, SVML.model$pred[,4:8])$auc[[1]], 3),
+      round(pROC::multiclass.roc(SVMP.model$pred$obs, SVMP.model$pred[,6:10])$auc[[1]], 3),
+      round(pROC::multiclass.roc(SVMR.model$pred$obs, SVMR.model$pred[,5:9])$auc[[1]], 3),
+      round(pROC::multiclass.roc(C50_Mod$pred$obs, C50_Mod$pred[,7:11])$auc[[1]], 3),
+      round(pROC::multiclass.roc(RF.model$pred$obs, RF.model$pred[,6:10])$auc[[1]], 3),
+      round(pROC::multiclass.roc(GBM.model$pred$obs, GBM.model$pred[,8:12])$auc[[1]], 3),
+      round(pROC::multiclass.roc(NB.model$pred$obs, NB.model$pred[,6:10])$auc[[1]], 3))) %>% 
+  mutate(Model = factor(Model, levels = c("LDA", "KNN", "Log. Reg.", "SVML", "SVMP", "SVMR",
+                                          "C5.0", "Rand. Forest", "GBM", "Naïve Bayes"))) %>% 
+  
+  pivot_longer(
+    cols = c(Accuracy, AUC),
+    values_to = "values",
+    names_to = "Variables") %>% 
+  
+  ggplot(aes(values, Model, fill = Model)) +
+  geom_col() +
+  facet_wrap(~ Variables, scales = "free") +
+  ggsci::scale_fill_npg() +
+  geom_text(aes(label = (values)), hjust = "top", size = 2.5) +
+  theme_light() +
+  xlab("Values") +
+  theme(
+    legend.position = "none",
+    strip.text = element_text(color = "black", face = "bold", size = 11),
+    strip.background = element_rect(fill = "white", colour = "black", linewidth = 0.75),
+    axis.text = element_text(color = "black")
+  )
+```
+
+![](Texture_analysis_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+
+The following code presents the ROC curves and AUC’s obtained for each
+category of sedimentary abrasion using the LDA model. Individual AUC
+values of fresh surfaces and neocortex were outstanding (respective
+values of 0.9 and 0.98). Individual AUC values of the different times of
+exposure varied from being fair in the case of one (0.71) and ten (0.74)
+hours of exposure, to being poor in the case of five hours (0.62) of
+exposure.
+
+``` r
+#### Confusion matrix ####
+# Obtain from caret and reshape
+Cnf.Matr <- confusionMatrix(LDA.model)$table
+Cnf.Matr <- reshape2::melt(Cnf.Matr)
+
+# Normalize the data
+Cnf.Matr %>% mutate(
+  value = case_when(
+    Reference == "Fresh" ~ (value/sum(confusionMatrix(LDA.model)$table[1:5]))*100,
+    Reference == "One.Hour" ~ (value/sum(confusionMatrix(LDA.model)$table[6:10]))*100,
+    Reference == "Five.Hours" ~ (value/sum(confusionMatrix(LDA.model)$table[11:15]))*100,
+    Reference == "Ten.Hours" ~ (value/sum(confusionMatrix(LDA.model)$table[16:20]))*100,
+    Reference == "Neocortex" ~ (value/sum(confusionMatrix(LDA.model)$table[21:25]))*100,
+  )) %>% 
+  mutate(
+    Prediction = factor(Prediction, 
+                        levels = c("Neocortex", "Ten.Hours", "Five.Hours",
+                                   "One.Hour", "Fresh"),
+                        labels = c("Neocort.", "10 h", "5 h", "1 h", "Fresh")),
+    Reference = factor(Reference,
+                       levels = c("Fresh", "One.Hour", "Five.Hours", 
+                                  "Ten.Hours", "Neocortex"),
+                       labels = c("Fresh", "1 h", "5 h", 
+                                  "10 h", "Neocort."))) %>% 
+  
+  # And plot cnfusion matrix
+  ggplot(aes(Reference, Prediction, fill = value)) + 
+  geom_tile(alpha = 0.75) +
+  geom_text(aes(label = round(value, 2)), size = 2.5) +
+  scale_fill_gradient(low = "white", high = "blue")  +
+  scale_x_discrete(position = "top") +
+  theme_bw() +
+  coord_fixed() +
+  theme(legend.position = "none",
+        axis.title = element_text(size = 8, color = "black", face = "bold"),
+        axis.text = element_text(size = 7.5, color = "black"),
+        title = element_text(size = 8, color = "black", face = "bold"))
+```
+
+![](Texture_analysis_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+
+``` r
+#### Final ROC curve and AUC ####
+MC.ROC <- LDA.model$pred %>% 
+  select(pred, obs, Fresh, One.Hour, Five.Hours, Ten.Hours, Neocortex) %>% 
+  mutate(
+    FreshvsAll = case_when(
+      obs == "Neocortex" ~ "Rest",
+      obs == "Ten.Hours" ~ "Rest", 
+      obs == "Five.Hours" ~ "Rest", 
+      obs == "One.Hour" ~ "Rest", 
+      obs == "Fresh" ~ "Fresh"),
+    
+    OnehvsAll = case_when(
+      obs == "Neocortex" ~ "Rest",
+      obs == "Ten.Hours" ~ "Rest", 
+      obs == "Five.Hours" ~ "Rest", 
+      obs == "One.Hour" ~ "One.Hour", 
+      obs == "Fresh" ~ "Rest"),
+    
+    FivevsAll = case_when(
+      obs == "Neocortex" ~ "Rest",
+      obs == "Ten.Hours" ~ "Rest", 
+      obs == "Five.Hours" ~ "Five.Hours", 
+      obs == "One.Hour" ~ "Rest", 
+      obs == "Fresh" ~ "Rest"),
+    
+    TenvsAll = case_when(
+      obs == "Neocortex" ~ "Rest",
+      obs == "Ten.Hours" ~ "Ten.Hours", 
+      obs == "Five.Hours" ~ "Rest", 
+      obs == "One.Hour" ~ "Rest", 
+      obs == "Fresh" ~ "Rest"),
+    
+    NeovsAll = case_when(
+      obs == "Neocortex" ~ "Neocortex",
+      obs == "Ten.Hours" ~ "Rest", 
+      obs == "Five.Hours" ~ "Rest", 
+      obs == "One.Hour" ~ "Rest", 
+      obs == "Fresh" ~ "Rest"))
+
+library(pROC)
+x <- roc(MC.ROC$FreshvsAll, MC.ROC$Fresh)
+```
+
+    ## Setting levels: control = Fresh, case = Rest
+
+    ## Setting direction: controls > cases
+
+``` r
+RF.ROCs <- data.frame(
+  Sensi = x$sensitivities,
+  Speci = x$specificities,
+  Class = "Fresh")
+
+x <- roc(MC.ROC$OnehvsAll, MC.ROC$One.Hour)
+```
+
+    ## Setting levels: control = One.Hour, case = Rest
+    ## Setting direction: controls > cases
+
+``` r
+temp <- data.frame(
+  Sensi = x$sensitivities,
+  Speci = x$specificities,
+  Class = "One.Hour")
+RF.ROCs <- rbind(RF.ROCs, temp)
+
+x <- roc(MC.ROC$FivevsAll, MC.ROC$Five.Hours)
+```
+
+    ## Setting levels: control = Five.Hours, case = Rest
+    ## Setting direction: controls > cases
+
+``` r
+temp <- data.frame(
+  Sensi = x$sensitivities,
+  Speci = x$specificities,
+  Class = "Five.Hours")
+RF.ROCs <- rbind(RF.ROCs, temp)
+
+x <- roc(MC.ROC$TenvsAll, MC.ROC$Ten.Hours)
+```
+
+    ## Setting levels: control = Rest, case = Ten.Hours
+
+    ## Setting direction: controls < cases
+
+``` r
+temp <- data.frame(
+  Sensi = x$sensitivities,
+  Speci = x$specificities,
+  Class = "Ten.Hours")
+RF.ROCs <- rbind(RF.ROCs, temp)
+
+x <- roc(MC.ROC$NeovsAll, MC.ROC$Neocortex)
+```
+
+    ## Setting levels: control = Neocortex, case = Rest
+
+    ## Setting direction: controls > cases
+
+``` r
+temp <- data.frame(
+  Sensi = x$sensitivities,
+  Speci = x$specificities,
+  Class = "Neocortex")
+RF.ROCs <- rbind(RF.ROCs, temp)
+
+#Set factors (otherwise legend will not correspond)
+RF.ROCs$Class <- factor(RF.ROCs$Class, 
+                        levels = c(
+                          "Neocortex",
+                          "Ten.Hours",
+                          "Five.Hours", 
+                          "One.Hour",
+                          "Fresh" 
+                        ))
+
+
+# Plot the three ROC's and AUC's in legend
+RF.ROCs %>% 
+  ggplot(aes(Speci, Sensi, color = Class)) +
+  geom_line(linewidth = 1.01) +
+  scale_x_continuous(trans = "reverse") +
+  ggsci::scale_color_aaas(
+    labels = c(paste0("Neocortex ", "(AUC = ", round(auc(MC.ROC$NeovsAll, MC.ROC$Neocortex)[[1]],2), ")"),
+               paste0("Ten Hours ", "(AUC = ", round(auc(MC.ROC$TenvsAll, MC.ROC$Ten.Hours)[[1]],2), ")"),
+               paste0("Five Hours ", "(AUC = ", round(auc(MC.ROC$FivevsAll, MC.ROC$Five.Hours)[[1]], 2), ")"),
+               paste0("One Hour ", "(AUC = ", round(auc(MC.ROC$OnehvsAll, MC.ROC$One.Hour)[[1]], 2), ")"),
+               paste0("Fresh ", "(AUC = ", round(auc(MC.ROC$FreshvsAll, MC.ROC$Fresh)[[1]], 2), ")"))) +
+  coord_fixed() +
+  theme_light() +
+  xlab("Specificities") +
+  ylab("Sensitivities") +
+  geom_abline(intercept = 1, slope = 1) +
+  theme(
+    legend.title = element_text(color = "black", face = "bold", size = 9),
+    legend.text = element_text(color = "black", size = 8),  
+    axis.text = element_text(color = "black", size = 10),
+    axis.title = element_text(color = "black", size = 11, face = "bold"))
+```
+
+    ## Setting levels: control = Neocortex, case = Rest
+    ## Setting direction: controls > cases
+
+    ## Setting levels: control = Rest, case = Ten.Hours
+
+    ## Setting direction: controls < cases
+
+    ## Setting levels: control = Five.Hours, case = Rest
+
+    ## Setting direction: controls > cases
+
+    ## Setting levels: control = One.Hour, case = Rest
+
+    ## Setting direction: controls > cases
+
+    ## Setting levels: control = Fresh, case = Rest
+
+    ## Setting direction: controls > cases
+
+![](Texture_analysis_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ## References
 
