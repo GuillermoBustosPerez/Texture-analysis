@@ -1016,6 +1016,46 @@ from 1 (perfect classifier) to 0.5 (random classifier). The ROC and AUC
 are commonly applied in two-class problems and their extension to
 multiclass problems is usually done through pairwise analysis.
 
+In the case of multiclass problems, the AUC provides two groups of
+values: first, each class obtains an AUC value using a “one vs all”
+approach; second, a general AUC value of model performance is obtained
+from the average of each class AUC ([Robin et al.,
+2011](#ref-robin_proc_2011);
+[**hand_simple_200?**](#ref-hand_simple_200)). In the case of the ROC
+curve, individual curves of each class are plotted using the previously
+mentioned “one vs all” approach. The present study tested 10 different
+models with a three-class classification problem which would involve a
+total of 30 different ROC curves (three curves per 10 models). In this
+paper, we have provided only the three ROC curves of the best model.
+When analyzing lithic materials, the use of thresholds to guarantee true
+positives and avoid false positives is of special interest. The use of
+thresholds better indicates the accuracy of a model considering these
+probability values. In the present study we have slightly variated the
+interpretation of the AUC values ([Lantz,
+2019](#ref-lantz_machine_2019)) with intervals interpreted as follows:
+
+- 0.9 to 1: outstanding  
+- 0.85 to 0.9: excellent  
+- 0.8 to 0.85: good  
+- 0.75 to 0.8: acceptable  
+- 0.7 to 0.75: fair  
+- 0.6 to 0.7: poor  
+- 0.5 to 0.6: no discrimination
+
+Strong levels of correlation are present between the variables of the
+present study. The issue of multicollinearity in classification remains
+a matter of debate. It is commonly pointed that for multiple linear
+regressions, collinearity affects the interpretation of coefficients
+(variables), but does not affect the quality of the predictions ([James
+et al., 2013](#ref-james_introduction_2013)). Additional arguments
+indicate that if the collinearity between variables of the training set
+is also present in the test set, it should not be considered a problem.
+In the present study variables presenting perfect levels of collinearity
+(mean and Ra) are excluded from the training of machine learning models,
+and feature importance is explored among non-correlated features. After
+evaluating and determining the best model, an additional model on PCA
+values was trained in order to determine possible overfitting.
+
 ``` r
 # Check for collinearity of the data
 r <- cor(Sequential.Data[,2:16], use="complete.obs")^2
@@ -1032,6 +1072,10 @@ ggcorrplot::ggcorrplot(r,
 ```
 
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+## **3. Results**
+
+### **3.1 Texture metrics**
 
 ## References
 
@@ -1453,6 +1497,15 @@ Quinlan, J.R., 1996. Improved use of continuous attributes in C4.5. jair
 Ridgeway, G., 2007. [Generalized boosted models: A guide to the gbm
 package](http://CRAN.R-project.org/package=gbm). R package vignette
 2007.
+
+</div>
+
+<div id="ref-robin_proc_2011" class="csl-entry">
+
+Robin, X., Turck, N., Hainard, A., Tiberti, N., Lisacek, F., Sanchez,
+J.-C., Müller, M., 2011. <span class="nocase">pROC</span>: An
+open-source package for r and s+ to analyze and compare ROC curves. BMC
+bioinformatics 12, 1–8. <https://doi.org/10.1186/1471-2105-12-77>
 
 </div>
 
