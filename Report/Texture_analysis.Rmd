@@ -135,10 +135,7 @@ Data from descriptive statistics, roughness and texture were employed as variabl
   * **Supported vector machines (SVM):** fit hyperplanes into a multidimensional space with the objective of creating homogeneous partitions [@cortes_support-vector_1995; @frey_letter_1991]. The present study tests SVM with linear, radial and polynomial kernels.   
   * **Naïve Bayes classifier:** computes class probabilities using Bayes’ rule [@weihs_klar_2005].   
 
-<center>  
 ![Example of the "one versus all" approach in order to obtain ROC curves and AUC values in the case of multiclass problems](Figures/04-Thresholds-multiple-categories.png){width=600}
-</center>
-\ 
 
 All models are evaluated using 10×100 k-fold cross validation (10 folds and 100 cycles), providing measures of accuracy. Using a 10-fold division, each fold will have 43 data points. Each fold serves subsequently as test set for a trained model. Although computationally more expensive, this guarantees that all data points will serve as test sets.  The 100 cycles provide a random shuffling of the dataset prior to fold division, thus ensuring that the composition of the folds varies in each cycle and it does not play a significant role in the evaluation of the models.   
 
@@ -269,6 +266,11 @@ Sequential.Data  %>%
     axis.text.y = element_text(color = "black", size = 7)
   )
 ```
+
+Although trends in surface change by sedimentary abrasion are clear, the exploratory visual analysis also indicates important overlapping between exposure time categories. A visual evaluation of images shows that, within lithic artifacts, the development of sedimentary abrasion is heterogeneous. Convex surfaces and areas close to the ridges and edges developed abrasion more quickly and intensely than other areas.    
+
+![Examples of differential abrasion among the same artifact. Top: images of the fresh surface. Bottom: sequential images of sedimentary abrasion: a) little or no abrasion is developed; b) sedimentary abrasion is moderately developed; c) sedimentary abrasion is heavily developed.](Figures/07-Differential-development.png){heigh=300}
+![Examples of differential abrasion among the same artifact. Top: images of the fresh surface. Bottom: sequential images of sedimentary abrasion: a) sedimentary abrasion develops moderately/strongly; b) sedimentary abrasion is lightly developed; c) sedimentary abrasion is strongly developed.](Figures/08-Differential-development2.png){heigh=300}
 
 
 ## References
