@@ -134,8 +134,11 @@ Data from descriptive statistics, roughness and texture were employed as variabl
   * **Generalized boosted model [@greenwell_package_2019; @ridgeway_generalized_2007]:** implements the gradient boosted machine [@friedman_greedy_2001; @friedman_stochastic_2002] making it possible to detect learning deficiencies and increase model accuracy for a set of random forests.    
   * **Supported vector machines (SVM):** fit hyperplanes into a multidimensional space with the objective of creating homogeneous partitions [@cortes_support-vector_1995; @frey_letter_1991]. The present study tests SVM with linear, radial and polynomial kernels.   
   * **Naïve Bayes classifier:** computes class probabilities using Bayes’ rule [@weihs_klar_2005].   
-  
-!["Example of the "one versus all" approach in order to obtain ROC curves and AUC values in the case of multiclass problems"](Figures/04-Thresholds-multiple-categories.png){width=600}
+
+<center>  
+![Example of the "one versus all" approach in order to obtain ROC curves and AUC values in the case of multiclass problems](Figures/04-Thresholds-multiple-categories.png){width=600}
+</center>
+\ 
 
 All models are evaluated using 10×100 k-fold cross validation (10 folds and 100 cycles), providing measures of accuracy. Using a 10-fold division, each fold will have 43 data points. Each fold serves subsequently as test set for a trained model. Although computationally more expensive, this guarantees that all data points will serve as test sets.  The 100 cycles provide a random shuffling of the dataset prior to fold division, thus ensuring that the composition of the folds varies in each cycle and it does not play a significant role in the evaluation of the models.   
 

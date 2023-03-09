@@ -972,13 +972,19 @@ were:
 - **Naïve Bayes classifier:** computes class probabilities using Bayes’
   rule ([Weihs et al., 2005](#ref-weihs_klar_2005)).
 
+<center>
+
 <figure>
 <img src="Figures/04-Thresholds-multiple-categories.png" width="600"
-alt="“Example of the”one versus all” approach in order to obtain ROC curves and AUC values in the case of multiclass problems”" />
-<figcaption aria-hidden="true">“Example of the”one versus all” approach
+alt="Example of the “one versus all” approach in order to obtain ROC curves and AUC values in the case of multiclass problems" />
+<figcaption aria-hidden="true">Example of the “one versus all” approach
 in order to obtain ROC curves and AUC values in the case of multiclass
-problems”</figcaption>
+problems</figcaption>
 </figure>
+
+</center>
+
+ 
 
 All models are evaluated using 10×100 k-fold cross validation (10 folds
 and 100 cycles), providing measures of accuracy. Using a 10-fold
