@@ -951,7 +951,60 @@ were:
   1967](#ref-walker_estimation_1967)).  
 - **Decision tree with C5.0 algorithm:** an improvement on decision
   trees for classification ([Quinlan, 2014](#ref-quinlan_c4_2014);
-  [Quinlan, 1996](#ref-quinlan_improved_1996)).
+  [Quinlan, 1996](#ref-quinlan_improved_1996)).  
+- **Random forest:** made of decision trees. Each tree is grown from a
+  random sample of the data and variables, allowing for each tree to
+  grow differently and to better reflect the complexity of the data
+  ([Breiman, 2001](#ref-breiman_random_2001)).  
+- **Generalized boosted model ([Greenwell et al.,
+  2019](#ref-greenwell_package_2019); [Ridgeway,
+  2007](#ref-ridgeway_generalized_2007)):** implements the gradient
+  boosted machine ([Friedman, 2002](#ref-friedman_stochastic_2002),
+  [2001](#ref-friedman_greedy_2001)) making it possible to detect
+  learning deficiencies and increase model accuracy for a set of random
+  forests.  
+- **Supported vector machines (SVM):** fit hyperplanes into a
+  multidimensional space with the objective of creating homogeneous
+  partitions ([Cortes and Vapnik,
+  1995](#ref-cortes_support-vector_1995); [Frey and Slate,
+  1991](#ref-frey_letter_1991)). The present study tests SVM with
+  linear, radial and polynomial kernels.  
+- **Naïve Bayes classifier:** computes class probabilities using Bayes’
+  rule ([Weihs et al., 2005](#ref-weihs_klar_2005)).
+
+![“Example of the”one versus all” approach in order to obtain ROC curves
+and AUC values in the case of multiclass
+problems”](Figures/04-Thresholds-multiple-categories.png)
+
+All models are evaluated using 10×100 k-fold cross validation (10 folds
+and 100 cycles), providing measures of accuracy. Using a 10-fold
+division, each fold will have 43 data points. Each fold serves
+subsequently as test set for a trained model. Although computationally
+more expensive, this guarantees that all data points will serve as test
+sets. The 100 cycles provide a random shuffling of the dataset prior to
+fold division, thus ensuring that the composition of the folds varies in
+each cycle and it does not play a significant role in the evaluation of
+the models.
+
+Machine Learning models commonly use a 0.5 classification threshold to
+assign categories. However, classification thresholds can be modified to
+balance the ability of model to detect true positives and avoid false
+positives which are respectively referred as sensitivity and
+specificity. The receiver operating characteristic (ROC) curve is
+employed to systematically evaluate the ratio of detected true positives
+while avoiding false positives ([Bradley, 1997](#ref-bradley_use_1997);
+[Spackman, 1989](#ref-spackman_signal_1989)). The ROC curve allows
+visually analyzing model performance and calculating the AUC, which
+ranges from 1 (perfect classifier) to 0.5 (random classifier). The AUC
+is a measure of performance derived from the receiver operating
+characteristic (ROC) curve. The ROC curve is used to evaluate the ratio
+of detected true positives while avoiding false positives ([Bradley,
+1997](#ref-bradley_use_1997); [Spackman,
+1989](#ref-spackman_signal_1989)). The ROC curve makes it possible to
+visually analyze model performance and calculate the AUC, which ranges
+from 1 (perfect classifier) to 0.5 (random classifier). The ROC and AUC
+are commonly applied in two-class problems and their extension to
+multiclass problems is usually done through pairwise analysis.
 
 ## References
 
@@ -1014,6 +1067,21 @@ artifacts. Archeologi e Calcolatori 7, 387–396.
 
 Boström, S., Lundin, J., 2022. Quantifying use-wear polish through 3D
 imaging software. Lund Archaeological Review 26-27, 7–22.
+
+</div>
+
+<div id="ref-bradley_use_1997" class="csl-entry">
+
+Bradley, A.P., 1997. The use of the area under the ROC curve in the
+evaluation of machine learning algorithms. Pattern recognition 30,
+1145–1159.
+
+</div>
+
+<div id="ref-breiman_random_2001" class="csl-entry">
+
+Breiman, L., 2001. Random forests. Machine Learning 45, 5–32.
+<https://doi.org/10.1023/A:1010933404324>
 
 </div>
 
@@ -1090,6 +1158,13 @@ Anthropological Sciences 7, 3–11.
 
 </div>
 
+<div id="ref-cortes_support-vector_1995" class="csl-entry">
+
+Cortes, C., Vapnik, V., 1995. Support-vector networks. Machine learning
+20, 273–297.
+
+</div>
+
 <div id="ref-cover_nearest_1967" class="csl-entry">
 
 Cover, T., Hart, P., 1967. Nearest neighbor pattern classification. IEEE
@@ -1132,11 +1207,41 @@ problems. Annals of Eugenics 7, 179–188.
 
 </div>
 
+<div id="ref-frey_letter_1991" class="csl-entry">
+
+Frey, P.W., Slate, D.J., 1991. Letter recognition using holland-style
+adaptive classifiers. Machine learning 6, 161–182.
+
+</div>
+
+<div id="ref-friedman_stochastic_2002" class="csl-entry">
+
+Friedman, J.H., 2002. Stochastic gradient boosting. Computational
+Statistics & Data Analysis 38, 367–378.
+<https://doi.org/10.1016/S0167-9473(01)00065-2>
+
+</div>
+
+<div id="ref-friedman_greedy_2001" class="csl-entry">
+
+Friedman, J.H., 2001. [Greedy function approximation: A gradient
+boosting machine](https://www.jstor.org/stable/2699986). Annals of
+statistics 29, 1189–1232.
+
+</div>
+
 <div id="ref-grace_quantification_1985" class="csl-entry">
 
 Grace, R., Graham, I.D.G., Newcomer, M.H., 1985. [The quantification of
 microwear polishes](http://www.jstor.org/stable/124679). World
 Archaeology 17, 112–120.
+
+</div>
+
+<div id="ref-greenwell_package_2019" class="csl-entry">
+
+Greenwell, B., Boehmke, B., Cunningham, J., Developers, G.B.M.,
+Greenwell, M.B., 2019. Package “gbm.” R package version 2.
 
 </div>
 
@@ -1316,6 +1421,14 @@ Quinlan, J.R., 1996. Improved use of continuous attributes in C4.5. jair
 
 </div>
 
+<div id="ref-ridgeway_generalized_2007" class="csl-entry">
+
+Ridgeway, G., 2007. [Generalized boosted models: A guide to the gbm
+package](http://CRAN.R-project.org/package=gbm). R package vignette
+2007.
+
+</div>
+
 <div id="ref-rust_structure_1972" class="csl-entry">
 
 Rust, B.R., 1972. Structure and process in a braided river.
@@ -1357,6 +1470,14 @@ Shackley, M.S., 1974. Stream abrasion of flint implements. Nature 248,
 
 </div>
 
+<div id="ref-spackman_signal_1989" class="csl-entry">
+
+Spackman, K.A., 1989. Signal detection theory: Valuable tools for
+evaluating inductive learning, in: Proceedings of the Sixth
+International Workshop on Machine Learning. Elsevier, pp. 160–163.
+
+</div>
+
 <div id="ref-stapert_natural_1976" class="csl-entry">
 
 Stapert, D., 1976. Some natural surface modifications on flint in the
@@ -1389,6 +1510,14 @@ Préhistoire, Université de Liège, Liège, pp. 459–466.
 Walker, S.H., Duncan, D.B., 1967. Estimation of the probability of an
 event as a function of several independent variables. Biometrika 54,
 167–179. <https://doi.org/10.2307/2333860>
+
+</div>
+
+<div id="ref-weihs_klar_2005" class="csl-entry">
+
+Weihs, C., Ligges, U., Luebke, K., Raabe, N., 2005. <span
+class="nocase">klaR</span> analyzing german business cycles, in: Data
+Analysis and Decision Support. Springer, pp. 335–343.
 
 </div>
 

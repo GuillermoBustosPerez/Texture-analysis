@@ -130,10 +130,16 @@ Data from descriptive statistics, roughness and texture were employed as variabl
   * **K-nearest neighbor (KNN):** classifies cases by assigning the class of similar known cases. The ‘k’ in KNN refers to the number of cases (neighbors) to consider when assigning a class, which must be found by testing different values. Given that KNN uses distance metrics to compute nearest neighbors and that each variable is in different scales, the data must be scaled and centered prior to fitting the model [@cover_nearest_1967; @lantz_machine_2019].   
   * **Logistic regression:** essentially adapts continuous regression predictions to categorical outcomes [@cramer_early_2004; @walker_estimation_1967].  
   * **Decision tree with C5.0 algorithm:** an improvement on decision trees for classification [@quinlan_improved_1996; @quinlan_c4_2014].    
+  * **Random forest:** made of decision trees. Each tree is grown from a random sample of the data and variables, allowing for each tree to grow differently and to better reflect the complexity of the data [@breiman_random_2001].    
+  * **Generalized boosted model [@greenwell_package_2019; @ridgeway_generalized_2007]:** implements the gradient boosted machine [@friedman_greedy_2001; @friedman_stochastic_2002] making it possible to detect learning deficiencies and increase model accuracy for a set of random forests.    
+  * **Supported vector machines (SVM):** fit hyperplanes into a multidimensional space with the objective of creating homogeneous partitions [@cortes_support-vector_1995; @frey_letter_1991]. The present study tests SVM with linear, radial and polynomial kernels.   
+  * **Naïve Bayes classifier:** computes class probabilities using Bayes’ rule [@weihs_klar_2005].   
+  
+!["Example of the "one versus all" approach in order to obtain ROC curves and AUC values in the case of multiclass problems"](Figures/04-Thresholds-multiple-categories.png)
 
+All models are evaluated using 10×100 k-fold cross validation (10 folds and 100 cycles), providing measures of accuracy. Using a 10-fold division, each fold will have 43 data points. Each fold serves subsequently as test set for a trained model. Although computationally more expensive, this guarantees that all data points will serve as test sets.  The 100 cycles provide a random shuffling of the dataset prior to fold division, thus ensuring that the composition of the folds varies in each cycle and it does not play a significant role in the evaluation of the models.   
 
-
-
+Machine Learning models commonly use a 0.5 classification threshold to assign categories. However, classification thresholds can be modified to balance the ability of model to detect true positives and avoid false positives which are respectively referred as sensitivity and specificity. The receiver operating characteristic (ROC) curve is employed to systematically evaluate the ratio of detected true positives while avoiding false positives [@bradley_use_1997; @spackman_signal_1989]. The ROC curve allows visually analyzing model performance and calculating the AUC, which ranges from 1 (perfect classifier) to 0.5 (random classifier). The AUC is a measure of performance derived from the receiver operating characteristic (ROC) curve. The ROC curve is used to evaluate the ratio of detected true positives while avoiding false positives [@bradley_use_1997; @spackman_signal_1989]. The ROC curve makes it possible to visually analyze model performance and calculate the AUC, which ranges from 1 (perfect classifier) to 0.5 (random classifier). The ROC and AUC are commonly applied in two-class problems and their extension to multiclass problems is usually done through pairwise analysis.   
 
 
 
