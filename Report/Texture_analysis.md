@@ -974,8 +974,8 @@ were:
 
 ![“Example of the”one versus all” approach in order to obtain ROC curves
 and AUC values in the case of multiclass
-problems”](Figures/04-Thresholds-multiple-categories.png){width=50%,
-height = 50%}
+problems”](Figures/04-Thresholds-multiple-categories.png){width=25%,
+height = 25%}
 
 All models are evaluated using 10×100 k-fold cross validation (10 folds
 and 100 cycles), providing measures of accuracy. Using a 10-fold
