@@ -1,6 +1,6 @@
 ---
 title: "Lithic artifacts and texture analysis: a low magnification approach"
-author: "Guillermo Bustos-Pérez$^{1,2,3}"
+author: "Guillermo Bustos-Pérez$^{1,2,3}$; Andreu Ollé$^{2,3}$"
 output: 
   md_document:
     variant: gfm
@@ -17,7 +17,7 @@ output:
     number_sections: FALSE
     code_folding: "hide"
 bibliography: "References_Styles/References.bib"
-csl: "References_Styles/journal-of-archaeological-science.csl"
+csl: "References_Styles/plos-one.csl"
 link-citations: true
 linkcolor: blue
 editor_options: 
@@ -170,6 +170,9 @@ ggcorrplot::ggcorrplot(r,
         axis.text = element_text(color = "black"))
 ```
 
+This study was conducted using an R version 4.2.2 in IDE RStudio version 2022.12 [67,68]. The data and graphs were managed using the tidyverse v.1.3.2 package [69]. The LDA and KNN were trained with the MASS (Modern Applied Statistics with S) v.7.3.58.1 package [70]. The C5.0 tree was trained using the C50 v.0.1.7 package [51,52]. The random forest was trained using the ranger v.0.14.1 package [71]. The Generalized Boosted Model was trained using package gbm v.2.1.8.1 [54,55]. The SVM was trained using the e1071 v.1.7.12 package [72,73]. The Naïve Bayes model was trained using package klaR v.1.7.1 [60]. The k-fold cross validation of all models, precision metrics, and confusion matrix were obtained using the caret v.6.0.93 package [74]. Machine learning models also provide insights into variable importance for classification. The caret package was used to extract variable importance after each k-fold cross validation. ROC curves and AUC values are obtained using the package pROC v.1.18.0 [64].   
+
+
 ### **2.5 Training of Machine Learning models**     
 
 The following code was set to evaluate and train the machine learning models described in the methods section. All resultant models are available in the *Data* section.    
@@ -285,6 +288,7 @@ NB.model <- train(frmla,
                   metric = "Accuracy")
 ```
 
+This study was conducted using an R version 4.2.2 in IDE RStudio version 2022.12 [@r_core_team_r_2019; @rstudio_team_rstudio_2019]. The data and graphs were managed using the tidyverse v.1.3.2 package [@wickham_welcome_2019]. The LDA and KNN were trained with the MASS (Modern Applied Statistics with S) v.7.3.58.1 package [@venables_modern_2002]. The C5.0 tree was trained using the C50 v.0.1.7 package [@quinlan_improved_1996; @quinlan_c4_2014]. The random forest was trained using the ranger v.0.14.1 package [@wright_ranger_2017]. The Generalized Boosted Model was trained using package gbm v.2.1.8.1 [@greenwell_package_2019; @ridgeway_generalized_2007]. The SVM was trained using the e1071 v.1.7.12 package [@karatzoglou_support_2006; @karatzoglou_kernlab_2004]. The Naïve Bayes model was trained using package klaR v.1.7.1 [@weihs_klar_2005]. The k-fold cross validation of all models, precision metrics, and confusion matrix were obtained using the caret v.6.0.93 package [@kuhn_building_2008]. Machine learning models also provide insights into variable importance for classification. The caret package was used to extract variable importance after each k-fold cross validation. ROC curves and AUC values are obtained using the package pROC v.1.18.0 [@robin_proc_2011].   
 
 ## **3. Results**   
 

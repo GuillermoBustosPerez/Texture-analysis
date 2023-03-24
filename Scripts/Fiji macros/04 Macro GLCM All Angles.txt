@@ -4,8 +4,8 @@ macro "Batch GLCM Measure" {
     step = getNumber("Enter the size of the step in pixels: ", 1);
     setBatchMode(true);
     print("#,","Angular Second Moment,","Contrast,","Correlation,","Inverse Difference Moment,","Entropy,");
-	four_angles = (list.length*4);
-    for (i=0; i<=four_angles; i++) {
+
+    for (i=0; i<list.length; i++) {
         path = dir+list[i];
         showProgress(i, list.length);
         if (!endsWith(path,"/")) open(path);
