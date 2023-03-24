@@ -88,3 +88,14 @@ Técnica y de Innovación (2017–2020).
 The following data and code is publish under a **Non Commercial 4.0
 International (CC BY-NC 4.0) licnse**. For more details, see the
 [**License**](License.md) file.
+
+## **Structure of the repository**
+
+The repository provides
+
+The folder [Raw-images](Raw-Images) contains the original images
+generated after using Helicon Focus 7.7.2. to reduce problems due to
+focus variation.
+
+The [Scripts](Scripts) folder contains the subfolder [Fiji
+macros](Scripts/Fiji%20macros).
