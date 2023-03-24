@@ -4,7 +4,7 @@
 categories of backed flakes from recurrent centripetal core reduction.  
 **Authors:**
 
--   Guillermo Bustos-Pérez <sup>1, 2, 3, 7</sup>  
+-   Guillermo Bustos-Pérez <sup>1, 2, 3, 4</sup>  
 -   Andreu Ollé <sup>2, 3</sup>
 
 <sup>1</sup> Universidad Autónoma de Madrid. Departamento de Prehistoria
@@ -15,7 +15,7 @@ Tarragona, Spain.
 <sup>3</sup> Àrea de Prehistoria, Universitat Rovira i Virgili (URV),
 Avinguda de Catalunya 35, 43002 Tarragona, Spain.
 
-<sup>(7)</sup> Corresponding authors at: <guillermo.bustos@uam.es> |
+<sup>(4)</sup> Corresponding authors at: <guillermo.bustos@uam.es> |
 <francesca.romagnoli@uam.es>  
 **ORCID**: 0000-0002-1089-818X
 
