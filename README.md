@@ -92,8 +92,6 @@ International (CC BY-NC 4.0) licnse**. For more details, see the
 
 ## **Structure of the repository**
 
-The repository provides
-
 The folder [Raw-images](Raw-Images) contains the original images. These
 images were taken using a Dino-Lite Edge 3.0 AM73915MZT USB microscope
 at 120 magnifications with a field of view (FOV) of 3.28 x 2.46 mm and a
@@ -133,4 +131,19 @@ it exports the final data frame as an .RData file.
 
 The wrangled data can be found as a [.csv
 file](Report/Data/Sequential%20Data%20v1.01.csv) or as a
-[.RData](Report/Data/Sequential%20Data%20v1.01.RData)
+[.RData](Report/Data/Sequential%20Data%20v1.01.RData). The present
+repository makes use of the later file.
+
+The [Data folder](Report/Data) also contains two files containing the AI
+models trained to identify exposure time to abrasion. The file
+[AI-models-Surface.RData](Report/Data/AI-models-Surface.RData) contains
+all models trained using all non-perfectly colinear variables. The file
+[AI-PCA-models-Surface.RData](Report/Data/AI-PCA-models-Surface.RData)
+contains all models trained after reducing the dimensionality of the
+data through the use of a Principal Component Analysis. The models were
+trained on the first five PC (99% of variance).
+
+The complete workflow of the article can be followed through the files
+[Texture\_analysis.md](00-Texture-analysis/Report/Texture_analysis.md)
+and
+[Texture\_analysis.Rmd](00-Texture-analysis/Report/Texture_analysis.Rmd)
