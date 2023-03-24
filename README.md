@@ -93,9 +93,27 @@ International (CC BY-NC 4.0) licnse**. For more details, see the
 
 The repository provides
 
-The folder [Raw-images](Raw-Images) contains the original images
-generated after using Helicon Focus 7.7.2. to reduce problems due to
-focus variation.
+The folder [Raw-images](Raw-Images) contains the original images. These
+images were taken using a Dino-Lite Edge 3.0 AM73915MZT USB microscope
+at 120 magnifications with a field of view (FOV) of 3.28 x 2.46 mm and a
+pixel ratio of 2548 x 1918. The region of interest was manually
+positioned as horizontal as possible and several photographs at
+different distances were taken. The obtained sequences were mounted
+using Helicon Focus 7.7.2. to reduce problems due to focus variation.
 
 The [Scripts](Scripts) folder contains the subfolder [Fiji
 macros](Scripts/Fiji%20macros).
+
+-   The file [01 Retrieve Backgorun &
+    Normalize.ijm](Scripts/Fiji%20macros/Scripts/Fiji%20macros.ijm) pass
+    the functions “retrieve background” (to remove changes due to color
+    change or different lightning) and “normalize histogram” (to
+    desaturate the color channel) to all the images in a folder.
+
+-   The files [02 Descriptive
+    stats.txt](Scripts/Fiji%20macros/Scripts/02%20Descriptive%20stats.txt),
+    [03 Macro
+    Roughness.txt](Scripts/Fiji%20macros/Scripts/03%20Macro%20Roughness.txt)
+    and [04 Macro GLCM All
+    Angles.txt](Scripts/Fiji%20macros/Scripts/04%20Macro%20GLCM%20All%20Angles.txt)
+    respectively compute the metrics
