@@ -105,15 +105,15 @@ The [Scripts](Scripts) folder contains the subfolder [Fiji
 macros](Scripts/Fiji%20macros).
 
 -   The file [01 Retrieve Backgorun &
-    Normalize.ijm](Scripts/Fiji%20macros/Scripts/Fiji%20macros.ijm) pass
-    the functions “retrieve background” (to remove changes due to color
+    Normalize.ijm](Scripts/Fiji%20macros/Scripts/Fiji%20macros) pass the
+    functions “retrieve background” (to remove changes due to color
     change or different lightning) and “normalize histogram” (to
     desaturate the color channel) to all the images in a folder.
 
 -   The files [02 Descriptive
-    stats.txt](Scripts/Fiji%20macros/Scripts/02%20Descriptive%20stats.txt),
+    stats.txt](Scripts/Fiji%20macros/Scripts/02%20Descriptive%20stats),
     [03 Macro
-    Roughness.txt](Scripts/Fiji%20macros/Scripts/03%20Macro%20Roughness.txt)
+    Roughness.txt](Scripts/Fiji%20macros/Scripts/03%20Macro%20Roughness)
     and [04 Macro GLCM All
-    Angles.txt](Scripts/Fiji%20macros/Scripts/04%20Macro%20GLCM%20All%20Angles.txt)
+    Angles.txt](Scripts/Fiji%20macros/Scripts/04%20Macro%20GLCM%20All%20Angles)
     respectively compute the metrics
