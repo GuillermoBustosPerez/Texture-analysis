@@ -28,6 +28,11 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Quantification of surface abrasion on flint stone tools    
+
+Guillermo Bustos-Pérez$^{1,2,3}$    
+Andreu Ollé$^{2,3}$    
+
 $^1$Universidad Autónoma de Madrid. Departamento de Prehistoria y Arqueología, Campus de Cantoblanco, 28049 Madrid, Spain.   
 $^2$Institut Català de Paleoecologia Humana i Evolució Social (IPHES), Zona Educacional 4, Campus Sescelades URV (Edifici W3), 43007 Tarragona, Spain.      
 $^3$Àrea de Prehistoria, Universitat Rovira i Virgili (URV), Avinguda de Catalunya 35, 43002 Tarragona, Spain.    
@@ -61,7 +66,7 @@ Use-wear studies have shown surface quantification can discriminate worked mater
 Two blocks of flint representing two different types (Type I and Type II) were experimentally knapped. The two types correspond to the South Madrid Miocene Flint [@bustillo_caracterizacion_2012; @bustillo_caracteristicas_2005] although from two different locations. South Madrid Miocene flints were formed by the replacement of sedimentary rocks which had filled the original basin. This replacement of the sedimentary rocks is considered to have taken place under continental conditions such as alluvial plain deposits, shallow lacustrine waters, and marshes [@bustillo_caracterizacion_2012]. Macroscopic analysis of the flints shows that they present a fine opaque homogeneous surface, with colors being blue/grey and reddish/ocher. There is also a relative absence of opal, although geodes and pseudo-morphs can be observed. From these two blocks three flakes were selected from Type 1, and four flakes were selected from Type 2.     
 !["Experimental sample of flint flakes (photographs by M. D. Guillén)."](Figures/01-Presenting-materials.png)
 
-In order to simulate sedimentary abrasion, the flakes were introduced by pairs into a tumbler machine (KT-3010 SUPER-TUMBLER) along with a mix of sand and water (30/40% of water with a total weight of 5 kg). Sediment was obtained from the quaternary levels of the Madrid basin and it is composed of fine sands with silt and partial carbonation.    
+In order to simulate sedimentary abrasion, the flakes were introduced by pairs into a tumbler machine (KT-3010 SUPER-TUMBLER) along with a mix of sand and water (30/40% of water with a total weight of 5 kg). Sediment was obtained from the quaternary levels of the Madrid basin and it is composed of fine sands with silt and partial carbonation. Sediment was obtained from the quaternary levels of the Madrid basin and it is composed of fine sands with silt and partial carbonation. The tumbler machine was set at continuous direction at 83 rpm.        
 
 All flakes were submitted to three cumulative cycles of tumbling with times set to 1h, 5h and 10h. Prior to their introduction into the tumbling machine, 6 photographs (3 per each side) of the surface of each flake were taken in order to have references of texture metrics from flint flakes. Previous research [@chu_micro-abrasion_2015; @bustos-perez_experimental_2019] suggests that, for the development of post depositional alterations, a decrease in particle size increases the heterogeneity in the speed, intensity and location of their development. Thus, after the first cycle of rounding (1h), each flint flake was screened using the Dino-Lite Edge 3.0 AM73915MZT USB microscope in order to determine and photograph areas which had developed sedimentary abrasion. These areas were photographed in the subsequent rounding cycles, allowing to obtain sequential images and data of surface change for cumulative times of 1h, 5h and 10h. The dataset of images was supplemented by the inclusion of sample photographs of macroscopically recognizable geological neocortex of flints from the same formation, providing a total of 269 photographs.    
 

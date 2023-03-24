@@ -1,3 +1,8 @@
+# Quantification of surface abrasion on flint stone tools
+
+Guillermo Bustos-Pérez$^{1,2,3}$  
+Andreu Ollé$^{2,3}$
+
 $^1$Universidad Autónoma de Madrid. Departamento de Prehistoria y
 Arqueología, Campus de Cantoblanco, 28049 Madrid, Spain.  
 $^2$Institut Català de Paleoecologia Humana i Evolució Social (IPHES),
@@ -164,7 +169,10 @@ In order to simulate sedimentary abrasion, the flakes were introduced by
 pairs into a tumbler machine (KT-3010 SUPER-TUMBLER) along with a mix of
 sand and water (30/40% of water with a total weight of 5 kg). Sediment
 was obtained from the quaternary levels of the Madrid basin and it is
-composed of fine sands with silt and partial carbonation.
+composed of fine sands with silt and partial carbonation. Sediment was
+obtained from the quaternary levels of the Madrid basin and it is
+composed of fine sands with silt and partial carbonation. The tumbler
+machine was set at continuous direction at 83 rpm.
 
 All flakes were submitted to three cumulative cycles of tumbling with
 times set to 1h, 5h and 10h. Prior to their introduction into the
