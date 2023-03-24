@@ -30,12 +30,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Quantification of surface abrasion on flint stone tools    
 
-Guillermo Bustos-Pérez$^{1,2,3}$    
-Andreu Ollé$^{2,3}$    
+Guillermo Bustos-Pérez $^{1,2,3}$    
+Andreu Ollé $^{2,3}$    
 
-$^1$Universidad Autónoma de Madrid. Departamento de Prehistoria y Arqueología, Campus de Cantoblanco, 28049 Madrid, Spain.   
-$^2$Institut Català de Paleoecologia Humana i Evolució Social (IPHES), Zona Educacional 4, Campus Sescelades URV (Edifici W3), 43007 Tarragona, Spain.      
-$^3$Àrea de Prehistoria, Universitat Rovira i Virgili (URV), Avinguda de Catalunya 35, 43002 Tarragona, Spain.    
+$^1$ Universidad Autónoma de Madrid. Departamento de Prehistoria y Arqueología, Campus de Cantoblanco, 28049 Madrid, Spain.   
+$^2$ Institut Català de Paleoecologia Humana i Evolució Social (IPHES), Zona Educacional 4, Campus Sescelades URV (Edifici W3), 43007 Tarragona, Spain.      
+$^3$ Àrea de Prehistoria, Universitat Rovira i Virgili (URV), Avinguda de Catalunya 35, 43002 Tarragona, Spain.    
 
 \ 
    
