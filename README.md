@@ -13,11 +13,12 @@ y Arqueología, Campus de Cantoblanco, 28049 Madrid, Spain.
 (IPHES), Zona Educacional 4, Campus Sescelades URV (Edifici W3), 43007
 Tarragona, Spain.  
 <sup>3</sup> Àrea de Prehistoria, Universitat Rovira i Virgili (URV),
-Avinguda de Catalunya 35, 43002 Tarragona, Spain.
-
+Avinguda de Catalunya 35, 43002 Tarragona, Spain.  
 <sup>(4)</sup> Corresponding authors at: <guillermo.bustos@uam.es> |
 <francesca.romagnoli@uam.es>  
 **ORCID**: 0000-0002-1089-818X
+
+ 
 
 **Abstract**
 
@@ -104,16 +105,20 @@ using Helicon Focus 7.7.2. to reduce problems due to focus variation.
 The [Scripts](Scripts) folder contains the subfolder [Fiji
 macros](Scripts/Fiji%20macros).
 
--   The file [01 Retrieve Backgorun &
-    Normalize.ijm](Scripts/Fiji%20macros/01%20Retrieve%20Backgorun%20&%20Normalize.ijm)
-    pass the functions “retrieve background” (to remove changes due to
-    color change or different lightning) and “normalize histogram” (to
-    desaturate the color channel) to all the images in a folder.
+The file [01 Retrieve Backgorun &
+Normalize.ijm](Scripts/Fiji%20macros/01%20Retrieve%20Backgorun%20&%20Normalize.ijm)
+pass the functions “retrieve background” (to remove changes due to color
+change or different lightning) and “normalize histogram” (to desaturate
+the color channel) to all the images in a folder.
 
--   The files [02 Descriptive
-    stats.txt](Scripts/Fiji%20macros/02%20Descriptive%20stats.txt), [03
-    Macro
-    Roughness.txt](Scripts/Fiji%20macros/03%20Macro%20Roughness.txt) and
-    [04 Macro GLCM All
-    Angles.txt](Scripts/Fiji%20macros/04%20Macro%20GLCM%20All%20Angles.txt)
-    respectively compute the metrics
+The files [02 Descriptive
+stats.txt](Scripts/Fiji%20macros/02%20Descriptive%20stats.txt), [03
+Macro Roughness.txt](Scripts/Fiji%20macros/03%20Macro%20Roughness.txt)
+and [04 Macro GLCM All
+Angles.txt](Scripts/Fiji%20macros/04%20Macro%20GLCM%20All%20Angles.txt)
+compute the three types of metrics on the images. Note that the
+computation of the GLCM requires to introduce the distance between the
+reference pixel and the neighbor pixel.  
+The resulting original three files of data can be found at the [Raw
+Data](Report/Data/Raw%20Data) folder. The file [01 Wrangle
+Data](Scripts/01%20Wrangle%20data.R)
