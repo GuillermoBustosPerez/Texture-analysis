@@ -121,4 +121,16 @@ computation of the GLCM requires to introduce the distance between the
 reference pixel and the neighbor pixel.  
 The resulting original three files of data can be found at the [Raw
 Data](Report/Data/Raw%20Data) folder. The file [01 Wrangle
-Data](Scripts/01%20Wrangle%20data.R)
+Data](Scripts/01%20Wrangle%20data.R) works in four steps:  
+1) it loads the three raw data files;  
+2) it combines the metrics from each of the files into a data frame in
+which each row is an image and each column a variable;  
+3) from each of the file names it extracts information regarding time of
+exposure, type of flint, number of the photograph, location of the
+photograph or if the artifact was screened to locate abrasion or not;  
+4) it creates factors and labels for the variables and categories, and
+it exports the final data frame as an .RData file.
+
+The wrangled data can be found as a [.csv
+file](Report/Data/Sequential%20Data%20v1.01.csv) or as a
+[.RData](Report/Data/Sequential%20Data%20v1.01.RData)
