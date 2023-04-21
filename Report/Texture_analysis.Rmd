@@ -17,7 +17,7 @@ output:
     number_sections: FALSE
     code_folding: "hide"
 bibliography: "References_Styles/References.bib"
-csl: "References_Styles/plos-one.csl"
+csl: "References_Styles/archaeometry.csl"
 link-citations: true
 linkcolor: blue
 editor_options: 

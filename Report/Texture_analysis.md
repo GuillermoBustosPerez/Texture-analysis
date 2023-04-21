@@ -53,25 +53,30 @@ them. Methods for determining assemblage integrity usually focus on the
 assemblage as a hole. These methods often include spatial analysis of
 artifacts and analysis of fabrics to determine if water flow has
 resulted in a reorganization of the spatial distribution and
-orientations
-\[[1](#ref-lenoble_fabric_2004)–[5](#ref-schick_experimentally-derived_1987)\].
-Also, lithic size distribution analysis are realized to determine if
-post-depositional processes have resulted in sorting of the materials
-\[[6](#ref-bertran_particle_2012),[7](#ref-maillo_fernandez_proporciones_1998)\].
-Another option is to focus directly on individual lithic artifacts to
-determine the degree of alteration that they have undergone
-\[[8](#ref-chu_micro-abrasion_2015),[9](#ref-levi_sala_use_1986)\].
-Although being more time consuming, this type of analysis allows to
-individually establish a graduation in the degree of post-depositional
-alterations. Furthermore, it can be combined with spatial analysis,
-possible dissection of archaeological episodes, or to detect several
-episodes of recycling. Individual determination of degree of alteration
-undergone by a lithic artifact uses microscopic analysis to measure
-ridge width, visually analyze the surface to determine the existence and
-intensity of abrasion, and examine the edges to determine the presence
-of detachments coming from particle impact or dulling of the edges in
-more extreme cases
-\[[10](#ref-bustos-perez_experimental_2019)–[12](#ref-shackley_stream_1974)\].
+orientations ([Schick 1987](#ref-schick_experimentally-derived_1987);
+[Petraglia and Potts 1994](#ref-petraglia_water_1994); [Lenoble and
+Bertran 2004](#ref-lenoble_fabric_2004); [McPherron
+2005](#ref-mcpherron_artifact_2005); [McPherron
+2018](#ref-mcpherron_additional_2018)). Also, lithic size distribution
+analysis are realized to determine if post-depositional processes have
+resulted in sorting of the materials ([Maíllo Fernández
+1998](#ref-maillo_fernandez_proporciones_1998); [Bertran et al.
+2012](#ref-bertran_particle_2012)). Another option is to focus directly
+on individual lithic artifacts to determine the degree of alteration
+that they have undergone ([Levi Sala 1986](#ref-levi_sala_use_1986);
+[Chu et al. 2015](#ref-chu_micro-abrasion_2015)). Although being more
+time consuming, this type of analysis allows to individually establish a
+graduation in the degree of post-depositional alterations. Furthermore,
+it can be combined with spatial analysis, possible dissection of
+archaeological episodes, or to detect several episodes of recycling.
+Individual determination of degree of alteration undergone by a lithic
+artifact uses microscopic analysis to measure ridge width, visually
+analyze the surface to determine the existence and intensity of
+abrasion, and examine the edges to determine the presence of detachments
+coming from particle impact or dulling of the edges in more extreme
+cases ([Shackley 1974](#ref-shackley_stream_1974); [Chambers
+2003](#ref-chambers_like_2003); [Bustos-Pérez et al.
+2019](#ref-bustos-perez_experimental_2019)).
 
 Post-depositional alterations can affect and interact with stone tools
 in two broad ways. First, the type of fluvial sedimentary processes
@@ -80,50 +85,63 @@ characterized by particle transport. Lithic artifacts can form part of
 these process as another particle, or remain static and be affected by
 particles being transported. Commonly, three modes of particle transport
 are described in fluvial sedimentary contexts: rolling, sliding and
-saltation \[[13](#ref-alhusban_assessing_2021)\], although the last one
-is not a common form of alteration in the case of stone tools
-\[[4](#ref-petraglia_water_1994)\]. Additional to alterations coming
-from fluvial contexts, stone artifacts might also be affected by aeolian
-particle transport, usually resulting in wind abrasion
-\[[14](#ref-stapert_natural_1976)\]. The second factor of variability
-affecting post-depositional alterations of stone tools is the degree of
-exposure and speed on which a stone tool enters the archaeological
-record
-\[[4](#ref-petraglia_water_1994),[5](#ref-schick_experimentally-derived_1987),[15](#ref-schiffer_archaeological_1972)\].
-For example, it is expected that partially buried artifacts with water
-and sediment flowing above them will present modifications in the
-exposed surface, while the edges and the burred surface will remain
-semi-intact \[[4](#ref-petraglia_water_1994)\]. AHowever, if artifacts
-are transported by rolling in coarse sediments, it will result in
-abrasion of all surfaces, dulling of the edges, but the impact from
-coarse particles might result in freshly detached surfaces and edges
-which undergo new modifications until the artifact enters the
-archaeological record
-\[[4](#ref-petraglia_water_1994),[16](#ref-sieveking_transport_1987)\].
-Finally, a same homogeneous lithic assemblage might be affected
-differentially by stream abrasion. This differential alteration is
-consequence of the complex structure of water streams, were the overall
-slope of the terrain, energy and charge of the flow, morphology of the
-channel (which also affects the lateral deposition of sediments) and
-several other factors result in complex and uneven structures
-\[[17](#ref-rust_structure_1972)–[19](#ref-montgomery_channel-reach_1997)\].
+saltation ([Alhusban and Valyrakis 2021](#ref-alhusban_assessing_2021)),
+although the last one is not a common form of alteration in the case of
+stone tools ([Petraglia and Potts 1994](#ref-petraglia_water_1994)).
+Additional to alterations coming from fluvial contexts, stone artifacts
+might also be affected by aeolian particle transport, usually resulting
+in wind abrasion ([Stapert 1976](#ref-stapert_natural_1976)). The second
+factor of variability affecting post-depositional alterations of stone
+tools is the degree of exposure and speed on which a stone tool enters
+the archaeological record ([Schiffer
+1972](#ref-schiffer_archaeological_1972); [Schick
+1987](#ref-schick_experimentally-derived_1987); [Petraglia and Potts
+1994](#ref-petraglia_water_1994)). For example, it is expected that
+partially buried artifacts with water and sediment flowing above them
+will present modifications in the exposed surface, while the edges and
+the burred surface will remain semi-intact ([Petraglia and Potts
+1994](#ref-petraglia_water_1994)). AHowever, if artifacts are
+transported by rolling in coarse sediments, it will result in abrasion
+of all surfaces, dulling of the edges, but the impact from coarse
+particles might result in freshly detached surfaces and edges which
+undergo new modifications until the artifact enters the archaeological
+record ([Harding et al. 1987](#ref-sieveking_transport_1987); [Petraglia
+and Potts 1994](#ref-petraglia_water_1994)). Finally, a same homogeneous
+lithic assemblage might be affected differentially by stream abrasion.
+This differential alteration is consequence of the complex structure of
+water streams, were the overall slope of the terrain, energy and charge
+of the flow, morphology of the channel (which also affects the lateral
+deposition of sediments) and several other factors result in complex and
+uneven structures ([Rust 1972](#ref-rust_structure_1972); [Montgomery
+and Buffington 1997](#ref-montgomery_channel-reach_1997); [Jain et al.
+2008](#ref-jain_where_2008)).
 
 Use-wear studies have shown that quantification of the surface can offer
-a higher resolution of analysis
-\[[20](#ref-stemp_quantification_2009)–[26](#ref-evans_laser_2008)\].
-Obtaining quantitative data of surface modifications due to
-post-depositional alterations can also increment the resolution of these
-analysis and complement other features of post-depositional analysis.
-However, as previously mentioned, stone artifacts are some of the most
-common remains from Paleolithic archaeological sites. Thus, a versatile,
-fast and light time-consuming method is highly desirable since it would
-enable to analyze large quantities of lithic materials. Previous
-approaches in the study of use-wear have used grayscale level values for
-surface analysis of different worked materials
-\[[27](#ref-adan_spatial_2003)–[32](#ref-grace_quantification_1985)\].
-The present research seeks to determine if changes in flint surface
-caused by sedimentary abrasion can be captured and quantified from
-grayscale images.
+a higher resolution of analysis ([Evans and Donahue
+2008](#ref-evans_laser_2008); [Stemp et al.
+2009](#ref-stemp_quantification_2009); [Ibáñez et al.
+2016](#ref-ibanez_cereal_2016); [Ibáñez et al.
+2019](#ref-ibanez_identifying_2019); [Pedergnana et al.
+2020](#ref-pedergnana_polish_2020); [Ibáñez and Mazzucco
+2021](#ref-ibanez_quantitative_2021); [Boström and Lundin
+2022](#ref-bostrom_quantifying_2022)). Obtaining quantitative data of
+surface modifications due to post-depositional alterations can also
+increment the resolution of these analysis and complement other features
+of post-depositional analysis. However, as previously mentioned, stone
+artifacts are some of the most common remains from Paleolithic
+archaeological sites. Thus, a versatile, fast and light time-consuming
+method is highly desirable since it would enable to analyze large
+quantities of lithic materials. Previous approaches in the study of
+use-wear have used grayscale level values for surface analysis of
+different worked materials ([Grace et al.
+1985](#ref-grace_quantification_1985); [Vila and Gallart
+1993](#ref-vila_caracterizacion_1993); [Bietti
+1996](#ref-bietti_image_1996); [Barceló et al.
+2001](#ref-barcelo_image_2001); [Pijoan-López et al.
+2002](#ref-pijoan-lopez_variabilidad_2002); [Adán et al.
+2003](#ref-adan_spatial_2003)). The present research seeks to determine
+if changes in flint surface caused by sedimentary abrasion can be
+captured and quantified from grayscale images.
 
 ## **2. Methods**
 
@@ -131,16 +149,17 @@ grayscale images.
 
 Two blocks of flint representing two different types (Type I and Type
 II) were experimentally knapped. The two types correspond to the South
-Madrid Miocene Flint
-\[[33](#ref-bustillo_caracterizacion_2012),[34](#ref-bustillo_caracteristicas_2005)\]
-although from two different locations. South Madrid Miocene flints were
-formed by the replacement of sedimentary rocks which had filled the
-original basin. This replacement of the sedimentary rocks is considered
-to have taken place under continental conditions such as alluvial plain
-deposits, shallow lacustrine waters, and marshes
-\[[33](#ref-bustillo_caracterizacion_2012)\]. Macroscopic analysis of
-the flints shows that they present a fine opaque homogeneous surface,
-with colors being blue/grey and reddish/ocher. There is also a relative
+Madrid Miocene Flint ([Bustillo and Pérez-Jiménez
+2005](#ref-bustillo_caracteristicas_2005); [Bustillo et al.
+2012](#ref-bustillo_caracterizacion_2012)) although from two different
+locations. South Madrid Miocene flints were formed by the replacement of
+sedimentary rocks which had filled the original basin. This replacement
+of the sedimentary rocks is considered to have taken place under
+continental conditions such as alluvial plain deposits, shallow
+lacustrine waters, and marshes ([Bustillo et al.
+2012](#ref-bustillo_caracterizacion_2012)). Macroscopic analysis of the
+flints shows that they present a fine opaque homogeneous surface, with
+colors being blue/grey and reddish/ocher. There is also a relative
 absence of opal, although geodes and pseudo-morphs can be observed. From
 these two blocks three flakes were selected from Type 1, and four flakes
 were selected from Type 2.  
@@ -160,16 +179,17 @@ All flakes were submitted to three cumulative cycles of tumbling with
 times set to 1h, 5h and 10h. Prior to their introduction into the
 tumbling machine, 6 photographs (3 per each side) of the surface of each
 flake were taken in order to have references of texture metrics from
-flint flakes. Previous research
-\[[8](#ref-chu_micro-abrasion_2015),[10](#ref-bustos-perez_experimental_2019)\]
-suggests that, for the development of post depositional alterations, a
-decrease in particle size increases the heterogeneity in the speed,
-intensity and location of their development. Thus, after the first cycle
-of rounding (1h), each flint flake was screened using the Dino-Lite Edge
-3.0 AM73915MZT USB microscope in order to determine and photograph areas
-which had developed sedimentary abrasion. These areas were photographed
-in the subsequent rounding cycles, allowing to obtain sequential images
-and data of surface change for cumulative times of 1h, 5h and 10h. The
+flint flakes. Previous research ([Chu et al.
+2015](#ref-chu_micro-abrasion_2015); [Bustos-Pérez et al.
+2019](#ref-bustos-perez_experimental_2019)) suggests that, for the
+development of post depositional alterations, a decrease in particle
+size increases the heterogeneity in the speed, intensity and location of
+their development. Thus, after the first cycle of rounding (1h), each
+flint flake was screened using the Dino-Lite Edge 3.0 AM73915MZT USB
+microscope in order to determine and photograph areas which had
+developed sedimentary abrasion. These areas were photographed in the
+subsequent rounding cycles, allowing to obtain sequential images and
+data of surface change for cumulative times of 1h, 5h and 10h. The
 dataset of images was supplemented by the inclusion of sample
 photographs of macroscopically recognizable geological neocortex of
 flints from the same formation, providing a total of 269 photographs.
@@ -765,10 +785,13 @@ cleaning protocol to remove contaminants from the stone tool surface,
 image capture, and image enhancement.
 
 Multiple works emphasize the need of cleaning protocols to remove modern
-contaminants prior to analysis
-\[[35](#ref-pedergnana_modern_2016)–[38](#ref-fernandez-marchena_microscopic_2016)\].
-A multi-step procedure based on previous studies was adopted
-\[[35](#ref-pedergnana_modern_2016)\] in order to retrieve possible
+contaminants prior to analysis ([Ollé and Vergès
+2014](#ref-olle_use_2014); [Pedergnana et al.
+2016](#ref-pedergnana_modern_2016); [Fernández-Marchena and Ollé
+2016](#ref-fernandez-marchena_microscopic_2016); [Asryan and Ollé
+2020](#ref-asryan_results_2020)). A multi-step procedure based on
+previous studies was adopted ([Pedergnana et al.
+2016](#ref-pedergnana_modern_2016)) in order to retrieve possible
 contaminants. This multi-step procedure included a sonic bath in 2%
 neutral soap (Derquim) solution during 10 to 15 minutes, followed by a
 second sonic bath in pure acetone during another 10 to 15 minutes. After
@@ -790,10 +813,10 @@ mounted in a Dino-Lite RK-06-AE stand in order to ensure verticality,
 and a N3C-D2 diffuser cap was used to ensure homogeneous distribution of
 light. During the realization of each photograph, the region of interest
 of the flint was manually positioned as horizontal as possible
-\[[39](#ref-calandra_workflow_2022)\]. To avoid problems due to focus
-variation, each surface was photographed several times at different
-heights, and the obtained sequences were mounted using Helicon Focus
-7.7.2.
+([Calandra 2022](#ref-calandra_workflow_2022)). To avoid problems due to
+focus variation, each surface was photographed several times at
+different heights, and the obtained sequences were mounted using Helicon
+Focus 7.7.2.
 
 A common problem of images obtained from USB microscopes is the lack of
 detail due to saturation in one of the grey level values and the effects
@@ -801,12 +824,12 @@ of different lightning or surface color. This saturation is often
 observed as a general glaze in one of the grey level values and results
 in a low-quality image with poor detail. To increase detail and quality
 prior to the analysis, all images were subjected to a two-step process.
-First, the Fiji \[[40](#ref-schindelin_fiji_2012)\] plugging “Subtract
-background” was employed to minimize effects of different lightning and
-changes in flint color. Second, the function “Enhance contrast” was
-employed to desaturate the images by normalizing their histograms. This
-process provides a gray-scale level image employed as input for the
-statistical analysis.
+First, the Fiji ([Schindelin et al. 2012](#ref-schindelin_fiji_2012))
+plugging “Subtract background” was employed to minimize effects of
+different lightning and changes in flint color. Second, the function
+“Enhance contrast” was employed to desaturate the images by normalizing
+their histograms. This process provides a gray-scale level image
+employed as input for the statistical analysis.
 
 ![“Two examples of image enhancement. Left: original images taken with
 the AM73915MZT USB microscope and using a N3C-D2 diffuser cap. Center:
@@ -825,9 +848,9 @@ and kurtosis). The second set of statistical measures corresponds to
 measures of roughness. Surface parameters using the “R” prefix use
 profiles as input. The present work uses a Fiji/ImageJ plugging were
 R-values are obtained on the hole surface following the ISO 4287/2000
-standard
-\[[41](#ref-chinga_roughness_2002),[42](#ref-chinga_quantification_2007)\].
-These measures are:
+standard ([Chinga and Dougherty 2002](#ref-chinga_roughness_2002);
+[Chinga et al. 2007](#ref-chinga_quantification_2007)). These measures
+are:
 
 - **Root mean square deviation/roughness (Rq):** indicator of surface
   roughness.  
@@ -841,15 +864,15 @@ These measures are:
   values indicate sharp peaks.
 
 Analysis of intensity values through the Gray Level Co-occurrence Matrix
-(GLCM; \[[43](#ref-haralick_textural_1973)\]) takes into consideration
-the spatial distribution of intensity values. The GLCM works in two
-steps \[[43](#ref-haralick_textural_1973)\]. First, using a given
-distance and direction it builds a matrix which captures the
-relationship of intensity between pairs of pixels (reference and
-neighbor). Second, for every x and y it considers the co-occurrence of
-values, forming a new matrix. From this new matrix, a series of
-statistical descriptors are derived
-\[[43](#ref-haralick_textural_1973)\].
+(GLCM; ([Haralick et al. 1973](#ref-haralick_textural_1973))) takes into
+consideration the spatial distribution of intensity values. The GLCM
+works in two steps ([Haralick et al.
+1973](#ref-haralick_textural_1973)). First, using a given distance and
+direction it builds a matrix which captures the relationship of
+intensity between pairs of pixels (reference and neighbor). Second, for
+every x and y it considers the co-occurrence of values, forming a new
+matrix. From this new matrix, a series of statistical descriptors are
+derived ([Haralick et al. 1973](#ref-haralick_textural_1973)).
 
 - **Angular Second Moment (ASM)** is measure of homogeneity in the
   image. Homogeneous images (with low gray-tone transitions) will have
@@ -872,23 +895,23 @@ statistical descriptors are derived
 
 As previously mentioned, use of the GLCM requires selecting pixel
 distance between reference and neighbor, and direction on which to
-establish the distance \[[43](#ref-haralick_textural_1973)\]. For this,
-it is common to test for different combinations of distances and
-directions since images at different magnifications, different field of
-view and different resolution might require variation in pixel distance
-and directions
-\[[29](#ref-bietti_image_1996),[32](#ref-grace_quantification_1985)\].
-For the present study, a preliminary test indicated that using four
-distances at 5, 10, 15 and 20 pixels in the four possible directions
-(north, east, south and west) to set the GLCM presented the best results
-for discrimination.
+establish the distance ([Haralick et al.
+1973](#ref-haralick_textural_1973)). For this, it is common to test for
+different combinations of distances and directions since images at
+different magnifications, different field of view and different
+resolution might require variation in pixel distance and directions
+([Grace et al. 1985](#ref-grace_quantification_1985); [Bietti
+1996](#ref-bietti_image_1996)). For the present study, a preliminary
+test indicated that using four distances at 5, 10, 15 and 20 pixels in
+the four possible directions (north, east, south and west) to set the
+GLCM presented the best results for discrimination.
 
 Calculation of all metrics was done using the free software Fiji
-\[[40](#ref-schindelin_fiji_2012)\]. Roughness metrics calculation was
-implemented through the “Roughness calculation” plugin
-\[[41](#ref-chinga_roughness_2002)\]. GLCM and texture metrics were
-calculated using the “GLCM Texture” plugging
-\[[44](#ref-cabrera_texture_2006)\].
+([Schindelin et al. 2012](#ref-schindelin_fiji_2012)). Roughness metrics
+calculation was implemented through the “Roughness calculation” plugin
+([Chinga and Dougherty 2002](#ref-chinga_roughness_2002)). GLCM and
+texture metrics were calculated using the “GLCM Texture” plugging
+([Cabrera 2006](#ref-cabrera_texture_2006)).
 
 ### **2.4 Machine Learning models and evaluation**
 
@@ -899,40 +922,42 @@ were:
 
 - **Linear discriminant analysis (LDA):** reduces dimensionality for the
   purpose of maximizing the separation between classes while decision
-  boundaries divide the predictor range into regions
-  \[[45](#ref-fisher_use_1936),[46](#ref-james_introduction_2013)\].  
+  boundaries divide the predictor range into regions ([Fisher
+  1936](#ref-fisher_use_1936); [James et al.
+  2013](#ref-james_introduction_2013)).  
 - **K-nearest neighbor (KNN):** classifies cases by assigning the class
   of similar known cases. The ‘k’ in KNN refers to the number of cases
   (neighbors) to consider when assigning a class, which must be found by
   testing different values. Given that KNN uses distance metrics to
   compute nearest neighbors and that each variable is in different
   scales, the data must be scaled and centered prior to fitting the
-  model
-  \[[47](#ref-cover_nearest_1967),[48](#ref-lantz_machine_2019)\].  
+  model ([Cover and Hart 1967](#ref-cover_nearest_1967); [Lantz
+  2019](#ref-lantz_machine_2019)).  
 - **Logistic regression:** essentially adapts continuous regression
-  predictions to categorical outcomes
-  \[[49](#ref-cramer_early_2004),[50](#ref-walker_estimation_1967)\].  
+  predictions to categorical outcomes ([Walker and Duncan
+  1967](#ref-walker_estimation_1967); [Cramer
+  2004](#ref-cramer_early_2004)).  
 - **Decision tree with C5.0 algorithm:** an improvement on decision
-  trees for classification
-  \[[51](#ref-quinlan_improved_1996),[52](#ref-quinlan_c4_2014)\].  
+  trees for classification ([Quinlan 1996](#ref-quinlan_improved_1996);
+  [Quinlan 2014](#ref-quinlan_c4_2014)).  
 - **Random forest:** made of decision trees. Each tree is grown from a
   random sample of the data and variables, allowing for each tree to
   grow differently and to better reflect the complexity of the data
-  \[[53](#ref-breiman_random_2001)\].  
-- **Generalized boosted model
-  \[[54](#ref-greenwell_package_2019),[55](#ref-ridgeway_generalized_2007)\]:**
-  implements the gradient boosted machine
-  \[[56](#ref-friedman_greedy_2001),[57](#ref-friedman_stochastic_2002)\]
-  making it possible to detect learning deficiencies and increase model
-  accuracy for a set of random forests.  
+  ([Breiman 2001](#ref-breiman_random_2001)).  
+- **Generalized boosted model ([Ridgeway
+  2007](#ref-ridgeway_generalized_2007); [Greenwell et al.
+  2019](#ref-greenwell_package_2019)):** implements the gradient boosted
+  machine ([Friedman 2001](#ref-friedman_greedy_2001); [Friedman
+  2002](#ref-friedman_stochastic_2002)) making it possible to detect
+  learning deficiencies and increase model accuracy for a set of random
+  forests.  
 - **Supported vector machines (SVM):** fit hyperplanes into a
   multidimensional space with the objective of creating homogeneous
-  partitions
-  \[[58](#ref-cortes_support-vector_1995),[59](#ref-frey_letter_1991)\].
-  The present study tests SVM with linear, radial and polynomial
-  kernels.  
+  partitions ([Frey and Slate 1991](#ref-frey_letter_1991); [Cortes and
+  Vapnik 1995](#ref-cortes_support-vector_1995)). The present study
+  tests SVM with linear, radial and polynomial kernels.  
 - **Naïve Bayes classifier:** computes class probabilities using Bayes’
-  rule \[[60](#ref-weihs_klar_2005)\].
+  rule ([Weihs et al. 2005](#ref-weihs_klar_2005)).
 
 <figure>
 <img src="Figures/04-Thresholds-multiple-categories.png" width="600"
@@ -958,38 +983,38 @@ balance the ability of model to detect true positives and avoid false
 positives which are respectively referred as sensitivity and
 specificity. The receiver operating characteristic (ROC) curve is
 employed to systematically evaluate the ratio of detected true positives
-while avoiding false positives
-\[[61](#ref-bradley_use_1997),[62](#ref-spackman_signal_1989)\]. The ROC
-curve allows visually analyzing model performance and calculating the
-AUC, which ranges from 1 (perfect classifier) to 0.5 (random
-classifier). The AUC is a measure of performance derived from the
-receiver operating characteristic (ROC) curve. The ROC curve is used to
-evaluate the ratio of detected true positives while avoiding false
-positives
-\[[61](#ref-bradley_use_1997),[62](#ref-spackman_signal_1989)\]. The ROC
-curve makes it possible to visually analyze model performance and
-calculate the AUC, which ranges from 1 (perfect classifier) to 0.5
-(random classifier). The ROC and AUC are commonly applied in two-class
-problems and their extension to multiclass problems is usually done
-through pairwise analysis.
+while avoiding false positives ([Spackman
+1989](#ref-spackman_signal_1989); [Bradley
+1997](#ref-bradley_use_1997)). The ROC curve allows visually analyzing
+model performance and calculating the AUC, which ranges from 1 (perfect
+classifier) to 0.5 (random classifier). The AUC is a measure of
+performance derived from the receiver operating characteristic (ROC)
+curve. The ROC curve is used to evaluate the ratio of detected true
+positives while avoiding false positives ([Spackman
+1989](#ref-spackman_signal_1989); [Bradley
+1997](#ref-bradley_use_1997)). The ROC curve makes it possible to
+visually analyze model performance and calculate the AUC, which ranges
+from 1 (perfect classifier) to 0.5 (random classifier). The ROC and AUC
+are commonly applied in two-class problems and their extension to
+multiclass problems is usually done through pairwise analysis.
 
 In the case of multiclass problems, the AUC provides two groups of
 values: first, each class obtains an AUC value using a “one vs all”
 approach; second, a general AUC value of model performance is obtained
-from the average of each class AUC
-\[[63](#ref-robin_proc_2011),[**hand_simple_200?**](#ref-hand_simple_200)\].
-In the case of the ROC curve, individual curves of each class are
-plotted using the previously mentioned “one vs all” approach. The
-present study tested 10 different models with a three-class
-classification problem which would involve a total of 30 different ROC
-curves (three curves per 10 models). In this paper, we have provided
-only the three ROC curves of the best model. When analyzing lithic
-materials, the use of thresholds to guarantee true positives and avoid
-false positives is of special interest. The use of thresholds better
-indicates the accuracy of a model considering these probability values.
-In the present study we have slightly variated the interpretation of the
-AUC values \[[48](#ref-lantz_machine_2019)\] with intervals interpreted
-as follows:
+from the average of each class AUC ([Robin et al.
+2011](#ref-robin_proc_2011);
+[**hand_simple_200?**](#ref-hand_simple_200)). In the case of the ROC
+curve, individual curves of each class are plotted using the previously
+mentioned “one vs all” approach. The present study tested 10 different
+models with a three-class classification problem which would involve a
+total of 30 different ROC curves (three curves per 10 models). In this
+paper, we have provided only the three ROC curves of the best model.
+When analyzing lithic materials, the use of thresholds to guarantee true
+positives and avoid false positives is of special interest. The use of
+thresholds better indicates the accuracy of a model considering these
+probability values. In the present study we have slightly variated the
+interpretation of the AUC values ([Lantz 2019](#ref-lantz_machine_2019))
+with intervals interpreted as follows:
 
 - 0.9 to 1: outstanding  
 - 0.85 to 0.9: excellent  
@@ -1003,16 +1028,17 @@ Strong levels of correlation are present between the variables of the
 present study. The issue of multicollinearity in classification remains
 a matter of debate. It is commonly pointed that for multiple linear
 regressions, collinearity affects the interpretation of coefficients
-(variables), but does not affect the quality of the predictions
-\[[46](#ref-james_introduction_2013),[64](#ref-alin_multicollinearity_2010),[65](#ref-chan_mitigating_2022)\].
-Additional arguments indicate that if the collinearity between variables
-of the training set is also present in the test set, it should not be
-considered a problem. In the present study variables presenting perfect
-levels of collinearity (mean and Ra) are excluded from the training of
-machine learning models, and feature importance is explored among
-non-correlated features. After evaluating and determining the best
-model, an additional model on PCA values was trained in order to
-determine possible overfitting.
+(variables), but does not affect the quality of the predictions ([Alin
+2010](#ref-alin_multicollinearity_2010); [James et al.
+2013](#ref-james_introduction_2013); [Chan et al.
+2022](#ref-chan_mitigating_2022)). Additional arguments indicate that if
+the collinearity between variables of the training set is also present
+in the test set, it should not be considered a problem. In the present
+study variables presenting perfect levels of collinearity (mean and Ra)
+are excluded from the training of machine learning models, and feature
+importance is explored among non-correlated features. After evaluating
+and determining the best model, an additional model on PCA values was
+trained in order to determine possible overfitting.
 
 ``` r
 # Check for collinearity of the data
@@ -1165,29 +1191,31 @@ NB.model <- train(frmla,
 ```
 
 This study was conducted using an R version 4.2.2 in IDE RStudio version
-2022.12
-\[[66](#ref-r_core_team_r_2019),[67](#ref-rstudio_team_rstudio_2019)\].
-The data and graphs were managed using the tidyverse v.1.3.2 package
-\[[68](#ref-wickham_welcome_2019)\]. The LDA and KNN were trained with
-the MASS (Modern Applied Statistics with S) v.7.3.58.1 package
-\[[69](#ref-venables_modern_2002)\]. The C5.0 tree was trained using the
-C50 v.0.1.7 package
-\[[51](#ref-quinlan_improved_1996),[52](#ref-quinlan_c4_2014)\]. The
-random forest was trained using the ranger v.0.14.1 package
-\[[70](#ref-wright_ranger_2017)\]. The Generalized Boosted Model was
-trained using package gbm v.2.1.8.1
-\[[54](#ref-greenwell_package_2019),[55](#ref-ridgeway_generalized_2007)\].
-The SVM was trained using the e1071 v.1.7.12 package
-\[[71](#ref-karatzoglou_support_2006),[72](#ref-karatzoglou_kernlab_2004)\].
-The Naïve Bayes model was trained using package klaR v.1.7.1
-\[[60](#ref-weihs_klar_2005)\]. The k-fold cross validation of all
-models, precision metrics, and confusion matrix were obtained using the
-caret v.6.0.93 package \[[73](#ref-kuhn_building_2008)\]. Machine
-learning models also provide insights into variable importance for
-classification. The caret package was used to extract variable
-importance after each k-fold cross validation. ROC curves and AUC values
-are obtained using the package pROC v.1.18.0
-\[[63](#ref-robin_proc_2011)\].
+2022.12 ([Team 2019a](#ref-r_core_team_r_2019); [Team
+2019b](#ref-rstudio_team_rstudio_2019)). The data and graphs were
+managed using the tidyverse v.1.3.2 package ([Wickham et al.
+2019](#ref-wickham_welcome_2019)). The LDA and KNN were trained with the
+MASS (Modern Applied Statistics with S) v.7.3.58.1 package ([Venables
+and Ripley 2002](#ref-venables_modern_2002)). The C5.0 tree was trained
+using the C50 v.0.1.7 package ([Quinlan
+1996](#ref-quinlan_improved_1996); [Quinlan
+2014](#ref-quinlan_c4_2014)). The random forest was trained using the
+ranger v.0.14.1 package ([Wright and Ziegler
+2017](#ref-wright_ranger_2017)). The Generalized Boosted Model was
+trained using package gbm v.2.1.8.1 ([Ridgeway
+2007](#ref-ridgeway_generalized_2007); [Greenwell et al.
+2019](#ref-greenwell_package_2019)). The SVM was trained using the e1071
+v.1.7.12 package ([Karatzoglou et al.
+2004](#ref-karatzoglou_kernlab_2004); [Karatzoglou et al.
+2006](#ref-karatzoglou_support_2006)). The Naïve Bayes model was trained
+using package klaR v.1.7.1 ([Weihs et al. 2005](#ref-weihs_klar_2005)).
+The k-fold cross validation of all models, precision metrics, and
+confusion matrix were obtained using the caret v.6.0.93 package ([Kuhn
+2008](#ref-kuhn_building_2008)). Machine learning models also provide
+insights into variable importance for classification. The caret package
+was used to extract variable importance after each k-fold cross
+validation. ROC curves and AUC values are obtained using the package
+pROC v.1.18.0 ([Robin et al. 2011](#ref-robin_proc_2011)).
 
 ## **3. Results**
 
@@ -1909,14 +1937,15 @@ were not caused by the analytical procedure (use of a Dino-Lite Edge 3.0
 AM73915MZT USB and statistical analysis of grayscale level images), but
 because of the heterogeneous development of sedimentary abrasion.
 
-Previous studies \[[10](#ref-bustos-perez_experimental_2019)\] indicate
-that as particle size of the sediment decreases, heterogeneity in the
-development of post-depositional process increases. However, this
-interaction remains unresolved. In the present study, particle size of
-the sediment employed to induce sedimentary abrasion was small, and the
-development of sedimentary abrasion was heterogeneous. This more
-heterogeneous development falls in line with previous studies
-\[[10](#ref-bustos-perez_experimental_2019)\], were more fine grained
+Previous studies ([Bustos-Pérez et al.
+2019](#ref-bustos-perez_experimental_2019)) indicate that as particle
+size of the sediment decreases, heterogeneity in the development of
+post-depositional process increases. However, this interaction remains
+unresolved. In the present study, particle size of the sediment employed
+to induce sedimentary abrasion was small, and the development of
+sedimentary abrasion was heterogeneous. This more heterogeneous
+development falls in line with previous studies ([Bustos-Pérez et al.
+2019](#ref-bustos-perez_experimental_2019)), were more fine grained
 sediments resulted in increasing variability of ridge width measurement.
 Further research might contemplate subjecting lithic artifacts to
 similar experimental conditions, but using sediments with larger
@@ -1925,12 +1954,14 @@ whether if abrasion is developed in a more homogeneous way, and whether
 if the resulting surfaces present different quantifiable features. Use
 wear analysis have shown that the model of polish development results in
 quantifiable differences for different worked materials with time not
-being a factor which blurs or overlaps differences
-\[[20](#ref-stemp_quantification_2009),[21](#ref-ibanez_quantitative_2021),[29](#ref-bietti_image_1996)\].
-For post-depositional processes it remains untested, weather if
-different particle size, type of transport of particles (fluvial or
-aeolian), or weathering induces quantifiable differentiable surfaces
-that can be identified with the use of greyscale level values.
+being a factor which blurs or overlaps differences ([Bietti
+1996](#ref-bietti_image_1996); [Stemp et al.
+2009](#ref-stemp_quantification_2009); [Ibáñez and Mazzucco
+2021](#ref-ibanez_quantitative_2021)). For post-depositional processes
+it remains untested, weather if different particle size, type of
+transport of particles (fluvial or aeolian), or weathering induces
+quantifiable differentiable surfaces that can be identified with the use
+of greyscale level values.
 
 Results showing the heterogeneous development of abrasion on a same
 flint artifact are indicative of the need for caution when attributing a
@@ -1941,16 +1972,20 @@ develop faster, or averaging results from several areas of the same
 artifact. The present work employed the complete photographs for the
 analysis of post-depositional abrasion in lithic artefacts. However,
 previous research has shown that sampling images on the most developed
-areas \[[21](#ref-ibanez_quantitative_2021)\] can help improve the
-analysis by focusing in the areas of interest, or avoiding noise
-generated by irregularities such as fossils or geodes. Further research
-in post-depositional studies in lithic artifacts might benefit from
-applying these sampling procedures and reduce the degree of overlapping
-values observed in the present study. However, the results presented
-here outline the need to consider additional features of a lithic
-artifact, such as the width of the ridges, or the presence of
-alterations in the edges
-\[[8](#ref-chu_micro-abrasion_2015),[10](#ref-bustos-perez_experimental_2019),[12](#ref-shackley_stream_1974),[74](#ref-panera_gallego_propuesta_1996),[75](#ref-burroni_surface_2002)\].
+areas ([Ibáñez and Mazzucco 2021](#ref-ibanez_quantitative_2021)) can
+help improve the analysis by focusing in the areas of interest, or
+avoiding noise generated by irregularities such as fossils or geodes.
+Further research in post-depositional studies in lithic artifacts might
+benefit from applying these sampling procedures and reduce the degree of
+overlapping values observed in the present study. However, the results
+presented here outline the need to consider additional features of a
+lithic artifact, such as the width of the ridges, or the presence of
+alterations in the edges ([Shackley 1974](#ref-shackley_stream_1974);
+[Panera Gallego and Rubio Jara
+1996](#ref-panera_gallego_propuesta_1996); [Burroni et al.
+2002](#ref-burroni_surface_2002); [Chu et al.
+2015](#ref-chu_micro-abrasion_2015); [Bustos-Pérez et al.
+2019](#ref-bustos-perez_experimental_2019)).
 
 The present study has sampled only two types of flints which were
 considered similar in their surface appearance. Despite the
@@ -2017,728 +2052,650 @@ Técnica y de Innovación (2017–2020).
 
 </div>
 
-<div id="refs" class="references csl-bib-body">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
-<div id="ref-lenoble_fabric_2004" class="csl-entry">
+<div id="ref-adan_spatial_2003" class="csl-entry">
 
-<span class="csl-left-margin">1. </span><span
-class="csl-right-inline">Lenoble A, Bertran P. Fabric of Palaeolithic
-levels: Methods and implications for site formation processes. Journal
-of Archaeological Science. 2004;31: 457–469.
-doi:[10.1016/j.jas.2003.09.013](https://doi.org/10.1016/j.jas.2003.09.013)</span>
-
-</div>
-
-<div id="ref-mcpherron_artifact_2005" class="csl-entry">
-
-<span class="csl-left-margin">2. </span><span
-class="csl-right-inline">McPherron SJP. Artifact orientations and site
-formation processes from total station proveniences. Journal of
-Archaeological Science. 2005;32: 1003–1014. </span>
-
-</div>
-
-<div id="ref-mcpherron_additional_2018" class="csl-entry">
-
-<span class="csl-left-margin">3. </span><span
-class="csl-right-inline">McPherron SP. Additional statistical and
-graphical methods for analyzing site formation processes using artifact
-orientations. Hart JP, editor. PLOS ONE. 2018;13: e0190195.
-doi:[10.1371/journal.pone.0190195](https://doi.org/10.1371/journal.pone.0190195)</span>
-
-</div>
-
-<div id="ref-petraglia_water_1994" class="csl-entry">
-
-<span class="csl-left-margin">4. </span><span
-class="csl-right-inline">Petraglia MD, Potts R. Water Flow and the
-Formation of Early Pleistocene Artifact Sites in Olduvai Gorge,
-Tanzania. Journal of Anthropological Archaeology. 1994;13: 228–254.
-doi:[10.1006/jaar.1994.1014](https://doi.org/10.1006/jaar.1994.1014)</span>
-
-</div>
-
-<div id="ref-schick_experimentally-derived_1987" class="csl-entry">
-
-<span class="csl-left-margin">5. </span><span
-class="csl-right-inline">Schick KD. Experimentally-derived criteria for
-assessing hydrologic disturbance of archaeological sites. In: Nash DT,
-Petraglia MD, editors. Natural Formation Processes and the
-Archaeological Record. 1987. pp. 86–107. </span>
-
-</div>
-
-<div id="ref-bertran_particle_2012" class="csl-entry">
-
-<span class="csl-left-margin">6. </span><span
-class="csl-right-inline">Bertran P, Lenoble A, Todisco D, Desrosiers PM,
-Sørensen M. Particle size distribution of lithic assemblages and
-taphonomy of Palaeolithic sites. Journal of Archaeological Science.
-2012;39: 3148–3166.
-doi:[10.1016/j.jas.2012.04.055](https://doi.org/10.1016/j.jas.2012.04.055)</span>
-
-</div>
-
-<div id="ref-maillo_fernandez_proporciones_1998" class="csl-entry">
-
-<span class="csl-left-margin">7. </span><span
-class="csl-right-inline">Maíllo Fernández JM. Proporciones de debris en
-réplicas de talla experimental. Espacio Tiempo y Forma Serie I,
-Prehistoria y Arqueología. 1998 \[cited 20 Oct 2022\].
-doi:[10.5944/etfi.11.1998.4665](https://doi.org/10.5944/etfi.11.1998.4665)</span>
-
-</div>
-
-<div id="ref-chu_micro-abrasion_2015" class="csl-entry">
-
-<span class="csl-left-margin">8. </span><span
-class="csl-right-inline">Chu W, Thompson C, Hosfield R. Micro-abrasion
-of flint artifacts by mobile sediments: A taphonomic approach.
-Archaeological and Anthropological Sciences. 2015;7: 3–11.
-doi:[10.1007/s12520-013-0157-0](https://doi.org/10.1007/s12520-013-0157-0)</span>
-
-</div>
-
-<div id="ref-levi_sala_use_1986" class="csl-entry">
-
-<span class="csl-left-margin">9. </span><span
-class="csl-right-inline">Levi Sala I. Use Wear and Post-depositional
-Surface Modification: A Word of Caution. Journal of Archaeological
-Science. 1986;13: 229–244. </span>
-
-</div>
-
-<div id="ref-bustos-perez_experimental_2019" class="csl-entry">
-
-<span class="csl-left-margin">10. </span><span
-class="csl-right-inline">Bustos-Pérez G, Díaz S, Baena J. An
-Experimental Approach to Degrees of Rounding Among Lithic Artifacts.
-Journal of Archaeological Method and Theory. 2019;26: 1243–1275.
-doi:[10.1007/s10816-018-9409-8](https://doi.org/10.1007/s10816-018-9409-8)</span>
-
-</div>
-
-<div id="ref-chambers_like_2003" class="csl-entry">
-
-<span class="csl-left-margin">11. </span><span
-class="csl-right-inline">Chambers JC. Like a rolling stone? The
-identification of fluvial transportation damage signatures on secondary
-context bifaces. Lithics. 2003;24: 66–77. </span>
-
-</div>
-
-<div id="ref-shackley_stream_1974" class="csl-entry">
-
-<span class="csl-left-margin">12. </span><span
-class="csl-right-inline">Shackley MS. Stream abrasion of flint
-implements. Nature. 1974;248: 501–502. </span>
+Adán, M., Barceló, J. A., Pijoan-López, J., Piqué, R., and Toselli, A.,
+2003, Spatial statistics in archaeological texture analysis, *The
+digital heritage of archaeology*.
 
 </div>
 
 <div id="ref-alhusban_assessing_2021" class="csl-entry">
 
-<span class="csl-left-margin">13. </span><span
-class="csl-right-inline">Alhusban Z, Valyrakis M. Assessing and
-Modelling the Interactions of Instrumented Particles with Bed Surface at
-Low Transport Conditions. Applied Sciences. 2021;11: 7306.
-doi:[10.3390/app11167306](https://doi.org/10.3390/app11167306)</span>
-
-</div>
-
-<div id="ref-stapert_natural_1976" class="csl-entry">
-
-<span class="csl-left-margin">14. </span><span
-class="csl-right-inline">Stapert D. Some natural surface modifications
-on flint in the Netherlands. Paleohistoria. 1976;18: 9–41. </span>
-
-</div>
-
-<div id="ref-schiffer_archaeological_1972" class="csl-entry">
-
-<span class="csl-left-margin">15. </span><span
-class="csl-right-inline">Schiffer MB. Archaeological Context and
-Systemic Context. American Antiquity. 1972;37: 156–165.
-doi:[10.2307/278203](https://doi.org/10.2307/278203)</span>
-
-</div>
-
-<div id="ref-sieveking_transport_1987" class="csl-entry">
-
-<span class="csl-left-margin">16. </span><span
-class="csl-right-inline">Harding P, Gibbard PL, Lewin J, Macklin MG,
-Moss EH. The transport and abrasion of flint handaxes in a gravel-bed
-river. In: Sieveking G, Newcomer M, editors. The Human Uses of Flint and
-Chert: Proceedings of the Fourth International Flint Symposium Held at
-Brighton Polytechnic. Cambridge: Cambridge University Press; 1987. pp.
-115–126. </span>
-
-</div>
-
-<div id="ref-rust_structure_1972" class="csl-entry">
-
-<span class="csl-left-margin">17. </span><span
-class="csl-right-inline">Rust BR. Structure and process in a braided
-river. Sedimentology. 1972;18: 221–245. </span>
-
-</div>
-
-<div id="ref-jain_where_2008" class="csl-entry">
-
-<span class="csl-left-margin">18. </span><span
-class="csl-right-inline">Jain V, Fryirs K, Brierley G. Where do
-floodplains begin? The role of total stream power and longitudinal
-profile form on floodplain initiation processes. Geological Society of
-America Bulletin. 2008;120: 127–141.
-doi:[10.1130/B26092.1](https://doi.org/10.1130/B26092.1)</span>
-
-</div>
-
-<div id="ref-montgomery_channel-reach_1997" class="csl-entry">
-
-<span class="csl-left-margin">19. </span><span
-class="csl-right-inline">Montgomery DR, Buffington JM. Channel-reach
-morphology in mountain drainage basins. Geological Society of America
-Bulletin. 1997;109: 596–611.
-doi:[10.1130/0016-7606(1997)109\<0596:CRMIMD\>2.3.CO;2](https://doi.org/10.1130/0016-7606(1997)109<0596:CRMIMD>2.3.CO;2)</span>
-
-</div>
-
-<div id="ref-stemp_quantification_2009" class="csl-entry">
-
-<span class="csl-left-margin">20. </span><span
-class="csl-right-inline">Stemp WJ, Childs BE, Vionnet S, Brown CA.
-Quantification and discrimination of lithic use-wear: Surface profile
-measurements and length-scale fractal analysis. Archaeometry. 2009;51:
-366–382.
-doi:[10.1111/j.1475-4754.2008.00404.x](https://doi.org/10.1111/j.1475-4754.2008.00404.x)</span>
-
-</div>
-
-<div id="ref-ibanez_quantitative_2021" class="csl-entry">
-
-<span class="csl-left-margin">21. </span><span
-class="csl-right-inline">Ibáñez JJ, Mazzucco N. Quantitative use-wear
-analysis of stone tools: Measuring how the intensity of use affects the
-identification of the worked material. Spinapolice EE, editor. PLOS ONE.
-2021;16: e0257266.
-doi:[10.1371/journal.pone.0257266](https://doi.org/10.1371/journal.pone.0257266)</span>
-
-</div>
-
-<div id="ref-ibanez_identifying_2019" class="csl-entry">
-
-<span class="csl-left-margin">22. </span><span
-class="csl-right-inline">Ibáñez JJ, Lazuen T, González-Urquijo J.
-Identifying Experimental Tool Use Through Confocal Microscopy. Journal
-of Archaeological Method and Theory. 2019;26: 1176–1215.
-doi:[10.1007/s10816-018-9408-9](https://doi.org/10.1007/s10816-018-9408-9)</span>
-
-</div>
-
-<div id="ref-ibanez_cereal_2016" class="csl-entry">
-
-<span class="csl-left-margin">23. </span><span
-class="csl-right-inline">Ibáñez JJ, Anderson PC, González-Urquijo J,
-Gibaja J. Cereal cultivation and domestication as shown by microtexture
-analysis of sickle gloss through confocal microscopy. Journal of
-Archaeological Science. 2016;73: 62–81.
-doi:[10.1016/j.jas.2016.07.011](https://doi.org/10.1016/j.jas.2016.07.011)</span>
-
-</div>
-
-<div id="ref-bostrom_quantifying_2022" class="csl-entry">
-
-<span class="csl-left-margin">24. </span><span
-class="csl-right-inline">Boström S, Lundin J. Quantifying Use-Wear
-Polish Through 3D Imaging Software. Lund Archaeological Review.
-2022;26-27: 7–22. </span>
-
-</div>
-
-<div id="ref-pedergnana_polish_2020" class="csl-entry">
-
-<span class="csl-left-margin">25. </span><span
-class="csl-right-inline">Pedergnana A, Calandra I, Evans AA, Bob K,
-Hildebrandt A, Ollé A. Polish is quantitatively different on quartzite
-flakes used on different worked materials. Peresani M, editor. PLOS ONE.
-2020;15: e0243295.
-doi:[10.1371/journal.pone.0243295](https://doi.org/10.1371/journal.pone.0243295)</span>
-
-</div>
-
-<div id="ref-evans_laser_2008" class="csl-entry">
-
-<span class="csl-left-margin">26. </span><span
-class="csl-right-inline">Evans AA, Donahue RE. Laser scanning confocal
-microscopy: A potential technique for the study of lithic microwear.
-Journal of Archaeological Science. 2008;35: 2223–2230.
-doi:[10.1016/j.jas.2008.02.006](https://doi.org/10.1016/j.jas.2008.02.006)</span>
-
-</div>
-
-<div id="ref-adan_spatial_2003" class="csl-entry">
-
-<span class="csl-left-margin">27. </span><span
-class="csl-right-inline">Adán M, Barceló JA, Pijoan-López J, Piqué R,
-Toselli A. Spatial statistics in archaeological texture analysis. The
-digital heritage of archaeology. 2003. </span>
-
-</div>
-
-<div id="ref-barcelo_image_2001" class="csl-entry">
-
-<span class="csl-left-margin">28. </span><span
-class="csl-right-inline">Barceló JA, Pijoan J, Vicente O. Image
-Quantification as Archaeological Description. In: Stancic Z, Veljanovski
-T, editors. Computing Archaeology for Understanding the Past. Oxford:
-Oxford: Archaeopress; 2001. pp. 69–78. </span>
-
-</div>
-
-<div id="ref-bietti_image_1996" class="csl-entry">
-
-<span class="csl-left-margin">29. </span><span
-class="csl-right-inline">Bietti A. Image processing in microwear studies
-of flint artifacts. Archeologi e Calcolatori. 1996;7: 387–396. </span>
-
-</div>
-
-<div id="ref-pijoan-lopez_variabilidad_2002" class="csl-entry">
-
-<span class="csl-left-margin">30. </span><span
-class="csl-right-inline">Pijoan-López J, Barceló-Álvarez JA,
-Clemente-Conte I, Vila-Mitjà A. Variabilidad estadística en imágenes
-digitalizadas de rastros de uso: Resultados preliminares. In: Clemente
-Conte I, Risch R, Gibaja Bao JF, editors. Análisis funcional: Su
-aplicación al estudio de sociedades prehistóricas. Archaeopress; 2002.
-pp. 55–64. Available:
-<https://digital.csic.es/handle/10261/10418></span>
-
-</div>
-
-<div id="ref-vila_caracterizacion_1993" class="csl-entry">
-
-<span class="csl-left-margin">31. </span><span
-class="csl-right-inline">Vila A, Gallart F. Caracterización de los
-micropulidos de uso: Ejemplo de aplicación del análisis de imágenes
-digitalizadas. In: Anderson PC, Beyries S, Otte M, Plisson H, editors.
-Traces et fonction: Les gestes retrouvés. Liège: Service de Préhistoire,
-Université de Liège; 1993. pp. 459–466. </span>
-
-</div>
-
-<div id="ref-grace_quantification_1985" class="csl-entry">
-
-<span class="csl-left-margin">32. </span><span
-class="csl-right-inline">Grace R, Graham IDG, Newcomer MH. The
-Quantification of Microwear Polishes. World Archaeology. 1985;17:
-112–120. Available: <http://www.jstor.org/stable/124679></span>
-
-</div>
-
-<div id="ref-bustillo_caracterizacion_2012" class="csl-entry">
-
-<span class="csl-left-margin">33. </span><span
-class="csl-right-inline">Bustillo MÁ, Pérez-Jiménez JL, Bustillo M.
-Caracterización geoquímica de rocas sedimentarias formadas por
-silicificación como fuentes de suministro de utensilios líticos
-(Mioceno, cuenca de Madrid). Revista Mexicana de Ciencias Geológicas.
-2012;29: 233–247. </span>
-
-</div>
-
-<div id="ref-bustillo_caracteristicas_2005" class="csl-entry">
-
-<span class="csl-left-margin">34. </span><span
-class="csl-right-inline">Bustillo MA, Pérez-Jiménez JL. Características
-diferenciales y génesis de los niveles silíceos explotados en el
-yacimiento arqueológico de Casa Montero (Vicálvaro, Madrid). Geogaceta.
-2005;38: 243–246. </span>
-
-</div>
-
-<div id="ref-pedergnana_modern_2016" class="csl-entry">
-
-<span class="csl-left-margin">35. </span><span
-class="csl-right-inline">Pedergnana A, Asryan L, Fernández-Marchena JL,
-Ollé A. Modern contaminants affecting microscopic residue analysis on
-stone tools: A word of caution. Micron. 2016;86: 1–21.
-doi:[10.1016/j.micron.2016.04.003](https://doi.org/10.1016/j.micron.2016.04.003)</span>
-
-</div>
-
-<div id="ref-asryan_results_2020" class="csl-entry">
-
-<span class="csl-left-margin">36. </span><span
-class="csl-right-inline">Asryan L, Ollé A. Results of a functional study
-on the Middle to early Upper Pleistocene lithic assemblages from the
-Azokh 1 Cave site (South Caucasus). Quaternary International.
-2020;569-570: 168–180.
-doi:[10.1016/j.quaint.2020.05.028](https://doi.org/10.1016/j.quaint.2020.05.028)</span>
-
-</div>
-
-<div id="ref-olle_use_2014" class="csl-entry">
-
-<span class="csl-left-margin">37. </span><span
-class="csl-right-inline">Ollé A, Vergès JM. The use of sequential
-experiments and SEM in documenting stone tool microwear. Journal of
-Archaeological Science. 2014;48: 60–71.
-doi:[10.1016/j.jas.2013.10.028](https://doi.org/10.1016/j.jas.2013.10.028)</span>
-
-</div>
-
-<div id="ref-fernandez-marchena_microscopic_2016" class="csl-entry">
-
-<span class="csl-left-margin">38. </span><span
-class="csl-right-inline">Fernández-Marchena JL, Ollé A. Microscopic
-analysis of technical and functional traces as a method for the use-wear
-analysis of rock crystal tools. Quaternary International. 2016;424:
-171–190.
-doi:[10.1016/j.quaint.2015.10.064](https://doi.org/10.1016/j.quaint.2015.10.064)</span>
-
-</div>
-
-<div id="ref-calandra_workflow_2022" class="csl-entry">
-
-<span class="csl-left-margin">39. </span><span
-class="csl-right-inline">Calandra I. A workflow for quality control in
-surface texture analysis applied to teeth and tools. Journal of
-Archaeological Science: Reports. 2022;46: 103692.
-doi:[10.1016/j.jasrep.2022.103692](https://doi.org/10.1016/j.jasrep.2022.103692)</span>
-
-</div>
-
-<div id="ref-schindelin_fiji_2012" class="csl-entry">
-
-<span class="csl-left-margin">40. </span><span
-class="csl-right-inline">Schindelin J, Arganda-Carreras I, Frise E,
-Kaynig V, Longair M, Pietzsch T, et al. Fiji: An open-source platform
-for biological-image analysis. Nature Methods. 2012;9: 676–682.
-doi:[10.1038/nmeth.2019](https://doi.org/10.1038/nmeth.2019)</span>
-
-</div>
-
-<div id="ref-chinga_roughness_2002" class="csl-entry">
-
-<span class="csl-left-margin">41. </span><span
-class="csl-right-inline">Chinga G, Dougherty B. Roughness Calculation.
-2002. Available:
-<https://imagej.nih.gov/ij/plugins/roughness.html></span>
-
-</div>
-
-<div id="ref-chinga_quantification_2007" class="csl-entry">
-
-<span class="csl-left-margin">42. </span><span
-class="csl-right-inline">Chinga G, Johnsen PO, Dougherty R, Berli EL,
-Walter J. Quantification of the 3D microstructure of SC surfaces.
-Journal of Microscopy. 2007;227: 254–265.
-doi:[10.1111/j.1365-2818.2007.01809.x](https://doi.org/10.1111/j.1365-2818.2007.01809.x)</span>
-
-</div>
-
-<div id="ref-haralick_textural_1973" class="csl-entry">
-
-<span class="csl-left-margin">43. </span><span
-class="csl-right-inline">Haralick RM, Shanmugam K, Dinstein IH. Textural
-features for image classification. IEEE Transactions on systems, man,
-and cybernetics. 1973;3: 610–621. </span>
-
-</div>
-
-<div id="ref-cabrera_texture_2006" class="csl-entry">
-
-<span class="csl-left-margin">44. </span><span
-class="csl-right-inline">Cabrera JE. Texture Analyzer. 2006. Available:
-<https://imagej.nih.gov/ij/plugins/texture.html></span>
-
-</div>
-
-<div id="ref-fisher_use_1936" class="csl-entry">
-
-<span class="csl-left-margin">45. </span><span
-class="csl-right-inline">Fisher RA. The use of multiple measurements in
-taxonomic problems. Annals of Eugenics. 1936;7: 179–188. </span>
-
-</div>
-
-<div id="ref-james_introduction_2013" class="csl-entry">
-
-<span class="csl-left-margin">46. </span><span
-class="csl-right-inline">James G, Witten D, Hastie T, Tibshirani R. An
-Introduction to Statistical Learning with Applications in R. Second
-Edition. Springer; 2013. </span>
-
-</div>
-
-<div id="ref-cover_nearest_1967" class="csl-entry">
-
-<span class="csl-left-margin">47. </span><span
-class="csl-right-inline">Cover T, Hart P. Nearest neighbor pattern
-classification. IEEE Transactions on Information Theory. 1967;13: 21–27.
-doi:[10.1109/TIT.1967.1053964](https://doi.org/10.1109/TIT.1967.1053964)</span>
-
-</div>
-
-<div id="ref-lantz_machine_2019" class="csl-entry">
-
-<span class="csl-left-margin">48. </span><span
-class="csl-right-inline">Lantz B. Machine learning with R: Expert
-techniques for predictive modeling. Packt publishing ltd; 2019. </span>
-
-</div>
-
-<div id="ref-cramer_early_2004" class="csl-entry">
-
-<span class="csl-left-margin">49. </span><span
-class="csl-right-inline">Cramer JS. The early origins of the logit
-model. Studies in History and Philosophy of Science Part C: Studies in
-History and Philosophy of Biological and Biomedical Sciences. 2004;35:
-613–626.
-doi:[10.1016/j.shpsc.2004.09.003](https://doi.org/10.1016/j.shpsc.2004.09.003)</span>
-
-</div>
-
-<div id="ref-walker_estimation_1967" class="csl-entry">
-
-<span class="csl-left-margin">50. </span><span
-class="csl-right-inline">Walker SH, Duncan DB. Estimation of the
-Probability of an Event as a Function of Several Independent Variables.
-Biometrika. 1967;54: 167–179.
-doi:[10.2307/2333860](https://doi.org/10.2307/2333860)</span>
-
-</div>
-
-<div id="ref-quinlan_improved_1996" class="csl-entry">
-
-<span class="csl-left-margin">51. </span><span
-class="csl-right-inline">Quinlan JR. Improved Use of Continuous
-Attributes in C4.5. Journal of Artificial Intelligence Research. 1996;4:
-77–90. doi:[10.1613/jair.279](https://doi.org/10.1613/jair.279)</span>
-
-</div>
-
-<div id="ref-quinlan_c4_2014" class="csl-entry">
-
-<span class="csl-left-margin">52. </span><span
-class="csl-right-inline">Quinlan JR. C4. 5: Programs for machine
-learning. Elsevier; 2014. </span>
-
-</div>
-
-<div id="ref-breiman_random_2001" class="csl-entry">
-
-<span class="csl-left-margin">53. </span><span
-class="csl-right-inline">Breiman L. Random Forests. Machine Learning.
-2001;45: 5–32.
-doi:[10.1023/A:1010933404324](https://doi.org/10.1023/A:1010933404324)</span>
-
-</div>
-
-<div id="ref-greenwell_package_2019" class="csl-entry">
-
-<span class="csl-left-margin">54. </span><span
-class="csl-right-inline">Greenwell B, Boehmke B, Cunningham J,
-Developers GBM, Greenwell MB. Package “gbm.” R package version. 2019;2.
-</span>
-
-</div>
-
-<div id="ref-ridgeway_generalized_2007" class="csl-entry">
-
-<span class="csl-left-margin">55. </span><span
-class="csl-right-inline">Ridgeway G. Generalized Boosted Models: A guide
-to the gbm package. R package vignette. 2007; 2007. Available:
-<http://CRAN.R-project.org/package=gbm></span>
-
-</div>
-
-<div id="ref-friedman_greedy_2001" class="csl-entry">
-
-<span class="csl-left-margin">56. </span><span
-class="csl-right-inline">Friedman JH. Greedy function approximation: A
-gradient boosting machine. Annals of statistics. 2001;29: 1189–1232.
-Available: <https://www.jstor.org/stable/2699986></span>
-
-</div>
-
-<div id="ref-friedman_stochastic_2002" class="csl-entry">
-
-<span class="csl-left-margin">57. </span><span
-class="csl-right-inline">Friedman JH. Stochastic gradient boosting.
-Computational Statistics & Data Analysis. 2002;38: 367–378.
-doi:[10.1016/S0167-9473(01)00065-2](https://doi.org/10.1016/S0167-9473(01)00065-2)</span>
-
-</div>
-
-<div id="ref-cortes_support-vector_1995" class="csl-entry">
-
-<span class="csl-left-margin">58. </span><span
-class="csl-right-inline">Cortes C, Vapnik V. Support-vector networks.
-Machine learning. 1995;20: 273–297. </span>
-
-</div>
-
-<div id="ref-frey_letter_1991" class="csl-entry">
-
-<span class="csl-left-margin">59. </span><span
-class="csl-right-inline">Frey PW, Slate DJ. Letter recognition using
-Holland-style adaptive classifiers. Machine learning. 1991;6: 161–182.
-</span>
-
-</div>
-
-<div id="ref-weihs_klar_2005" class="csl-entry">
-
-<span class="csl-left-margin">60. </span><span
-class="csl-right-inline">Weihs C, Ligges U, Luebke K, Raabe N. <span
-class="nocase">klaR</span> analyzing German business cycles. Data
-analysis and decision support. Springer; 2005. pp. 335–343. </span>
-
-</div>
-
-<div id="ref-bradley_use_1997" class="csl-entry">
-
-<span class="csl-left-margin">61. </span><span
-class="csl-right-inline">Bradley AP. The use of the area under the ROC
-curve in the evaluation of machine learning algorithms. Pattern
-recognition. 1997;30: 1145–1159. </span>
-
-</div>
-
-<div id="ref-spackman_signal_1989" class="csl-entry">
-
-<span class="csl-left-margin">62. </span><span
-class="csl-right-inline">Spackman KA. Signal detection theory: Valuable
-tools for evaluating inductive learning. Proceedings of the sixth
-international workshop on Machine learning. Elsevier; 1989. pp. 160–163.
-</span>
-
-</div>
-
-<div id="ref-robin_proc_2011" class="csl-entry">
-
-<span class="csl-left-margin">63. </span><span
-class="csl-right-inline">Robin X, Turck N, Hainard A, Tiberti N, Lisacek
-F, Sanchez J-C, et al. <span class="nocase">pROC</span>: An open-source
-package for R and S+ to analyze and compare ROC curves. BMC
-bioinformatics. 2011;12: 1–8.
-doi:[10.1186/1471-2105-12-77](https://doi.org/10.1186/1471-2105-12-77)</span>
+Alhusban, Z., and Valyrakis, M., 2021, [Assessing and Modelling the
+Interactions of Instrumented Particles with Bed Surface at Low Transport
+Conditions](https://doi.org/10.3390/app11167306), *Applied Sciences*,
+**11**(16), 7306.
 
 </div>
 
 <div id="ref-alin_multicollinearity_2010" class="csl-entry">
 
-<span class="csl-left-margin">64. </span><span
-class="csl-right-inline">Alin A. Multicollinearity. Wiley
-Interdisciplinary Reviews: Computational Statistics. 2010;2: 370–374.
-</span>
+Alin, A., 2010, Multicollinearity, *Wiley Interdisciplinary Reviews:
+Computational Statistics*, **2**(3), 370–4.
 
 </div>
 
-<div id="ref-chan_mitigating_2022" class="csl-entry">
+<div id="ref-asryan_results_2020" class="csl-entry">
 
-<span class="csl-left-margin">65. </span><span
-class="csl-right-inline">Chan JY-L, Leow SMH, Bea KT, Cheng WK, Phoong
-SW, Hong Z-W, et al. Mitigating the Multicollinearity Problem and Its
-Machine Learning Approach: A Review. Mathematics. 2022;10: 1283.
-doi:[10.3390/math10081283](https://doi.org/10.3390/math10081283)</span>
-
-</div>
-
-<div id="ref-r_core_team_r_2019" class="csl-entry">
-
-<span class="csl-left-margin">66. </span><span
-class="csl-right-inline">Team RC. R: A language and environment for
-statistical computing. Vienna, Austria: R Foundation for Statistical
-Computing; 2019. Available: <https://www.R-project.org/></span>
+Asryan, L., and Ollé, A., 2020, [Results of a functional study on the
+Middle to early Upper Pleistocene lithic assemblages from the Azokh 1
+Cave site (South
+Caucasus)](https://doi.org/10.1016/j.quaint.2020.05.028), *Quaternary
+International*, **569-570**, 168–80.
 
 </div>
 
-<div id="ref-rstudio_team_rstudio_2019" class="csl-entry">
+<div id="ref-barcelo_image_2001" class="csl-entry">
 
-<span class="csl-left-margin">67. </span><span
-class="csl-right-inline">Team Rs. RStudio: Integrated Development for R.
-Boston, MA: RStudio, Inc.; 2019. Available:
-<http://www.rstudio.com/></span>
-
-</div>
-
-<div id="ref-wickham_welcome_2019" class="csl-entry">
-
-<span class="csl-left-margin">68. </span><span
-class="csl-right-inline">Wickham H, Averick M, Bryan J, Chang W, McGowan
-L, François R, et al. Welcome to the Tidyverse. Journal of Open Source
-Software. 2019;4: 1686.
-doi:[10.21105/joss.01686](https://doi.org/10.21105/joss.01686)</span>
+Barceló, J. A., Pijoan, J., and Vicente, O., 2001, Image Quantification
+as Archaeological Description, In *Computing Archaeology for
+Understanding the Past* (eds. Z. Stancic, and T. Veljanovski), 69–78,
+BAR International Series 931, Oxford: Archaeopress, Oxford.
 
 </div>
 
-<div id="ref-venables_modern_2002" class="csl-entry">
+<div id="ref-bertran_particle_2012" class="csl-entry">
 
-<span class="csl-left-margin">69. </span><span
-class="csl-right-inline">Venables WN, Ripley BD. Modern applied
-statistics with S. Fourth Edition. New York: Springer; 2002. Available:
-<https://www.stats.ox.ac.uk/pub/MASS4/></span>
-
-</div>
-
-<div id="ref-wright_ranger_2017" class="csl-entry">
-
-<span class="csl-left-margin">70. </span><span
-class="csl-right-inline">Wright MN, Ziegler A. Ranger: A Fast
-Implementation of Random Forests for High Dimensional Data in C++ and R.
-Journal of Statistical Software. 2017;77: 1–17.
-doi:[10.18637/jss.v077.i01](https://doi.org/10.18637/jss.v077.i01)</span>
+Bertran, P., Lenoble, A., Todisco, D., Desrosiers, P. M., and Sørensen,
+M., 2012, [Particle size distribution of lithic assemblages and
+taphonomy of Palaeolithic
+sites](https://doi.org/10.1016/j.jas.2012.04.055), *Journal of
+Archaeological Science*, **39**, 3148–66.
 
 </div>
 
-<div id="ref-karatzoglou_support_2006" class="csl-entry">
+<div id="ref-bietti_image_1996" class="csl-entry">
 
-<span class="csl-left-margin">71. </span><span
-class="csl-right-inline">Karatzoglou A, Meyer D, Hornik K. Support
-Vector Machines in R. Journal of Statistical Software. 2006;15: 1–28.
-doi:[10.18637/jss.v015.i09](https://doi.org/10.18637/jss.v015.i09)</span>
+Bietti, A., 1996, Image processing in microwear studies of flint
+artifacts, *Archeologi e Calcolatori*, **7**, 387–96.
 
 </div>
 
-<div id="ref-karatzoglou_kernlab_2004" class="csl-entry">
+<div id="ref-bostrom_quantifying_2022" class="csl-entry">
 
-<span class="csl-left-margin">72. </span><span
-class="csl-right-inline">Karatzoglou A, Smola A, Hornik K, Zeileis A.
-Kernlab - An S4 Package for Kernel Methods in R. Journal of Statistical
-Software. 2004;11: 1–20.
-doi:[10.18637/jss.v011.i09](https://doi.org/10.18637/jss.v011.i09)</span>
+Boström, S., and Lundin, J., 2022, Quantifying Use-Wear Polish Through
+3D Imaging Software, *Lund Archaeological Review*, **26-27**, 7–22.
 
 </div>
 
-<div id="ref-kuhn_building_2008" class="csl-entry">
+<div id="ref-bradley_use_1997" class="csl-entry">
 
-<span class="csl-left-margin">73. </span><span
-class="csl-right-inline">Kuhn M. Building Predictive Models in R using
-the caret Package. Journal of Statistical Software. 2008;28.
-doi:[10.18637/jss.v028.i05](https://doi.org/10.18637/jss.v028.i05)</span>
+Bradley, A. P., 1997, The use of the area under the ROC curve in the
+evaluation of machine learning algorithms, *Pattern recognition*,
+**30**(7), 1145–59.
 
 </div>
 
-<div id="ref-panera_gallego_propuesta_1996" class="csl-entry">
+<div id="ref-breiman_random_2001" class="csl-entry">
 
-<span class="csl-left-margin">74. </span><span
-class="csl-right-inline">Panera Gallego J, Rubio Jara S. Propuesta de
-análisis tecnomorfológico para la industria lítica del Pleistoceno
-Medio. Espacio, tiempo y forma Serie I, Prehistoria y Arqueología.
-1996;9: 33–76. </span>
+Breiman, L., 2001, [Random
+Forests](https://doi.org/10.1023/A:1010933404324), *Machine Learning*,
+**45**(1), 5–32.
 
 </div>
 
 <div id="ref-burroni_surface_2002" class="csl-entry">
 
-<span class="csl-left-margin">75. </span><span
-class="csl-right-inline">Burroni D, Donahue RE, Pollard AM. The Surface
+Burroni, D., Donahue, R. E., and Pollard, A. M., 2002, [The Surface
 Alteration Features of Flint Artefacts as a Record of Environmental
-Processes. Journal of Archaeological Science. 2002;29: 1277–1287.
-doi:[10.1006/jasc.2001.0771](https://doi.org/10.1006/jasc.2001.0771)</span>
+Processes](https://doi.org/10.1006/jasc.2001.0771), *Journal of
+Archaeological Science*, **29**, 1277–87.
+
+</div>
+
+<div id="ref-bustillo_caracteristicas_2005" class="csl-entry">
+
+Bustillo, M. A., and Pérez-Jiménez, J. L., 2005, Características
+diferenciales y génesis de los niveles silíceos explotados en el
+yacimiento arqueológico de Casa Montero (Vicálvaro, Madrid),
+*Geogaceta*, **38**, 243–6.
+
+</div>
+
+<div id="ref-bustillo_caracterizacion_2012" class="csl-entry">
+
+Bustillo, M. Á., Pérez-Jiménez, J. L., and Bustillo, M., 2012,
+Caracterización geoquímica de rocas sedimentarias formadas por
+silicificación como fuentes de suministro de utensilios líticos
+(Mioceno, cuenca de Madrid), *Revista Mexicana de Ciencias Geológicas*,
+**29**(1), 233–47.
+
+</div>
+
+<div id="ref-bustos-perez_experimental_2019" class="csl-entry">
+
+Bustos-Pérez, G., Díaz, S., and Baena, J., 2019, [An Experimental
+Approach to Degrees of Rounding Among Lithic
+Artifacts](https://doi.org/10.1007/s10816-018-9409-8), *Journal of
+Archaeological Method and Theory*, **26**, 1243–75.
+
+</div>
+
+<div id="ref-cabrera_texture_2006" class="csl-entry">
+
+Cabrera, J. E., 2006, [Texture
+Analyzer](https://imagej.nih.gov/ij/plugins/texture.html).
+
+</div>
+
+<div id="ref-calandra_workflow_2022" class="csl-entry">
+
+Calandra, I., 2022, [A workflow for quality control in surface texture
+analysis applied to teeth and
+tools](https://doi.org/10.1016/j.jasrep.2022.103692), *Journal of
+Archaeological Science: Reports*, **46**, 103692.
+
+</div>
+
+<div id="ref-chambers_like_2003" class="csl-entry">
+
+Chambers, J. C., 2003, Like a rolling stone? The identification of
+fluvial transportation damage signatures on secondary context bifaces,
+*Lithics*, **24**, 66–77.
+
+</div>
+
+<div id="ref-chan_mitigating_2022" class="csl-entry">
+
+Chan, J. Y.-L., Leow, S. M. H., Bea, K. T., Cheng, W. K., Phoong, S. W.,
+Hong, Z.-W., and Chen, Y.-L., 2022, [Mitigating the Multicollinearity
+Problem and Its Machine Learning Approach: A
+Review](https://doi.org/10.3390/math10081283), *Mathematics*, **10**(8),
+1283.
+
+</div>
+
+<div id="ref-chinga_roughness_2002" class="csl-entry">
+
+Chinga, G., and Dougherty, B., 2002, [Roughness
+Calculation](https://imagej.nih.gov/ij/plugins/roughness.html).
+
+</div>
+
+<div id="ref-chinga_quantification_2007" class="csl-entry">
+
+Chinga, G., Johnsen, P. O., Dougherty, R., Berli, E. L., and Walter, J.,
+2007, [Quantification of the 3D microstructure of SC
+surfaces](https://doi.org/10.1111/j.1365-2818.2007.01809.x), *Journal of
+Microscopy*, **227**(3), 254–65.
+
+</div>
+
+<div id="ref-chu_micro-abrasion_2015" class="csl-entry">
+
+Chu, W., Thompson, C., and Hosfield, R., 2015, [Micro-abrasion of flint
+artifacts by mobile sediments: A taphonomic
+approach](https://doi.org/10.1007/s12520-013-0157-0), *Archaeological
+and Anthropological Sciences*, **7**, 3–11.
+
+</div>
+
+<div id="ref-cortes_support-vector_1995" class="csl-entry">
+
+Cortes, C., and Vapnik, V., 1995, Support-vector networks, *Machine
+learning*, **20**(3), 273–97.
+
+</div>
+
+<div id="ref-cover_nearest_1967" class="csl-entry">
+
+Cover, T., and Hart, P., 1967, [Nearest neighbor pattern
+classification](https://doi.org/10.1109/TIT.1967.1053964), *IEEE
+Transactions on Information Theory*, **13**(1), 21–7.
+
+</div>
+
+<div id="ref-cramer_early_2004" class="csl-entry">
+
+Cramer, J. S., 2004, [The early origins of the logit
+model](https://doi.org/10.1016/j.shpsc.2004.09.003), *Studies in History
+and Philosophy of Science Part C: Studies in History and Philosophy of
+Biological and Biomedical Sciences*, **35**(4), 613–26.
+
+</div>
+
+<div id="ref-evans_laser_2008" class="csl-entry">
+
+Evans, A. A., and Donahue, R. E., 2008, [Laser scanning confocal
+microscopy: A potential technique for the study of lithic
+microwear](https://doi.org/10.1016/j.jas.2008.02.006), *Journal of
+Archaeological Science*, **35**(8), 2223–30.
+
+</div>
+
+<div id="ref-fernandez-marchena_microscopic_2016" class="csl-entry">
+
+Fernández-Marchena, J. L., and Ollé, A., 2016, [Microscopic analysis of
+technical and functional traces as a method for the use-wear analysis of
+rock crystal tools](https://doi.org/10.1016/j.quaint.2015.10.064),
+*Quaternary International*, **424**, 171–90.
+
+</div>
+
+<div id="ref-fisher_use_1936" class="csl-entry">
+
+Fisher, R. A., 1936, The use of multiple measurements in taxonomic
+problems, *Annals of Eugenics*, **7**, 179–88.
+
+</div>
+
+<div id="ref-frey_letter_1991" class="csl-entry">
+
+Frey, P. W., and Slate, D. J., 1991, Letter recognition using
+Holland-style adaptive classifiers, *Machine learning*, **6**(2),
+161–82.
+
+</div>
+
+<div id="ref-friedman_greedy_2001" class="csl-entry">
+
+Friedman, J. H., 2001, [Greedy function approximation: A gradient
+boosting machine](https://www.jstor.org/stable/2699986), *Annals of
+statistics*, **29**(5), 1189–232.
+
+</div>
+
+<div id="ref-friedman_stochastic_2002" class="csl-entry">
+
+Friedman, J. H., 2002, [Stochastic gradient
+boosting](https://doi.org/10.1016/S0167-9473(01)00065-2), *Computational
+Statistics & Data Analysis*, **38**(4), 367–78.
+
+</div>
+
+<div id="ref-grace_quantification_1985" class="csl-entry">
+
+Grace, R., Graham, I. D. G., and Newcomer, M. H., 1985, [The
+Quantification of Microwear
+Polishes](http://www.jstor.org/stable/124679), *World Archaeology*,
+**17**(1,), 112–20.
+
+</div>
+
+<div id="ref-greenwell_package_2019" class="csl-entry">
+
+Greenwell, B., Boehmke, B., Cunningham, J., Developers, G. B. M., and
+Greenwell, M. B., 2019, Package “gbm,” *R package version*, **2**(5).
+
+</div>
+
+<div id="ref-haralick_textural_1973" class="csl-entry">
+
+Haralick, R. M., Shanmugam, K., and Dinstein, I. H., 1973, Textural
+features for image classification, *IEEE Transactions on systems, man,
+and cybernetics*, **3**(6), 610–21.
+
+</div>
+
+<div id="ref-sieveking_transport_1987" class="csl-entry">
+
+Harding, P., Gibbard, P. L., Lewin, J., Macklin, M. G., and Moss, E. H.,
+1987, The transport and abrasion of flint handaxes in a gravel-bed
+river, In *The Human Uses of Flint and Chert: Proceedings of the Fourth
+International Flint Symposium Held at Brighton Polytechnic* (eds. G.
+Sieveking, and M. Newcomer), 115–26, Cambridge University Press,
+Cambridge.
+
+</div>
+
+<div id="ref-ibanez_cereal_2016" class="csl-entry">
+
+Ibáñez, J. J., Anderson, P. C., González-Urquijo, J., and Gibaja, J.,
+2016, [Cereal cultivation and domestication as shown by microtexture
+analysis of sickle gloss through confocal
+microscopy](https://doi.org/10.1016/j.jas.2016.07.011), *Journal of
+Archaeological Science*, **73**, 62–81.
+
+</div>
+
+<div id="ref-ibanez_identifying_2019" class="csl-entry">
+
+Ibáñez, J. J., Lazuen, T., and González-Urquijo, J., 2019, [Identifying
+Experimental Tool Use Through Confocal
+Microscopy](https://doi.org/10.1007/s10816-018-9408-9), *Journal of
+Archaeological Method and Theory*, **26**(3), 1176–215.
+
+</div>
+
+<div id="ref-ibanez_quantitative_2021" class="csl-entry">
+
+Ibáñez, J. J., and Mazzucco, N., 2021, [Quantitative use-wear analysis
+of stone tools: Measuring how the intensity of use affects the
+identification of the worked
+material](https://doi.org/10.1371/journal.pone.0257266), *PLOS ONE*,
+**16**(9), e0257266.
+
+</div>
+
+<div id="ref-jain_where_2008" class="csl-entry">
+
+Jain, V., Fryirs, K., and Brierley, G., 2008, [Where do floodplains
+begin? The role of total stream power and longitudinal profile form on
+floodplain initiation processes](https://doi.org/10.1130/B26092.1),
+*Geological Society of America Bulletin*, **120**(1-2), 127–41.
+
+</div>
+
+<div id="ref-james_introduction_2013" class="csl-entry">
+
+James, G., Witten, D., Hastie, T., and Tibshirani, R., 2013, *An
+Introduction to Statistical Learning with Applications in R* Second
+Edition ed., Springer.
+
+</div>
+
+<div id="ref-karatzoglou_kernlab_2004" class="csl-entry">
+
+Karatzoglou, A., Smola, A., Hornik, K., and Zeileis, A., 2004,
+[Kernlab - An S4 Package for Kernel Methods in
+R](https://doi.org/10.18637/jss.v011.i09), *Journal of Statistical
+Software*, **11**, 1–20.
+
+</div>
+
+<div id="ref-karatzoglou_support_2006" class="csl-entry">
+
+Karatzoglou, A., Meyer, D., and Hornik, K., 2006, [Support Vector
+Machines in R](https://doi.org/10.18637/jss.v015.i09), *Journal of
+Statistical Software*, **15**, 1–28.
+
+</div>
+
+<div id="ref-kuhn_building_2008" class="csl-entry">
+
+Kuhn, M., 2008, [Building Predictive Models in R using the caret
+Package](https://doi.org/10.18637/jss.v028.i05), *Journal of Statistical
+Software*, **28**(5).
+
+</div>
+
+<div id="ref-lantz_machine_2019" class="csl-entry">
+
+Lantz, B., 2019, *Machine learning with R: Expert techniques for
+predictive modeling*, Packt publishing ltd.
+
+</div>
+
+<div id="ref-lenoble_fabric_2004" class="csl-entry">
+
+Lenoble, A., and Bertran, P., 2004, [Fabric of Palaeolithic levels:
+Methods and implications for site formation
+processes](https://doi.org/10.1016/j.jas.2003.09.013), *Journal of
+Archaeological Science*, **31**(4), 457–69.
+
+</div>
+
+<div id="ref-levi_sala_use_1986" class="csl-entry">
+
+Levi Sala, I., 1986, Use Wear and Post-depositional Surface
+Modification: A Word of Caution, *Journal of Archaeological Science*,
+**13**, 229–44.
+
+</div>
+
+<div id="ref-maillo_fernandez_proporciones_1998" class="csl-entry">
+
+Maíllo Fernández, J. M., 1998, [Proporciones de debris en réplicas de
+talla experimental](https://doi.org/10.5944/etfi.11.1998.4665), *Espacio
+Tiempo y Forma. Serie I, Prehistoria y Arqueología*(11).
+
+</div>
+
+<div id="ref-mcpherron_artifact_2005" class="csl-entry">
+
+McPherron, S. J. P., 2005, Artifact orientations and site formation
+processes from total station proveniences, *Journal of Archaeological
+Science*, **32**, 1003–14.
+
+</div>
+
+<div id="ref-mcpherron_additional_2018" class="csl-entry">
+
+McPherron, S. P., 2018, [Additional statistical and graphical methods
+for analyzing site formation processes using artifact
+orientations](https://doi.org/10.1371/journal.pone.0190195), *PLOS ONE*,
+**13**(1), e0190195.
+
+</div>
+
+<div id="ref-montgomery_channel-reach_1997" class="csl-entry">
+
+Montgomery, D. R., and Buffington, J. M., 1997, [Channel-reach
+morphology in mountain drainage
+basins](https://doi.org/10.1130/0016-7606(1997)109<0596:CRMIMD>2.3.CO;2),
+*Geological Society of America Bulletin*, **109**(5), 596–611.
+
+</div>
+
+<div id="ref-olle_use_2014" class="csl-entry">
+
+Ollé, A., and Vergès, J. M., 2014, [The use of sequential experiments
+and SEM in documenting stone tool
+microwear](https://doi.org/10.1016/j.jas.2013.10.028), *Journal of
+Archaeological Science*, **48**, 60–71.
+
+</div>
+
+<div id="ref-panera_gallego_propuesta_1996" class="csl-entry">
+
+Panera Gallego, J., and Rubio Jara, S., 1996, Propuesta de análisis
+tecnomorfológico para la industria lítica del Pleistoceno Medio,
+*Espacio, tiempo y forma. Serie I, Prehistoria y Arqueología*, **9**,
+33–76.
+
+</div>
+
+<div id="ref-pedergnana_modern_2016" class="csl-entry">
+
+Pedergnana, A., Asryan, L., Fernández-Marchena, J. L., and Ollé, A.,
+2016, [Modern contaminants affecting microscopic residue analysis on
+stone tools: A word of
+caution](https://doi.org/10.1016/j.micron.2016.04.003), *Micron*,
+**86**, 1–21.
+
+</div>
+
+<div id="ref-pedergnana_polish_2020" class="csl-entry">
+
+Pedergnana, A., Calandra, I., Evans, A. A., Bob, K., Hildebrandt, A.,
+and Ollé, A., 2020, [Polish is quantitatively different on quartzite
+flakes used on different worked
+materials](https://doi.org/10.1371/journal.pone.0243295), *PLOS ONE*,
+**15**(12), e0243295.
+
+</div>
+
+<div id="ref-petraglia_water_1994" class="csl-entry">
+
+Petraglia, M. D., and Potts, R., 1994, [Water Flow and the Formation of
+Early Pleistocene Artifact Sites in Olduvai Gorge,
+Tanzania](https://doi.org/10.1006/jaar.1994.1014), *Journal of
+Anthropological Archaeology*, **13**, 228–54.
+
+</div>
+
+<div id="ref-pijoan-lopez_variabilidad_2002" class="csl-entry">
+
+Pijoan-López, J., Barceló-Álvarez, J. A., Clemente-Conte, I., and
+Vila-Mitjà, A., 2002, [Variabilidad estadística en imágenes
+digitalizadas de rastros de uso: Resultados
+preliminares](https://digital.csic.es/handle/10261/10418), In *Análisis
+funcional: Su aplicación al estudio de sociedades prehistóricas* (eds.
+I. Clemente Conte, R. Risch, and J. F. Gibaja Bao), 55–64, Archaeopress.
+
+</div>
+
+<div id="ref-quinlan_improved_1996" class="csl-entry">
+
+Quinlan, J. R., 1996, [Improved Use of Continuous Attributes in
+C4.5](https://doi.org/10.1613/jair.279), *Journal of Artificial
+Intelligence Research*, **4**, 77–90.
+
+</div>
+
+<div id="ref-quinlan_c4_2014" class="csl-entry">
+
+Quinlan, J. R., 2014, *C4. 5: Programs for machine learning*, Elsevier.
+
+</div>
+
+<div id="ref-ridgeway_generalized_2007" class="csl-entry">
+
+Ridgeway, G., 2007, [Generalized Boosted Models: A guide to the gbm
+package](http://CRAN.R-project.org/package=gbm), *R package vignette*,
+2007.
+
+</div>
+
+<div id="ref-robin_proc_2011" class="csl-entry">
+
+Robin, X., Turck, N., Hainard, A., Tiberti, N., Lisacek, F., Sanchez,
+J.-C., and Müller, M., 2011, [<span class="nocase">pROC</span>: An
+open-source package for R and S+ to analyze and compare ROC
+curves](https://doi.org/10.1186/1471-2105-12-77), *BMC bioinformatics*,
+**12**(1), 1–8.
+
+</div>
+
+<div id="ref-rust_structure_1972" class="csl-entry">
+
+Rust, B. R., 1972, Structure and process in a braided river,
+*Sedimentology*, **18**(3-4), 221–45.
+
+</div>
+
+<div id="ref-schick_experimentally-derived_1987" class="csl-entry">
+
+Schick, K. D., 1987, Experimentally-derived criteria for assessing
+hydrologic disturbance of archaeological sites, In *Natural Formation
+Processes and the Archaeological Record* (eds. D. T. Nash, and M. D.
+Petraglia), 86–107, BAR International Series 352.
+
+</div>
+
+<div id="ref-schiffer_archaeological_1972" class="csl-entry">
+
+Schiffer, M. B., 1972, [Archaeological Context and Systemic
+Context](https://doi.org/10.2307/278203), *American Antiquity*,
+**37**(2), 156–65.
+
+</div>
+
+<div id="ref-schindelin_fiji_2012" class="csl-entry">
+
+Schindelin, J., Arganda-Carreras, I., Frise, E., Kaynig, V., Longair,
+M., Pietzsch, T., Preibisch, S., Rueden, C., Saalfeld, S., Schmid, B.,
+Tinevez, J.-Y., White, D. J., Hartenstein, V., Eliceiri, K., Tomancak,
+P., and Cardona, A., 2012, [Fiji: An open-source platform for
+biological-image analysis](https://doi.org/10.1038/nmeth.2019), *Nature
+Methods*, **9**(7), 676–82.
+
+</div>
+
+<div id="ref-shackley_stream_1974" class="csl-entry">
+
+Shackley, M. S., 1974, Stream abrasion of flint implements, *Nature*,
+**248**, 501–2.
+
+</div>
+
+<div id="ref-spackman_signal_1989" class="csl-entry">
+
+Spackman, K. A., 1989, Signal detection theory: Valuable tools for
+evaluating inductive learning, In *Proceedings of the sixth
+international workshop on Machine learning*, 160–3, Elsevier.
+
+</div>
+
+<div id="ref-stapert_natural_1976" class="csl-entry">
+
+Stapert, D., 1976, Some natural surface modifications on flint in the
+Netherlands, *Paleohistoria*, **18**, 9–41.
+
+</div>
+
+<div id="ref-stemp_quantification_2009" class="csl-entry">
+
+Stemp, W. J., Childs, B. E., Vionnet, S., and Brown, C. A., 2009,
+[Quantification and discrimination of lithic use-wear: Surface profile
+measurements and length-scale fractal
+analysis](https://doi.org/10.1111/j.1475-4754.2008.00404.x),
+*Archaeometry*, **51**(3), 366–82.
+
+</div>
+
+<div id="ref-r_core_team_r_2019" class="csl-entry">
+
+Team, R. C., 2019a, [R: A language and environment for statistical
+computing](https://www.R-project.org/), R Foundation for Statistical
+Computing, Vienna, Austria.
+
+</div>
+
+<div id="ref-rstudio_team_rstudio_2019" class="csl-entry">
+
+Team, Rs., 2019b, [RStudio: Integrated Development for
+R](http://www.rstudio.com/), RStudio, Inc., Boston, MA.
+
+</div>
+
+<div id="ref-venables_modern_2002" class="csl-entry">
+
+Venables, W. N., and Ripley, B. D., 2002, *[Modern applied statistics
+with S](https://www.stats.ox.ac.uk/pub/MASS4/)* Fourth Edition ed.,
+Statistics and Computing, Springer, New York.
+
+</div>
+
+<div id="ref-vila_caracterizacion_1993" class="csl-entry">
+
+Vila, A., and Gallart, F., 1993, Caracterización de los micropulidos de
+uso: Ejemplo de aplicación del análisis de imágenes digitalizadas, In
+*Traces et fonction: Les gestes retrouvés* (eds. P. C. Anderson, S.
+Beyries, M. Otte, and H. Plisson), 459–66, : E.R.A.U.L. Etudes et
+recherches archéologiques de l’université de Liège. Série A 50, Service
+de Préhistoire, Université de Liège, Liège.
+
+</div>
+
+<div id="ref-walker_estimation_1967" class="csl-entry">
+
+Walker, S. H., and Duncan, D. B., 1967, [Estimation of the Probability
+of an Event as a Function of Several Independent
+Variables](https://doi.org/10.2307/2333860), *Biometrika*, **54**(1/2),
+167–79.
+
+</div>
+
+<div id="ref-weihs_klar_2005" class="csl-entry">
+
+Weihs, C., Ligges, U., Luebke, K., and Raabe, N., 2005, <span
+class="nocase">klaR</span> analyzing German business cycles, In *Data
+analysis and decision support*, 335–43, Springer.
+
+</div>
+
+<div id="ref-wickham_welcome_2019" class="csl-entry">
+
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L., François,
+R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen,
+T., Miller, E., Bache, S., Müller, K., Ooms, J., Robinson, D., Seidel,
+D., Spinu, V., Takahashi, K., Vaughan, D., Wilke, C., Woo, K., and
+Yutani, H., 2019, [Welcome to the
+Tidyverse](https://doi.org/10.21105/joss.01686), *Journal of Open Source
+Software*, **4**(43), 1686.
+
+</div>
+
+<div id="ref-wright_ranger_2017" class="csl-entry">
+
+Wright, M. N., and Ziegler, A., 2017, [Ranger: A Fast Implementation of
+Random Forests for High Dimensional Data in C++ and
+R](https://doi.org/10.18637/jss.v077.i01), *Journal of Statistical
+Software*, **77**, 1–17.
 
 </div>
 
