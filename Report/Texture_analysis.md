@@ -18,30 +18,25 @@ de Catalunya 35, 43002 Tarragona, Spain.
 **Abstract**
 
 Lithic artifacts are some of the most common and numerous remains from
-paleolithic archaeological sites. However, their deposition into the
-archaeological record can be the result of multiple and distant episodes
-of discard which can undergo a series of post depositional alterations.
-Because the numerous amounts of lithic remains, a quick, flexible, and
-effective method for identifying degrees of alteration in the surface of
-lithic implements is highly desirable. This would favor the analysis of
-complete lithic assemblages, inferring their overall integrity, identify
-different episodes of alteration, and even identify post-depositional
-alterations of different nature (such as rounding, dragging or wind
-erosion). This study examines the use gray scale level images to obtain
-quantitative measures from the surface of flint artifacts and determine
-if they capture changes due to post-depositional alterations. An
-experimental collection of flints was subjected to sequential episodes
-of rounding in a tumbling machine. After each episode, photographs with
-a Dino-Lite Edge 3.0 AM73915MZT USB microscope were taken, allowing to
-obtain quantitative values of surface using gray scale level values. The
-surface quantitative values were employed as variables in machine
-learning models to determine degree of exposure time and the most
+paleolithic archaeological sites. However, after their introduction into
+the archaeological record they can undergo multiple post-depositional
+alterations. Because the numerous amounts of lithic remains, a quick,
+flexible, and effective method for identifying degrees of alteration in
+the surface of lithic implements is highly desirable. The present study
+examines the use gray scale level images to obtain quantitative measures
+from the surface of flint artifacts and determine if they capture
+changes due to post-depositional alterations. An experimental collection
+of flints was subjected to sequential episodes of rounding in a tumbling
+machine. After each episode, photographs with a microscope were taken,
+allowing to obtain quantitative values of surface using gray scale level
+values. The surface quantitative values were employed as variables in
+machine learning models to determine time of exposure and the most
 important variables for discrimination. Results indicate that the
 extraction of metrics from gray scale level images successfully capture
 changes in the surface of flint artifacts caused by post-depositional
 alterations. Additional results provide insights into which areas to
-sample in search for post-depositional alterations, and underline the
-importance of particle size causing the damage.
+sample in search for post-depositional alterations and underline the
+importance of particle size causing alterations.
 
 **Key words**: lithic taphonomy; experimental archaeology; machine
 learning
@@ -52,13 +47,13 @@ learning
 
   Lithic artifacts constitute one of the most common remains from
 paleolithic archaeological sites. When analyzing lithic assemblages, a
-key factor to consider is determining the degree of post-depositional
-alterations undergone by the assemblage, since eco-cultural inferences
-are drawn from them. Methods for determining assemblage integrity
-usually focus on the assemblage as a hole. These methods often include
-spatial analysis of artifacts and analysis of fabrics to determine if
-water flow has resulted in a reorganization of the spatial distribution
-and orientations
+key factor to consider is the degree of post-depositional alterations
+undergone by an assemblage, since eco-cultural inferences are drawn from
+them. Methods for determining assemblage integrity usually focus on the
+assemblage as a hole. These methods often include spatial analysis of
+artifacts and analysis of fabrics to determine if water flow has
+resulted in a reorganization of the spatial distribution and
+orientations
 \[[1](#ref-lenoble_fabric_2004)–[5](#ref-schick_experimentally-derived_1987)\].
 Also, lithic size distribution analysis are realized to determine if
 post-depositional processes have resulted in sorting of the materials
@@ -66,31 +61,30 @@ post-depositional processes have resulted in sorting of the materials
 Another option is to focus directly on individual lithic artifacts to
 determine the degree of alteration that they have undergone
 \[[8](#ref-chu_micro-abrasion_2015),[9](#ref-levi_sala_use_1986)\].
-Although being more time consuming, this type of analysis provides a
-higher resolution, allowing to establish a graduation in the degree of
-post-depositional alterations, combine individual data of stone tools
-with spatial analysis, possible dissection of archaeological episodes,
-or to detect several episodes of recycling. Individual determination of
-degree of alteration undergone by a lithic artifact uses microscopic
-analysis to measure ridge width, visually analyze the surface to
-determine the existence and intensity of abrasion, and examine the edges
-to determine the presence of detachments coming from particle impact or
-dulling of the edges in more extreme cases
+Although being more time consuming, this type of analysis allows to
+individually establish a graduation in the degree of post-depositional
+alterations. Furthermore, it can be combined with spatial analysis,
+possible dissection of archaeological episodes, or to detect several
+episodes of recycling. Individual determination of degree of alteration
+undergone by a lithic artifact uses microscopic analysis to measure
+ridge width, visually analyze the surface to determine the existence and
+intensity of abrasion, and examine the edges to determine the presence
+of detachments coming from particle impact or dulling of the edges in
+more extreme cases
 \[[10](#ref-bustos-perez_experimental_2019)–[12](#ref-shackley_stream_1974)\].
 
 Post-depositional alterations can affect and interact with stone tools
-in two broad ways which will be recorded by the tool surface. First, the
-type of fluvial sedimentary processes which can affect lithic artifacts.
-Fluvial sedimentary processes are characterized by particle transport
-and these processes are not homogeneous. Lithic artifacts can form part
-of these process as another particle, or remain static and be affected
-by particles being transported. Commonly, three modes of particle
-transport are described in fluvial sedimentary contexts: rolling,
-sliding and saltation \[[13](#ref-alhusban_assessing_2021)\], although
-the last one is not a common form of alteration in the case of stone
-tools \[[4](#ref-petraglia_water_1994)\]. Additional to alterations
-coming from fluvial contexts, stone artifacts might also be affected by
-aeolian particle transport, usually resulting in wind abrasion
+in two broad ways. First, the type of fluvial sedimentary processes
+which can affect lithic artifacts. Fluvial sedimentary processes are
+characterized by particle transport. Lithic artifacts can form part of
+these process as another particle, or remain static and be affected by
+particles being transported. Commonly, three modes of particle transport
+are described in fluvial sedimentary contexts: rolling, sliding and
+saltation \[[13](#ref-alhusban_assessing_2021)\], although the last one
+is not a common form of alteration in the case of stone tools
+\[[4](#ref-petraglia_water_1994)\]. Additional to alterations coming
+from fluvial contexts, stone artifacts might also be affected by aeolian
+particle transport, usually resulting in wind abrasion
 \[[14](#ref-stapert_natural_1976)\]. The second factor of variability
 affecting post-depositional alterations of stone tools is the degree of
 exposure and speed on which a stone tool enters the archaeological
@@ -99,12 +93,12 @@ record
 For example, it is expected that partially buried artifacts with water
 and sediment flowing above them will present modifications in the
 exposed surface, while the edges and the burred surface will remain
-semi-intact \[[4](#ref-petraglia_water_1994)\]. A different scenario
-happens when artifacts are transported by rolling in coarse sediments,
-resulting in abrasion of all surfaces, dulling of the edges, but at the
-same time, the impact from coarse particles might result in freshly
-detached surfaces and edges which undergo new modifications until the
-artifact enters the archaeological record
+semi-intact \[[4](#ref-petraglia_water_1994)\]. AHowever, if artifacts
+are transported by rolling in coarse sediments, it will result in
+abrasion of all surfaces, dulling of the edges, but the impact from
+coarse particles might result in freshly detached surfaces and edges
+which undergo new modifications until the artifact enters the
+archaeological record
 \[[4](#ref-petraglia_water_1994),[16](#ref-sieveking_transport_1987)\].
 Finally, a same homogeneous lithic assemblage might be affected
 differentially by stream abrasion. This differential alteration is
@@ -114,34 +108,22 @@ channel (which also affects the lateral deposition of sediments) and
 several other factors result in complex and uneven structures
 \[[17](#ref-rust_structure_1972)–[19](#ref-montgomery_channel-reach_1997)\].
 
-Thus, obtaining quantitative data of surface modifications can
-complement values of ridge width, and help identify and interpret type
-of particle transport undergone by, or affecting a stone artifact.
-Ideally, quantitative values of surface abrasion would be extracted from
-each stone artifact, allowing to maximize information and interpretation
-of the formation process of an archaeological site. However, as
-previously mentioned, stone artifacts are some of the most common
-remains from Paleolithic archaeological sites. Thus, a versatile, fast
-and light time-consuming method is highly desirable since it would
-enable to analyze large quantities of lithic materials.
-
-Use-wear studies have shown surface quantification can discriminate
-worked materials and offer a high resolution analysis of the activities
-carried out
+Use-wear studies have shown that quantification of the surface can offer
+a higher resolution of analysis
 \[[20](#ref-stemp_quantification_2009)–[26](#ref-evans_laser_2008)\].
-Previous approaches in the study of use-wear have used grayscale level
-values for surface analysis of different worked materials
+Obtaining quantitative data of surface modifications due to
+post-depositional alterations can also increment the resolution of these
+analysis and complement other features of post-depositional analysis.
+However, as previously mentioned, stone artifacts are some of the most
+common remains from Paleolithic archaeological sites. Thus, a versatile,
+fast and light time-consuming method is highly desirable since it would
+enable to analyze large quantities of lithic materials. Previous
+approaches in the study of use-wear have used grayscale level values for
+surface analysis of different worked materials
 \[[27](#ref-adan_spatial_2003)–[32](#ref-grace_quantification_1985)\].
-Gray scale level analysis offers a series of advantages such as being
-fast to perform, require low equipment investment and can be applied in
-the field. This research presents results from a sequential
-experimentation in which a set of experimentally knapped flakes have
-undergone rounding process in a tumbler. After each episode of rounding,
-the same areas are photographed, and quantitative measures of flake
-surface using grayscale level values are employed to characterize the
-surface. Following the extraction of quantitative values, machine
-learning models are employed to determine the degree of separation
-between rounding times and most important features.
+The present research seeks to determine if changes in flint surface
+caused by sedimentary abrasion can be captured and quantified from
+grayscale images.
 
 ## **2. Methods**
 
@@ -1902,25 +1884,19 @@ ggpubr::ggarrange(
 
 ## **4. Discussion**
 
-The present work shows that grayscale level images can effectively be
-used to obtain quantitative data reflecting changes in the surface of
-flint artefacts due to post-depositional alterations. The range of
-metrics employed to analyze the gray scale level images successfully
-capture the changes suffered by the surface and their directionality,
-effectively serving as discriminatory variables to differentiate between
-time of exposure to post-depositional alterations. Additional to showing
-the effectiveness of the use of gray scale level images, the set of
-experiments presented here also provided insights into the differential
-development of sedimentary abrasion due to post-depositional processes.
-The present work shows that when addressing the study of
-post-depositional alterations, convex surfaces (bulb, parts of the
-dorsal surface, or hinge terminations) and surfaces close to the ridge
-or edges will develop faster and more intensely.  
-The results presented here indicate that, when addressing the analysis
-of a lithic assemblages in which post-depositional alterations might be
-present, photographs of the surface taken using a Dino-Lite Edge 3.0
-AM73915MZT USB microscope can be employed to determine degree of
-sedimentary abrasion undergone by a surface.
+The present work shows that grayscale level images obtained from a
+Dino-Lite Edge 3.0 AM73915MZT USB microscope can effectively be used to
+obtain quantitative values of changes in the surface of flint artefacts
+due to post-depositional alterations. The range of metrics employed to
+analyze the gray scale level images successfully capture surface changes
+and their directionality, effectively serving as discriminatory
+variables to differentiate between time of exposure. Additional to
+showing the effectiveness of the use of gray scale level images, results
+also provide insights into the differential development of sedimentary
+abrasion due to post-depositional processes. The present work indicates
+that convex surfaces (bulb, parts of the dorsal surface, or hinge
+terminations) and surfaces close to the ridge or edges will develop
+post-depositional alterations faster and more intensely.
 
 The general low values of precision from the machine learning models
 were expected given the heterogeneous development of sedimentary
@@ -1954,16 +1930,7 @@ being a factor which blurs or overlaps differences
 For post-depositional processes it remains untested, weather if
 different particle size, type of transport of particles (fluvial or
 aeolian), or weathering induces quantifiable differentiable surfaces
-that can be captured with the use of greyscale level values. Fernandes
-et al \[[74](#ref-fernandes_origins_2007)\] showed how different types
-of neocortex reflected various geological environments, capturing the
-evolutionary chains from the flints genetic phase until its entering
-into the archaeological record. While the use of geological neocortex in
-the present study was aimed to test if grayscale level images were able
-to separate it from images with a different condition, visualization of
-the images and data seem to indicate that different types of neocortex
-are present. However, this remains untested and requires a more
-systematic approach.
+that can be identified with the use of greyscale level values.
 
 Results showing the heterogeneous development of abrasion on a same
 flint artifact are indicative of the need for caution when attributing a
@@ -1983,7 +1950,7 @@ values observed in the present study. However, the results presented
 here outline the need to consider additional features of a lithic
 artifact, such as the width of the ridges, or the presence of
 alterations in the edges
-\[[8](#ref-chu_micro-abrasion_2015),[10](#ref-bustos-perez_experimental_2019),[12](#ref-shackley_stream_1974),[75](#ref-panera_gallego_propuesta_1996),[76](#ref-burroni_surface_2002)\].
+\[[8](#ref-chu_micro-abrasion_2015),[10](#ref-bustos-perez_experimental_2019),[12](#ref-shackley_stream_1974),[74](#ref-panera_gallego_propuesta_1996),[75](#ref-burroni_surface_2002)\].
 
 The present study has sampled only two types of flints which were
 considered similar in their surface appearance. Despite the
@@ -2755,20 +2722,9 @@ doi:[10.18637/jss.v028.i05](https://doi.org/10.18637/jss.v028.i05)</span>
 
 </div>
 
-<div id="ref-fernandes_origins_2007" class="csl-entry">
-
-<span class="csl-left-margin">74. </span><span
-class="csl-right-inline">Fernandes P, Le Bourdonnec F-X, Raynal J-P,
-Poupeau G, Piboule M, Moncel M-H. Origins of prehistoric flints: The
-neocortex memory revealed by scanning electron microscopy. Compets
-Rendus Palevol. 2007;6: 557–568.
-doi:[10.1016/j.crpv.2007.09.015](https://doi.org/10.1016/j.crpv.2007.09.015)</span>
-
-</div>
-
 <div id="ref-panera_gallego_propuesta_1996" class="csl-entry">
 
-<span class="csl-left-margin">75. </span><span
+<span class="csl-left-margin">74. </span><span
 class="csl-right-inline">Panera Gallego J, Rubio Jara S. Propuesta de
 análisis tecnomorfológico para la industria lítica del Pleistoceno
 Medio. Espacio, tiempo y forma Serie I, Prehistoria y Arqueología.
@@ -2778,7 +2734,7 @@ Medio. Espacio, tiempo y forma Serie I, Prehistoria y Arqueología.
 
 <div id="ref-burroni_surface_2002" class="csl-entry">
 
-<span class="csl-left-margin">76. </span><span
+<span class="csl-left-margin">75. </span><span
 class="csl-right-inline">Burroni D, Donahue RE, Pollard AM. The Surface
 Alteration Features of Flint Artefacts as a Record of Environmental
 Processes. Journal of Archaeological Science. 2002;29: 1277–1287.
