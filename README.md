@@ -1,7 +1,6 @@
 ## **General information**
 
-**Title:** A geometric morphometric approach to testing discrete
-categories of backed flakes from recurrent centripetal core reduction.  
+**Title:** Quantification of surface abrasion on flint stone tools.  
 **Authors:**
 
 -   Guillermo Bustos-Pérez <sup>1, 2, 3, 4</sup>  
@@ -17,8 +16,6 @@ Avinguda de Catalunya 35, 43002 Tarragona, Spain.
 <sup>(4)</sup> Corresponding authors at: <guillermo.bustos@uam.es> |
 <francesca.romagnoli@uam.es>  
 **ORCID**: 0000-0002-1089-818X
-
- 
 
 **Abstract**
 
