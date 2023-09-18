@@ -17,26 +17,27 @@ de Catalunya 35, 43002 Tarragona, Spain.
 
 **Abstract**
 
-Lithic artifacts are some of the most common and numerous remains from
-paleolithic archaeological sites. However, after their introduction into
-the archaeological record they can undergo multiple post-depositional
-alterations. Because the numerous amounts of lithic remains, a quick,
-flexible, and effective method for identifying degrees of alteration in
-the surface of lithic implements is highly desirable. The present study
-examines the use gray scale level images to obtain quantitative measures
-from the surface of flint artifacts and determine if they capture
-changes due to post-depositional alterations. An experimental collection
-of flints was subjected to sequential episodes of rounding in a tumbling
-machine. After each episode, photographs with a microscope were taken,
-allowing to obtain quantitative values of surface using gray scale level
-values. The surface quantitative values were employed as variables in
-machine learning models to determine time of exposure and the most
-important variables for discrimination. Results indicate that the
-extraction of metrics from gray scale level images successfully capture
-changes in the surface of flint artifacts caused by post-depositional
-alterations. Additional results provide insights into which areas to
-sample in search for post-depositional alterations and underline the
-importance of particle size causing alterations.
+Lithic artifacts are some of the most common and numerous remains
+recovered from paleolithic archaeological sites. However, these
+materials can undergo multiple post-depositional alterations after their
+introduction into the archaeological record. Due to the high quantity of
+lithic remains recovered, a quick, flexible, and effective method for
+identifying degrees of alteration on the surface of lithic implements is
+highly desirable. The present study examines the use of gray level
+images to obtain quantitative data from the surface of flint artifacts
+and determine whether these images can detect the presence of
+post-depositional alterations. An experimental collection of flints was
+subjected to sequential episodes of rounding in a tumbling machine.
+After each episode, photographs were taken with a microscope, resulting
+in quantitative surface values using gray level values. The quantitative
+surface values were used as variables in machine learning models to
+determine time of exposure and the most salient variables for
+discrimination. Our results indicate that the extraction of metrics from
+gray level images successfully capture changes in the surface of flint
+artifacts caused by post-depositional processes. Additional results
+provide insight into which areas to sample when seeking
+post-depositional alterations and underscore the importance of particle
+size in the generation of alterations.
 
 **Key words**: lithic taphonomy; experimental archaeology; machine
 learning
@@ -45,76 +46,80 @@ learning
 
 ## **1. Introduction**
 
-  Lithic artifacts constitute one of the most common remains from
-paleolithic archaeological sites. When analyzing lithic assemblages, a
-key factor to consider is the degree of post-depositional alterations
-undergone by an assemblage, since eco-cultural inferences are drawn from
-them. Methods for determining assemblage integrity usually focus on the
-assemblage as a hole. These methods often include spatial analysis of
-artifacts and analysis of fabrics to determine if water flow has
-resulted in a reorganization of the spatial distribution and
-orientations ([Schick 1987](#ref-schick_experimentally-derived_1987);
-[Petraglia and Potts 1994](#ref-petraglia_water_1994); [Lenoble and
-Bertran 2004](#ref-lenoble_fabric_2004); [McPherron
+  Some of the most common remains recovered from paleolithic
+archaeological sites are lithic artifacts. Because eco-cultural
+inferences can be drawn from lithic artifacts, post-depositional
+alterations are a key factor to consider when analyzing an assemblage.
+Methods for determining assemblage integrity usually focus on the
+assemblage as a whole, and often include a spatial analysis of the
+artifacts as well as fabric analysis to determine whether water flow has
+reorganized the spatial distribution and orientations of the pieces
+([Shackley 1974](#ref-shackley_stream_1974); [Petraglia and Potts
+1994](#ref-petraglia_water_1994); [McPherron
 2005](#ref-mcpherron_artifact_2005); [McPherron
-2018](#ref-mcpherron_additional_2018)). Also, lithic size distribution
-analysis are realized to determine if post-depositional processes have
-resulted in sorting of the materials ([Maíllo Fernández
-1998](#ref-maillo_fernandez_proporciones_1998); [Bertran et al.
-2012](#ref-bertran_particle_2012)). Another option is to focus directly
+2018](#ref-mcpherron_additional_2018)). Also, the size distribution of
+the lithics is analyzed to determine whether post-depositional processes
+have resulted in the sorting of materials ([Maíllo Fernández
+1998](#ref-maillo_fernandez_proporciones_1998); [Hiscock
+2002](#ref-hiscock_quantifying_2002); [Bertran et al.
+2012](#ref-bertran_particle_2012); [Byers et al.
+2015](#ref-byers_flake_2015)). Another option is to focus specifically
 on individual lithic artifacts to determine the degree of alteration
 that they have undergone ([Levi Sala 1986](#ref-levi_sala_use_1986);
-[Chu et al. 2015](#ref-chu_micro-abrasion_2015)). Although being more
-time consuming, this type of analysis allows to individually establish a
-graduation in the degree of post-depositional alterations. Furthermore,
-it can be combined with spatial analysis, possible dissection of
-archaeological episodes, or to detect several episodes of recycling.
-Individual determination of degree of alteration undergone by a lithic
-artifact uses microscopic analysis to measure ridge width, visually
-analyze the surface to determine the existence and intensity of
-abrasion, and examine the edges to determine the presence of detachments
-coming from particle impact or dulling of the edges in more extreme
-cases ([Shackley 1974](#ref-shackley_stream_1974); [Chambers
-2003](#ref-chambers_like_2003); [Bustos-Pérez et al.
+[Chu et al. 2015](#ref-chu_micro-abrasion_2015)). Although more time
+consuming, this type of analysis establishes an individual graduation in
+the degree of post-depositional alterations. It can also be combined
+with spatial analysis to potentially dissect distinct archaeological
+episodes or detect instances of recycling. The individual determination
+of the degree of alteration undergone by a lithic artifact makes use of
+a microscopic analysis to measure ridge width, a visual analysis of the
+surface to determine the existence and intensity of abrasion, and an
+examination of the edges to determine the presence of detachments caused
+by particle impact, or dulling in more extreme cases ([Shackley
+1974](#ref-shackley_stream_1974); [Bustos-Pérez et al.
 2019](#ref-bustos-perez_experimental_2019)).
 
-Post-depositional alterations can affect and interact with stone tools
-in two broad ways. First, the type of fluvial sedimentary processes
-which can affect lithic artifacts. Fluvial sedimentary processes are
-characterized by particle transport. Lithic artifacts can form part of
-these process as another particle, or remain static and be affected by
-particles being transported. Commonly, three modes of particle transport
-are described in fluvial sedimentary contexts: rolling, sliding and
+Broadly speaking, how post-depositional alterations can affect and
+interact with stone tools depends on two factors: firstly, the types of
+fluvial sedimentary processes an artifact might have encountered and,
+secondly, the degree to which an artifact has been exposed to the source
+of alteration and when it enters into the archaeological record. Fluvial
+sedimentary processes are characterized by particle transport. Lithic
+artifacts can form part of these processes as another component, or
+remain static and be affected by the particles being transported across
+their surfaces. Commonly, three modes of particle transport are
+described in fluvial sedimentary contexts: rolling, sliding and
 saltation ([Alhusban and Valyrakis 2021](#ref-alhusban_assessing_2021)),
-although the last one is not a common form of alteration in the case of
-stone tools ([Petraglia and Potts 1994](#ref-petraglia_water_1994)).
-Additional to alterations coming from fluvial contexts, stone artifacts
-might also be affected by aeolian particle transport, usually resulting
-in wind abrasion ([Stapert 1976](#ref-stapert_natural_1976)). The second
-factor of variability affecting post-depositional alterations of stone
-tools is the degree of exposure and speed on which a stone tool enters
-the archaeological record ([Schiffer
+although alterations cause by saltation are rarely seen on stone tools
+([Petraglia and Potts 1994](#ref-petraglia_water_1994)). In addition to
+alterations resulting from fluvial contexts, stone artifacts might also
+be affected by aeolian particle transport, which results in wind
+abrasion ([Stapert 1976](#ref-stapert_natural_1976)). The second factor
+of variability affecting the post-depositional alterations of stone
+tools is the degree of exposure they have had and the speed with which
+they enter the archaeological record ([Schiffer
 1972](#ref-schiffer_archaeological_1972); [Schick
-1987](#ref-schick_experimentally-derived_1987); [Petraglia and Potts
-1994](#ref-petraglia_water_1994)). For example, it is expected that
-partially buried artifacts with water and sediment flowing above them
-will present modifications in the exposed surface, while the edges and
-the burred surface will remain semi-intact ([Petraglia and Potts
-1994](#ref-petraglia_water_1994)). AHowever, if artifacts are
-transported by rolling in coarse sediments, it will result in abrasion
-of all surfaces, dulling of the edges, but the impact from coarse
-particles might result in freshly detached surfaces and edges which
-undergo new modifications until the artifact enters the archaeological
-record ([Harding et al. 1987](#ref-sieveking_transport_1987); [Petraglia
-and Potts 1994](#ref-petraglia_water_1994)). Finally, a same homogeneous
-lithic assemblage might be affected differentially by stream abrasion.
-This differential alteration is consequence of the complex structure of
-water streams, were the overall slope of the terrain, energy and charge
-of the flow, morphology of the channel (which also affects the lateral
-deposition of sediments) and several other factors result in complex and
-uneven structures ([Rust 1972](#ref-rust_structure_1972); [Montgomery
-and Buffington 1997](#ref-montgomery_channel-reach_1997); [Jain et al.
-2008](#ref-jain_where_2008)).
+1986](#ref-schick_stone_1986); [Petraglia and Potts
+1994](#ref-petraglia_water_1994)). For example, partially buried
+artifacts with water and sediment flowing above them are expected to
+present modifications on the exposed surface, while the edges and the
+buried surface will remain semi-intact ([Petraglia and Potts
+1994](#ref-petraglia_water_1994)). Meanwhile, artifacts that are
+transported by rolling in coarse sediments will exhibit abrasion across
+their entire surface and have dulled edges. However, the impact from
+coarse particles might result in freshly detached surfaces and edges
+which then undergo new modifications until the artifact enters the
+archaeological record ([Harding et al.
+1987](#ref-sieveking_transport_1987); [Petraglia and Potts
+1994](#ref-petraglia_water_1994)). Finally, the same homogeneous lithic
+assemblage might be affected differentially by stream abrasion. This
+differential alteration is a consequence of the complex structure of
+water streams, in which the overall slope of the terrain, energy and
+charge of the flow, morphology of the channel (which also affects the
+lateral deposition of sediments) and several other factors result in
+complex and uneven structures \[Rust ([1972](#ref-rust_structure_1972));
+Montgomery and Buffington ([1997](#ref-montgomery_channel-reach_1997));
+Jain et al. ([2008](#ref-jain_where_2008))).
 
 Use-wear studies have shown that quantification of the surface can offer
 a higher resolution of analysis ([Evans and Donahue
@@ -124,23 +129,22 @@ a higher resolution of analysis ([Evans and Donahue
 2019](#ref-ibanez_identifying_2019); [Pedergnana et al.
 2020](#ref-pedergnana_polish_2020); [Ibáñez and Mazzucco
 2021](#ref-ibanez_quantitative_2021); [Boström and Lundin
-2022](#ref-bostrom_quantifying_2022)). Obtaining quantitative data of
-surface modifications due to post-depositional alterations can also
-increment the resolution of these analysis and complement other features
-of post-depositional analysis. However, as previously mentioned, stone
-artifacts are some of the most common remains from Paleolithic
-archaeological sites. Thus, a versatile, fast and light time-consuming
-method is highly desirable since it would enable to analyze large
-quantities of lithic materials. Previous approaches in the study of
-use-wear have used grayscale level values for surface analysis of
-different worked materials ([Grace et al.
-1985](#ref-grace_quantification_1985); [Vila and Gallart
+2022](#ref-bostrom_quantifying_2022)). Obtaining quantitative data on
+surface modifications caused by post-depositional processes can also
+increase the resolution of these analyses and complement other features
+of post-depositional studies. However, as previously mentioned, stone
+artifacts are some of the most common remains recovered from paleolithic
+archaeological sites. Thus, a fast, versatile method is highly desirable
+since it would enable the analysis of large quantities of lithic
+materials. Previous approaches in the study of use-wear have used gray
+values to analyze the surfaces of different worked materials ([Grace et
+al. 1985](#ref-grace_quantification_1985); [Vila and Gallart
 1993](#ref-vila_caracterizacion_1993); [Bietti
 1996](#ref-bietti_image_1996); [Barceló et al.
 2001](#ref-barcelo_image_2001); [Pijoan-López et al.
 2002](#ref-pijoan-lopez_variabilidad_2002); [Adán et al.
 2003](#ref-adan_spatial_2003)). The present research seeks to determine
-if changes in flint surface caused by sedimentary abrasion can be
+whether changes in flint surface caused by sedimentary abrasion can be
 captured and quantified from grayscale images.
 
 ## **2. Methods**
@@ -148,564 +152,90 @@ captured and quantified from grayscale images.
 ### **2.1 Experimental sample and setting**
 
 Two blocks of flint representing two different types (Type I and Type
-II) were experimentally knapped. The two types correspond to the South
-Madrid Miocene Flint ([Bustillo and Pérez-Jiménez
+II) were experimentally knapped. Both types are south Madrid Miocene
+flint ([Bustillo and Pérez-Jiménez
 2005](#ref-bustillo_caracteristicas_2005); [Bustillo et al.
-2012](#ref-bustillo_caracterizacion_2012)) although from two different
-locations. South Madrid Miocene flints were formed by the replacement of
-sedimentary rocks which had filled the original basin. This replacement
-of the sedimentary rocks is considered to have taken place under
-continental conditions such as alluvial plain deposits, shallow
-lacustrine waters, and marshes ([Bustillo et al.
-2012](#ref-bustillo_caracterizacion_2012)). Macroscopic analysis of the
-flints shows that they present a fine opaque homogeneous surface, with
-colors being blue/grey and reddish/ocher. There is also a relative
-absence of opal, although geodes and pseudo-morphs can be observed. From
-these two blocks three flakes were selected from Type 1, and four flakes
-were selected from Type 2.  
-![“Experimental sample of flint flakes (photographs by M. D.
-Guillén).”](Figures/01-Presenting-materials.png)
+2012](#ref-bustillo_caracterizacion_2012)) although sourced from two
+different locations. South Madrid Miocene flints were formed by the
+replacement of sedimentary rocks which had filled the original basin.
+This replacement of the sedimentary rocks is considered to have taken
+place under continental conditions such as alluvial plain deposits,
+shallow lacustrine waters, and marshes ([Bustillo et al.
+2012](#ref-bustillo_caracterizacion_2012)). The macroscopic analysis of
+the flints evidences a fine opaque homogeneous surface that is blue/grey
+and reddish/ocher in color. There is also a relative absence of opal,
+although geodes and pseudo-morphs can be observed. From these two
+blocks, three flakes were selected from Type 1, and four flakes.
 
-In order to simulate sedimentary abrasion, the flakes were introduced by
+<figure>
+<img src="Figures/01-Presenting-materials.png"
+alt="“Experimental sample of flint flakes (photographs by M. D. Guillén).”" />
+<figcaption aria-hidden="true">“Experimental sample of flint flakes
+(photographs by M. D. Guillén).”</figcaption>
+</figure>
+
+In order to simulate sedimentary abrasion, the flakes were introduced in
 pairs into a tumbler machine (KT-3010 SUPER-TUMBLER) along with a mix of
-sand and water (30/40% of water with a total weight of 5 kg). Sediment
-was obtained from the quaternary levels of the Madrid basin and it is
-composed of fine sands with silt and partial carbonation. Sediment was
-obtained from the quaternary levels of the Madrid basin and it is
-composed of fine sands with silt and partial carbonation. The tumbler
-machine was set at continuous direction at 83 rpm.
+sand and water (30/40% water with a total weight of 5 kg). The sediment
+was obtained from the quaternary levels of the Madrid basin and is made
+up of fine sands with silt and partial carbonation. The tumbler machine
+was set to turn in a continuous direction at 83 rpm.
 
-All flakes were submitted to three cumulative cycles of tumbling with
-times set to 1h, 5h and 10h. Prior to their introduction into the
-tumbling machine, 6 photographs (3 per each side) of the surface of each
-flake were taken in order to have references of texture metrics from
-flint flakes. Previous research ([Chu et al.
+All of the flakes were submitted to three cumulative cycles of tumbling
+with times set to 1 h, 5 h and 10 h. Prior to placement in the tumbling
+machine, six photographs (three on each side) were taken of the surface
+of each flake to act as references for the texture metrics of the flint
+flakes. Previous research ([Chu et al.
 2015](#ref-chu_micro-abrasion_2015); [Bustos-Pérez et al.
-2019](#ref-bustos-perez_experimental_2019)) suggests that, for the
-development of post depositional alterations, a decrease in particle
-size increases the heterogeneity in the speed, intensity and location of
-their development. Thus, after the first cycle of rounding (1h), each
-flint flake was screened using the Dino-Lite Edge 3.0 AM73915MZT USB
-microscope in order to determine and photograph areas which had
+2019](#ref-bustos-perez_experimental_2019)) suggests that for the
+development of post-depositional alterations decreased particle size
+results in increased heterogeneity in the speed, intensity and location
+of their development. Thus, after the first cycle of rounding (1 h),
+each flint flake was screened using the Dino-Lite Edge 3.0 AM73915MZT
+USB microscope in order to determine and photograph areas which had
 developed sedimentary abrasion. These areas were photographed in the
-subsequent rounding cycles, allowing to obtain sequential images and
-data of surface change for cumulative times of 1h, 5h and 10h. The
+subsequent rounding cycles, thereby generating sequential images and
+data on surface changes for cumulative times of 1 h, 5 h and 10 h. The
 dataset of images was supplemented by the inclusion of sample
 photographs of macroscopically recognizable geological neocortex of
-flints from the same formation, providing a total of 269 photographs.
+flints from the same formation, resulting in a total of 269 photographs:
+42 of fresh surfaces, 68 from each cycle of rounding (i.e., 204 in
+total), and 23 of neocortex.
 
 ``` r
 # Load and inspect the data
 load("Data/Sequential Data v1.01.RData")
-kableExtra::kable(head(Sequential.Data))
+head(Sequential.Data)
 ```
 
-    ## Warning in !is.null(rmarkdown::metadata$output) && rmarkdown::metadata$output
-    ## %in% : 'length(x) = 4 > 1' in coercion to 'logical(1)'
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-ID
-</th>
-<th style="text-align:right;">
-Mean
-</th>
-<th style="text-align:right;">
-SD
-</th>
-<th style="text-align:right;">
-Modal
-</th>
-<th style="text-align:right;">
-Median
-</th>
-<th style="text-align:right;">
-Kurtosis
-</th>
-<th style="text-align:right;">
-Skewness
-</th>
-<th style="text-align:right;">
-Rq
-</th>
-<th style="text-align:right;">
-Ra
-</th>
-<th style="text-align:right;">
-Rsk
-</th>
-<th style="text-align:right;">
-Rku
-</th>
-<th style="text-align:right;">
-ASM
-</th>
-<th style="text-align:right;">
-CONT
-</th>
-<th style="text-align:right;">
-CORR
-</th>
-<th style="text-align:right;">
-IDM
-</th>
-<th style="text-align:right;">
-ENT
-</th>
-<th style="text-align:left;">
-Flake.ID
-</th>
-<th style="text-align:left;">
-Flake.Time
-</th>
-<th style="text-align:left;">
-Dorsal.Ventral
-</th>
-<th style="text-align:left;">
-No.Photo
-</th>
-<th style="text-align:left;">
-Photo.Type
-</th>
-<th style="text-align:left;">
-Flake.Number
-</th>
-<th style="text-align:left;">
-Flint.Type
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-HDisc_01_11 Neocortex 01c.tif
-</td>
-<td style="text-align:right;">
-78.8051
-</td>
-<td style="text-align:right;">
-48.0084
-</td>
-<td style="text-align:right;">
-52
-</td>
-<td style="text-align:right;">
-72
-</td>
-<td style="text-align:right;">
-0.192800
-</td>
-<td style="text-align:right;">
-0.6877
-</td>
-<td style="text-align:right;">
-92.238
-</td>
-<td style="text-align:right;">
-78.962
-</td>
-<td style="text-align:right;">
-1.404
-</td>
-<td style="text-align:right;">
-2.265
-</td>
-<td style="text-align:right;">
-0.0007549
-</td>
-<td style="text-align:right;">
-2590.374
-</td>
-<td style="text-align:right;">
-0.0001907
-</td>
-<td style="text-align:right;">
-0.0439237
-</td>
-<td style="text-align:right;">
-7.478644
-</td>
-<td style="text-align:left;">
-HDisc_01_11
-</td>
-<td style="text-align:left;">
-Neocortex
-</td>
-<td style="text-align:left;">
-01
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:left;">
-Screened
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-GeoSample
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-HDisc_01_11 Neocortex 2c.tif
-</td>
-<td style="text-align:right;">
-79.4588
-</td>
-<td style="text-align:right;">
-49.0694
-</td>
-<td style="text-align:right;">
-57
-</td>
-<td style="text-align:right;">
-72
-</td>
-<td style="text-align:right;">
-0.220100
-</td>
-<td style="text-align:right;">
-0.7342
-</td>
-<td style="text-align:right;">
-93.279
-</td>
-<td style="text-align:right;">
-79.431
-</td>
-<td style="text-align:right;">
-1.425
-</td>
-<td style="text-align:right;">
-2.324
-</td>
-<td style="text-align:right;">
-0.0006760
-</td>
-<td style="text-align:right;">
-2580.717
-</td>
-<td style="text-align:right;">
-0.0001932
-</td>
-<td style="text-align:right;">
-0.0435694
-</td>
-<td style="text-align:right;">
-7.616038
-</td>
-<td style="text-align:left;">
-HDisc_01_11
-</td>
-<td style="text-align:left;">
-Neocortex
-</td>
-<td style="text-align:left;">
-01
-</td>
-<td style="text-align:left;">
-2
-</td>
-<td style="text-align:left;">
-Screened
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-GeoSample
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-HDisc_01_11 Neocortex 3c.tif
-</td>
-<td style="text-align:right;">
-79.2460
-</td>
-<td style="text-align:right;">
-48.6480
-</td>
-<td style="text-align:right;">
-48
-</td>
-<td style="text-align:right;">
-72
-</td>
-<td style="text-align:right;">
-0.096450
-</td>
-<td style="text-align:right;">
-0.6573
-</td>
-<td style="text-align:right;">
-92.902
-</td>
-<td style="text-align:right;">
-79.279
-</td>
-<td style="text-align:right;">
-1.412
-</td>
-<td style="text-align:right;">
-2.268
-</td>
-<td style="text-align:right;">
-0.0005305
-</td>
-<td style="text-align:right;">
-2622.327
-</td>
-<td style="text-align:right;">
-0.0001890
-</td>
-<td style="text-align:right;">
-0.0397000
-</td>
-<td style="text-align:right;">
-7.818300
-</td>
-<td style="text-align:left;">
-HDisc_01_11
-</td>
-<td style="text-align:left;">
-Neocortex
-</td>
-<td style="text-align:left;">
-01
-</td>
-<td style="text-align:left;">
-3
-</td>
-<td style="text-align:left;">
-Screened
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-GeoSample
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-HDisc_01_11 Neocortex 4c.tif
-</td>
-<td style="text-align:right;">
-83.6360
-</td>
-<td style="text-align:right;">
-49.8806
-</td>
-<td style="text-align:right;">
-52
-</td>
-<td style="text-align:right;">
-80
-</td>
-<td style="text-align:right;">
--0.184100
-</td>
-<td style="text-align:right;">
-0.5215
-</td>
-<td style="text-align:right;">
-97.097
-</td>
-<td style="text-align:right;">
-83.571
-</td>
-<td style="text-align:right;">
-1.384
-</td>
-<td style="text-align:right;">
-2.157
-</td>
-<td style="text-align:right;">
-0.0004967
-</td>
-<td style="text-align:right;">
-2769.124
-</td>
-<td style="text-align:right;">
-0.0001789
-</td>
-<td style="text-align:right;">
-0.0393344
-</td>
-<td style="text-align:right;">
-7.856781
-</td>
-<td style="text-align:left;">
-HDisc_01_11
-</td>
-<td style="text-align:left;">
-Neocortex
-</td>
-<td style="text-align:left;">
-01
-</td>
-<td style="text-align:left;">
-4
-</td>
-<td style="text-align:left;">
-Screened
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-GeoSample
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-HDisc_01_11 Neocortex 5c.tif
-</td>
-<td style="text-align:right;">
-72.9310
-</td>
-<td style="text-align:right;">
-42.9089
-</td>
-<td style="text-align:right;">
-57
-</td>
-<td style="text-align:right;">
-65
-</td>
-<td style="text-align:right;">
-1.112800
-</td>
-<td style="text-align:right;">
-0.9028
-</td>
-<td style="text-align:right;">
-84.399
-</td>
-<td style="text-align:right;">
-73.105
-</td>
-<td style="text-align:right;">
-1.428
-</td>
-<td style="text-align:right;">
-2.390
-</td>
-<td style="text-align:right;">
-0.0009690
-</td>
-<td style="text-align:right;">
-2430.545
-</td>
-<td style="text-align:right;">
-0.0001860
-</td>
-<td style="text-align:right;">
-0.0449431
-</td>
-<td style="text-align:right;">
-7.275731
-</td>
-<td style="text-align:left;">
-HDisc_01_11
-</td>
-<td style="text-align:left;">
-Neocortex
-</td>
-<td style="text-align:left;">
-01
-</td>
-<td style="text-align:left;">
-5
-</td>
-<td style="text-align:left;">
-Screened
-</td>
-<td style="text-align:left;">
-11
-</td>
-<td style="text-align:left;">
-GeoSample
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Hdisc_01_12 Neocortex 01c.tif
-</td>
-<td style="text-align:right;">
-81.6403
-</td>
-<td style="text-align:right;">
-47.6198
-</td>
-<td style="text-align:right;">
-78
-</td>
-<td style="text-align:right;">
-78
-</td>
-<td style="text-align:right;">
-0.006416
-</td>
-<td style="text-align:right;">
-0.5100
-</td>
-<td style="text-align:right;">
-94.272
-</td>
-<td style="text-align:right;">
-81.652
-</td>
-<td style="text-align:right;">
-1.365
-</td>
-<td style="text-align:right;">
-2.125
-</td>
-<td style="text-align:right;">
-0.0005129
-</td>
-<td style="text-align:right;">
-2489.187
-</td>
-<td style="text-align:right;">
-0.0001996
-</td>
-<td style="text-align:right;">
-0.0412394
-</td>
-<td style="text-align:right;">
-7.828831
-</td>
-<td style="text-align:left;">
-Hdisc_01_12
-</td>
-<td style="text-align:left;">
-Neocortex
-</td>
-<td style="text-align:left;">
-01
-</td>
-<td style="text-align:left;">
-1
-</td>
-<td style="text-align:left;">
-Screened
-</td>
-<td style="text-align:left;">
-12
-</td>
-<td style="text-align:left;">
-GeoSample
-</td>
-</tr>
-</tbody>
-</table>
+    ##                               ID    Mean      SD Modal Median  Kurtosis
+    ## 1 HDisc_01_11 Neocortex 01c.tif  78.8051 48.0084    52     72  0.192800
+    ## 2  HDisc_01_11 Neocortex 2c.tif  79.4588 49.0694    57     72  0.220100
+    ## 3  HDisc_01_11 Neocortex 3c.tif  79.2460 48.6480    48     72  0.096450
+    ## 4  HDisc_01_11 Neocortex 4c.tif  83.6360 49.8806    52     80 -0.184100
+    ## 5  HDisc_01_11 Neocortex 5c.tif  72.9310 42.9089    57     65  1.112800
+    ## 6 Hdisc_01_12 Neocortex 01c.tif  81.6403 47.6198    78     78  0.006416
+    ##   Skewness     Rq     Ra   Rsk   Rku          ASM     CONT         CORR
+    ## 1   0.6877 92.238 78.962 1.404 2.265 0.0007548563 2590.374 0.0001906969
+    ## 2   0.7342 93.279 79.431 1.425 2.324 0.0006760500 2580.717 0.0001932169
+    ## 3   0.6573 92.902 79.279 1.412 2.268 0.0005304562 2622.327 0.0001890238
+    ## 4   0.5215 97.097 83.571 1.384 2.157 0.0004967000 2769.124 0.0001788550
+    ## 5   0.9028 84.399 73.105 1.428 2.390 0.0009690375 2430.545 0.0001859788
+    ## 6   0.5100 94.272 81.652 1.365 2.125 0.0005128812 2489.187 0.0001995875
+    ##          IDM      ENT    Flake.ID Flake.Time Dorsal.Ventral No.Photo Photo.Type
+    ## 1 0.04392375 7.478644 HDisc_01_11  Neocortex             01        1   Screened
+    ## 2 0.04356938 7.616038 HDisc_01_11  Neocortex             01        2   Screened
+    ## 3 0.03970000 7.818300 HDisc_01_11  Neocortex             01        3   Screened
+    ## 4 0.03933437 7.856781 HDisc_01_11  Neocortex             01        4   Screened
+    ## 5 0.04494313 7.275731 HDisc_01_11  Neocortex             01        5   Screened
+    ## 6 0.04123938 7.828831 Hdisc_01_12  Neocortex             01        1   Screened
+    ##   Flake.Number Flint.Type
+    ## 1           11  GeoSample
+    ## 2           11  GeoSample
+    ## 3           11  GeoSample
+    ## 4           11  GeoSample
+    ## 5           11  GeoSample
+    ## 6           12  GeoSample
 
 ``` r
 #load packages
@@ -715,158 +245,120 @@ library(tidyverse); library(caret); library(pROC)
 ``` r
 # Counts of number of images per time of exposure
 # (sequential images taken after the first episode of abrasion are not included)
-kableExtra::kable(Sequential.Data %>% 
+Sequential.Data %>% 
   filter(Photo.Type != "Sequential" | Flake.Time ==  "Fresh" ) %>% 
   group_by(Flake.Time) %>% 
   summarise(
-    N.by.Flakes = n()))
+    N.by.Flakes = n())
 ```
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-Flake.Time
-</th>
-<th style="text-align:right;">
-N.by.Flakes
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Fresh
-</td>
-<td style="text-align:right;">
-42
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-One.Hour
-</td>
-<td style="text-align:right;">
-68
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Five.Hours
-</td>
-<td style="text-align:right;">
-68
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ten.Hours
-</td>
-<td style="text-align:right;">
-68
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Neocortex
-</td>
-<td style="text-align:right;">
-23
-</td>
-</tr>
-</tbody>
-</table>
+    ## # A tibble: 5 × 2
+    ##   Flake.Time N.by.Flakes
+    ##   <fct>            <int>
+    ## 1 Fresh               42
+    ## 2 One.Hour            68
+    ## 3 Five.Hours          68
+    ## 4 Ten.Hours           68
+    ## 5 Neocortex           23
 
 ### **2.2 Cleaning protocol, image acquisition and processing**
 
-Workflow developed in the present study includes a series of steps prior
-to extracting quantitative data from the images. These steps are:
-cleaning protocol to remove contaminants from the stone tool surface,
-image capture, and image enhancement.
+Prior to extracting the quantitative data from the images, the workflow
+employed in the present study included a series of steps: cleaning
+protocol, image capture, and image enhancement.
 
-Multiple works emphasize the need of cleaning protocols to remove modern
-contaminants prior to analysis ([Ollé and Vergès
+Multiple studies have emphasized the need for cleaning protocols to
+remove modern contaminants prior to analysis ([Ollé and Vergès
 2014](#ref-olle_use_2014); [Pedergnana et al.
 2016](#ref-pedergnana_modern_2016); [Fernández-Marchena and Ollé
 2016](#ref-fernandez-marchena_microscopic_2016); [Asryan and Ollé
 2020](#ref-asryan_results_2020)). A multi-step procedure based on
 previous studies was adopted ([Pedergnana et al.
-2016](#ref-pedergnana_modern_2016)) in order to retrieve possible
-contaminants. This multi-step procedure included a sonic bath in 2%
-neutral soap (Derquim) solution during 10 to 15 minutes, followed by a
-second sonic bath in pure acetone during another 10 to 15 minutes. After
-each step the lithic artefacts were introduced in a water bath and
-finally dried using pressure air. During the cleaning protocol and
-microscopic analysis all artefacts were manipulated using surgical
-gloves.
+2016](#ref-pedergnana_modern_2016)) in order to remove possible
+contaminants (Fig. S2). This multi-step procedure included a sonic bath
+in 2% neutral soap (Derquim) solution for 10 to 15 minutes, followed by
+a second sonic bath in pure acetone for another 10 to 15 minutes. After
+each step, the lithic artifacts were placed in a water bath and finally
+dried with pressurized air. Surgical gloves were worn during the
+handling of all the artifacts during the cleaning protocol and
+microscopic analysis.
 
-![“Effects of manual manipulation without protection on flint surface.
-Left: surface photographed after the application of cleaning protocol
-and manipulation of the artefact using protection. Right: same surface
-after manual manipulation without
-protection”](Figures/02-Effects-of-grease.png)
+<figure>
+<img src="Figures/02-Effects-of-grease.png"
+alt="“Effects of manual manipulation without protection on flint surface. Left: surface photographed after the application of cleaning protocol and manipulation of the artefact using protection. Right: same surface after manual manipulation without protection”" />
+<figcaption aria-hidden="true">“Effects of manual manipulation without
+protection on flint surface. Left: surface photographed after the
+application of cleaning protocol and manipulation of the artefact using
+protection. Right: same surface after manual manipulation without
+protection”</figcaption>
+</figure>
 
 All surface photographs were taken using a Dino-Lite Edge 3.0 AM73915MZT
 USB microscope at 120 magnifications with a field of view (FOV) of 3.28
 x 2.46 mm and a pixel ratio of 2548 x 1918. The USB microscope was
 mounted in a Dino-Lite RK-06-AE stand in order to ensure verticality,
-and a N3C-D2 diffuser cap was used to ensure homogeneous distribution of
-light. During the realization of each photograph, the region of interest
-of the flint was manually positioned as horizontal as possible
+and a N3C-D2 diffuser cap was used to ensure the even distribution of
+light. In the process of taking each photograph, the region of interest
+on the flint was manually positioned as horizontally as possible
 ([Calandra 2022](#ref-calandra_workflow_2022)). To avoid problems due to
 focus variation, each surface was photographed several times at
-different heights, and the obtained sequences were mounted using Helicon
-Focus 7.7.2.
+different heights, and the sequences obtained were mounted using a
+Helicon Focus 7.7.2.
 
 A common problem of images obtained from USB microscopes is the lack of
 detail due to saturation in one of the grey level values and the effects
-of different lightning or surface color. This saturation is often
+of different lighting or surface color. This saturation is often
 observed as a general glaze in one of the grey level values and results
 in a low-quality image with poor detail. To increase detail and quality
 prior to the analysis, all images were subjected to a two-step process.
 First, the Fiji ([Schindelin et al. 2012](#ref-schindelin_fiji_2012))
-plugging “Subtract background” was employed to minimize effects of
-different lightning and changes in flint color. Second, the function
-“Enhance contrast” was employed to desaturate the images by normalizing
-their histograms. This process provides a gray-scale level image
-employed as input for the statistical analysis.
+“Subtract background” plugin was used to minimize the effects of
+different lighting and differing flint coloration. Second, we used the
+“Enhance contrast” function to desaturate the images by normalizing
+their histograms. This process provided a gray level image for use as
+input for the statistical analysis. All analyzed images were in TIFF
+format.
 
-![“Two examples of image enhancement. Left: original images taken with
-the AM73915MZT USB microscope and using a N3C-D2 diffuser cap. Center:
-images after retrieving the background to avoid effects of different
-lightning or color. Right: after normalizing the histogram to increase
-detail and avoid saturation. Top row: geological neocortex. Bottom row:
-fresh surface of an experimentally knapped
-flake.”](Figures/03-Retrieve-background-and-normalize.jpg)
+<figure>
+<img src="Figures/03-Retrieve-background-and-normalize.jpg"
+alt="“Two examples of image enhancement. Left: original images taken with the AM73915MZT USB microscope and using a N3C-D2 diffuser cap. Center: images after removing the background to avoid the effects of different lighting or color. Right: after normalizing the histogram to increase detail and prevent saturation. Top row: geological neocortex. Bottom row: fresh surface of an experimentally knapped flake.”" />
+<figcaption aria-hidden="true">“Two examples of image enhancement. Left:
+original images taken with the AM73915MZT USB microscope and using a
+N3C-D2 diffuser cap. Center: images after removing the background to
+avoid the effects of different lighting or color. Right: after
+normalizing the histogram to increase detail and prevent saturation. Top
+row: geological neocortex. Bottom row: fresh surface of an
+experimentally knapped flake.”</figcaption>
+</figure>
 
 ### **2.3 Statistical analysis**
 
-The present work uses three sets of statistical metrics to analyze
-obtained images. The first set of statistical metrics correspond to
-descriptive statistics (mean, standard deviation, mode, median skewness,
-and kurtosis). The second set of statistical measures corresponds to
-measures of roughness. Surface parameters using the “R” prefix use
-profiles as input. The present work uses a Fiji/ImageJ plugging were
-R-values are obtained on the hole surface following the ISO 4287/2000
+The present study used three sets of statistical metrics to analyze the
+images: descriptive statistics (mean, standard deviation, mode, median,
+skewness, and kurtosis), measures of roughness, and measures of
+intensity values.  
+The surface parameters were analyzed using the “R” prefix for the
+profiles as input. The present work uses a Fiji/ImageJ plugin with which
+R-values are obtained over the whole surface following the ISO 4287/2000
 standard ([Chinga and Dougherty 2002](#ref-chinga_roughness_2002);
 [Chinga et al. 2007](#ref-chinga_quantification_2007)). These measures
 are:
 
 - **Root mean square deviation/roughness (Rq):** indicator of surface
   roughness.  
-- **Arithmetical mean deviation (Ra):** which indicates the deviation of
-  a surface from a mean height.  
+- **Arithmetical mean deviation (Ra):** indicator of the deviation of a
+  surface from a mean height.  
 - **Skewness of the assessed profile (Rsk):** indicator of the departure
   from surface symmetry. Negative values indicate a surface made of deep
-  valleys, and positive values indicates peaks and asperities.  
-- **Kurtosis of the assessed profile (Rku):** which indicates the
-  sharpness of the peaks. Low values indicate blunt peaks, while high
-  values indicate sharp peaks.
+  valleys, and positive values indicate peaks and asperities.  
+- **Kurtosis of the assessed profile (Rku):** indicator of the sharpness
+  of the peaks. Low values indicate blunt peaks, while high values
+  indicate sharp peaks.
 
-Analysis of intensity values through the Gray Level Co-occurrence Matrix
-(GLCM; ([Haralick et al. 1973](#ref-haralick_textural_1973))) takes into
-consideration the spatial distribution of intensity values. The GLCM
-works in two steps ([Haralick et al.
+The intensity values were analyzed with the Gray Level Co-occurrence
+Matrix (GLCM; ([Haralick et al. 1973](#ref-haralick_textural_1973)))
+takes into consideration the spatial distribution of intensity values.
+The GLCM works in two steps ([Haralick et al.
 1973](#ref-haralick_textural_1973)). First, using a given distance and
 direction it builds a matrix which captures the relationship of
 intensity between pairs of pixels (reference and neighbor). Second, for
@@ -874,53 +366,53 @@ every x and y it considers the co-occurrence of values, forming a new
 matrix. From this new matrix, a series of statistical descriptors are
 derived ([Haralick et al. 1973](#ref-haralick_textural_1973)).
 
-- **Angular Second Moment (ASM)** is measure of homogeneity in the
+- **Angular Second Moment (ASM)** is a measure of homogeneity in the
   image. Homogeneous images (with low gray-tone transitions) will have
-  fewer entries of large magnitude. Thus, homogeneous images will have
-  high ASM values, while the opposite will be true for non-homogeneous
+  fewer high-magnitude entries. Thus, homogeneous images will have high
+  ASM values, while the opposite will be true for non-homogeneous
   images.  
-- **Contrast (CONT)** is a value of the amount of local variations. High
-  values are indicating a lot of local variation and low values indicate
-  few local variations.  
-- **Correlation (CORR)** which measures gray-tone linear-dependencies in
-  the image. It indicates how a reference pixel is related to its
-  neighbor. A 0 value indicates it is uncorrelated, and 1 indicates a
+- **Contrast (CONT)** is a value for local variations. High values
+  indicate more local variation and low values indicate less local
+  variation.  
+- **Correlation (CORR)** measures gray-tone linear-dependencies in the
+  image. It indicates how a reference pixel is related to its neighbor.
+  A value of 0 indicates it is uncorrelated, while a 1 indicates a
   perfect correlation.  
-- **Inverse Different Moment (IDM)** also referred as homogeneity. It
-  obtains the measures of the closeness of the distribution of the GLCM
-  elements to the GLCM diagonal.  
+- **Inverse Different Moment (IDM)**, also referred as homogeneity,
+  measures the closeness of the distribution of the GLCM elements to the
+  GLCM diagonal.  
 - **Entropy (ENT)** is a measure of the amount of irremediable chaos or
   disorder in an image. High values of entropy indicate values of
   similar magnitude, while low values indicate unequal entries.
 
-As previously mentioned, use of the GLCM requires selecting pixel
-distance between reference and neighbor, and direction on which to
-establish the distance ([Haralick et al.
-1973](#ref-haralick_textural_1973)). For this, it is common to test for
-different combinations of distances and directions since images at
-different magnifications, different field of view and different
-resolution might require variation in pixel distance and directions
-([Grace et al. 1985](#ref-grace_quantification_1985); [Bietti
+As previously mentioned, the use of the GLCM requires selecting the
+pixel distance between the reference and neighbor, and the direction at
+which to establish the distance ([Haralick et al.
+1973](#ref-haralick_textural_1973)). To do this, it is common to test
+for different combinations of distances and directions, as images at
+different magnifications, different fields of view and different
+resolutions might require variations in pixel distance ([Grace et al.
+1985](#ref-grace_quantification_1985); [Bietti
 1996](#ref-bietti_image_1996)). For the present study, a preliminary
 test indicated that using four distances at 5, 10, 15 and 20 pixels in
 the four possible directions (north, east, south and west) to set the
 GLCM presented the best results for discrimination.
 
-Calculation of all metrics was done using the free software Fiji
-([Schindelin et al. 2012](#ref-schindelin_fiji_2012)). Roughness metrics
-calculation was implemented through the “Roughness calculation” plugin
-([Chinga and Dougherty 2002](#ref-chinga_roughness_2002)). GLCM and
-texture metrics were calculated using the “GLCM Texture” plugging
-([Cabrera 2006](#ref-cabrera_texture_2006)).
+All metrics were calculated using the free software Fiji ([Schindelin et
+al. 2012](#ref-schindelin_fiji_2012)). Roughness metrics were calculated
+with the “Roughness calculation” plugin ([Chinga and Dougherty
+2002](#ref-chinga_roughness_2002)). GLCM and texture metrics were
+calculated using the “GLCM texture” ([Cabrera
+2006](#ref-cabrera_texture_2006)).
 
 ### **2.4 Machine Learning models and evaluation**
 
-Data from descriptive statistics, roughness and texture were employed as
-variable for the training of Machine Learning models in order to predict
-the time of exposure to sedimentary abrasion. The ten models tested
-were:
+The data from the descriptive statistics and the roughness and texture
+analyses were used as variables for the training of machine learning
+models in order to predict the time of exposure to sedimentary abrasion.
+The 10 models tested are described below.
 
-- **Linear discriminant analysis (LDA):** reduces dimensionality for the
+- **Linear discriminant analysis (LDA)** reduces dimensionality for the
   purpose of maximizing the separation between classes while decision
   boundaries divide the predictor range into regions ([Fisher
   1936](#ref-fisher_use_1936); [James et al.
@@ -937,25 +429,26 @@ were:
   predictions to categorical outcomes ([Walker and Duncan
   1967](#ref-walker_estimation_1967); [Cramer
   2004](#ref-cramer_early_2004)).  
-- **Decision tree with C5.0 algorithm:** an improvement on decision
-  trees for classification ([Quinlan 1996](#ref-quinlan_improved_1996);
-  [Quinlan 2014](#ref-quinlan_c4_2014)).  
-- **Random forest:** made of decision trees. Each tree is grown from a
-  random sample of the data and variables, allowing for each tree to
-  grow differently and to better reflect the complexity of the data
+- **The Decision tree with C5.0 algorithm:** algorithm is an improvement
+  on decision trees for classification ([Quinlan
+  1996](#ref-quinlan_improved_1996); [Quinlan
+  2014](#ref-quinlan_c4_2014)).  
+- **A random forest:** is made up of decision trees with each tree grown
+  from a random sample of the data and variables, allowing for each tree
+  to grow differently and to better reflect the complexity of the data
   ([Breiman 2001](#ref-breiman_random_2001)).  
-- **Generalized boosted model ([Ridgeway
+- **The Generalized boosted model** ([Ridgeway
   2007](#ref-ridgeway_generalized_2007); [Greenwell et al.
-  2019](#ref-greenwell_package_2019)):** implements the gradient boosted
+  2019](#ref-greenwell_package_2019)) implements the gradient boosted
   machine ([Friedman 2001](#ref-friedman_greedy_2001); [Friedman
-  2002](#ref-friedman_stochastic_2002)) making it possible to detect
-  learning deficiencies and increase model accuracy for a set of random
-  forests.  
-- **Supported vector machines (SVM):** fit hyperplanes into a
+  2002](#ref-friedman_stochastic_2002)) making making it possible to
+  detect learning deficiencies and increase model accuracy for a set of
+  random forests.  
+- **Supported vector machines (SVM):**fit hyperplanes into a
   multidimensional space with the objective of creating homogeneous
   partitions ([Frey and Slate 1991](#ref-frey_letter_1991); [Cortes and
   Vapnik 1995](#ref-cortes_support-vector_1995)). The present study
-  tests SVM with linear, radial and polynomial kernels.  
+  tests SVMs with linear, radial and polynomial kernels.  
 - **Naïve Bayes classifier:** computes class probabilities using Bayes’
   rule ([Weihs et al. 2005](#ref-weihs_klar_2005)).
 
@@ -967,78 +460,69 @@ in order to obtain ROC curves and AUC values in the case of multiclass
 problems</figcaption>
 </figure>
 
-All models are evaluated using 10×100 k-fold cross validation (10 folds
+All models were evaluated using 10×100 k-fold cross validation (10 folds
 and 100 cycles), providing measures of accuracy. Using a 10-fold
-division, each fold will have 43 data points. Each fold serves
-subsequently as test set for a trained model. Although computationally
-more expensive, this guarantees that all data points will serve as test
-sets. The 100 cycles provide a random shuffling of the dataset prior to
-fold division, thus ensuring that the composition of the folds varies in
-each cycle and it does not play a significant role in the evaluation of
-the models.
+division, each fold has 43 data points. Each fold subsequently acts as a
+test set for a trained model. Although computationally more expensive,
+this guarantees that all data points will serve as test sets. The 100
+cycles randomly shuffle the dataset prior to fold division, thus
+ensuring that the composition of the folds varies in each cycle and that
+composition does not play a significant role in the evaluation of the
+models.
 
-Machine Learning models commonly use a 0.5 classification threshold to
+Machine learning models commonly use a 0.5 classification threshold to
 assign categories. However, classification thresholds can be modified to
 balance the ability of model to detect true positives and avoid false
-positives which are respectively referred as sensitivity and
+positives, which are respectively referred as sensitivity and
 specificity. The receiver operating characteristic (ROC) curve is
 employed to systematically evaluate the ratio of detected true positives
 while avoiding false positives ([Spackman
 1989](#ref-spackman_signal_1989); [Bradley
-1997](#ref-bradley_use_1997)). The ROC curve allows visually analyzing
-model performance and calculating the AUC, which ranges from 1 (perfect
-classifier) to 0.5 (random classifier). The AUC is a measure of
-performance derived from the receiver operating characteristic (ROC)
-curve. The ROC curve is used to evaluate the ratio of detected true
-positives while avoiding false positives ([Spackman
-1989](#ref-spackman_signal_1989); [Bradley
-1997](#ref-bradley_use_1997)). The ROC curve makes it possible to
-visually analyze model performance and calculate the AUC, which ranges
+1997](#ref-bradley_use_1997)). The ROC curve allows model performance to
+be visually analyzed and the area under the curve (AUC) to be calculated
 from 1 (perfect classifier) to 0.5 (random classifier). The ROC and AUC
-are commonly applied in two-class problems and their extension to
-multiclass problems is usually done through pairwise analysis.
-
-In the case of multiclass problems, the AUC provides two groups of
-values: first, each class obtains an AUC value using a “one vs all”
-approach; second, a general AUC value of model performance is obtained
-from the average of each class AUC ([Robin et al.
-2011](#ref-robin_proc_2011);
-[**hand_simple_200?**](#ref-hand_simple_200)). In the case of the ROC
-curve, individual curves of each class are plotted using the previously
-mentioned “one vs all” approach. The present study tested 10 different
-models with a three-class classification problem which would involve a
-total of 30 different ROC curves (three curves per 10 models). In this
-paper, we have provided only the three ROC curves of the best model.
-When analyzing lithic materials, the use of thresholds to guarantee true
+are commonly applied in two-class problems, and are usually extended to
+multiclass problems through pairwise analysis (Fig. S3). For multiclass
+problems, the AUC provides two groups of values: first, each class
+obtains an AUC value using a “one vs all” approach; second, a general
+AUC value of model performance is obtained from the average of each AUC
+class ([Hand and Till 2001](#ref-hand_simple_2001); [Robin et al.
+2011](#ref-robin_proc_2011)). In the case of the ROC curve, individual
+curves of each class are plotted using the previously mentioned “one vs
+all” approach. The present study tested 10 different models with a
+three-class classification problem which would involve a total of 30
+different ROC curves (three curves per 10 models). In this paper, we
+have provided only the three ROC curves of the best model. When
+analyzing lithic materials, the use of thresholds to guarantee true
 positives and avoid false positives is of special interest. The use of
 thresholds better indicates the accuracy of a model considering these
-probability values. In the present study we have slightly variated the
+probability values. In the present study we have slightly varied the
 interpretation of the AUC values ([Lantz 2019](#ref-lantz_machine_2019))
 with intervals interpreted as follows:
 
-- 0.9 to 1: outstanding  
-- 0.85 to 0.9: excellent  
-- 0.8 to 0.85: good  
-- 0.75 to 0.8: acceptable  
-- 0.7 to 0.75: fair  
-- 0.6 to 0.7: poor  
-- 0.5 to 0.6: no discrimination
+- 0.9 to 1: outstanding.  
+- 0.85 to 0.9: excellent.  
+- 0.8 to 0.85: good.  
+- 0.75 to 0.8: acceptable.  
+- 0.7 to 0.75: fair.  
+- 0.6 to 0.7: poor.  
+- 0.5 to 0.6: no discrimination.
 
-Strong levels of correlation are present between the variables of the
-present study. The issue of multicollinearity in classification remains
-a matter of debate. It is commonly pointed that for multiple linear
-regressions, collinearity affects the interpretation of coefficients
+High levels of correlation were found between the variables in this
+study. The issue of multicollinearity in classification remains a matter
+of debate. It is commonly suggested that for multiple linear
+regressions, collinearity affects the interpretation of the coefficients
 (variables), but does not affect the quality of the predictions ([Alin
 2010](#ref-alin_multicollinearity_2010); [James et al.
 2013](#ref-james_introduction_2013); [Chan et al.
 2022](#ref-chan_mitigating_2022)). Additional arguments indicate that if
-the collinearity between variables of the training set is also present
-in the test set, it should not be considered a problem. In the present
-study variables presenting perfect levels of collinearity (mean and Ra)
-are excluded from the training of machine learning models, and feature
-importance is explored among non-correlated features. After evaluating
-and determining the best model, an additional model on PCA values was
-trained in order to determine possible overfitting.
+the collinearity between the variables of the training set is also
+present in the test set, it should not be considered a problem. In this
+study, the variables presenting perfect levels of collinearity (mean and
+Ra) were excluded from the training of the machine learning models, and
+feature importance was explored among non-correlated features. After
+evaluating and determining the best model, an additional model on PCA
+values was trained in order to determine possible overfitting.
 
 ``` r
 # Check for collinearity of the data
@@ -1059,163 +543,42 @@ ggcorrplot::ggcorrplot(r,
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 This study was conducted using an R version 4.2.2 in IDE RStudio version
-2022.12 \[67,68\]. The data and graphs were managed using the tidyverse
-v.1.3.2 package \[69\]. The LDA and KNN were trained with the MASS
-(Modern Applied Statistics with S) v.7.3.58.1 package \[70\]. The C5.0
-tree was trained using the C50 v.0.1.7 package \[51,52\]. The random
-forest was trained using the ranger v.0.14.1 package \[71\]. The
-Generalized Boosted Model was trained using package gbm v.2.1.8.1
-\[54,55\]. The SVM was trained using the e1071 v.1.7.12 package
-\[72,73\]. The Naïve Bayes model was trained using package klaR v.1.7.1
-\[60\]. The k-fold cross validation of all models, precision metrics,
-and confusion matrix were obtained using the caret v.6.0.93 package
-\[74\]. Machine learning models also provide insights into variable
-importance for classification. The caret package was used to extract
-variable importance after each k-fold cross validation. ROC curves and
-AUC values are obtained using the package pROC v.1.18.0 \[64\].
-
-### **2.5 Training of Machine Learning models**
-
-The following code was set to evaluate and train the machine learning
-models described in the methods section. All resultant models are
-available in the *Data* section.
-
-``` r
-#### Train the models ####
-# Validation
-library(caret)
-trControl <- trainControl(method  = "repeatedcv",
-                          verboseIter = TRUE,
-                          number  = 10,
-                          repeats = 100,
-                          savePredictions = "final",
-                          classProbs = TRUE)
-
-Data <- Sequential.Data %>% select(-c(Mean, Ra))
-
-frmla <- as.formula(
-  paste("Flake.Time", paste(colnames(Data[,2:14]), collapse = " + "), sep = " ~ "))
-
-# LDA model
-set.seed(123)
-LDA.model <- train(frmla, 
-                   Data,
-                   method = "lda",
-                   preProc = c("center", "scale"),
-                   trControl = trControl)
-
-# Logistic regression model
-set.seed(123)
-logmod <- train(
-  frmla, 
-  Data, 
-  method = "glmnet",                 
-  family = 'multinom',
-  trControl = trControl)
-
-# KNN model
-set.seed(123)
-KNN.model <- train(
-  frmla,
-  Data2,
-  method = "knn",
-  preProc = c("center", "scale"), 
-  trControl = trControl,
-  tuneGrid = expand.grid(k = seq(1, 15, 1)))
-
-# C5.0 Tree 
-set.seed(123)
-C50_Mod <- train(frmla, 
-                 Data,
-                 method = "C5.0",
-                 trControl = trControl,
-                 preProc = c("center", "scale"), 
-                 metric = "Accuracy",
-                 importance = 'impurity')
-
-# Random Forest
-set.seed(123)
-RF.model <- train(frmla, 
-                  Data,
-                  method = "ranger",
-                  trControl = trControl,
-                  preProc = c("center", "scale"), 
-                  metric = "Accuracy",
-                  importance = 'impurity')
-
-# GBM model 
-set.seed(123)
-GBM.model <- train(frmla, 
-                   Data,
-                   method = "gbm",
-                   preProc = c("center", "scale"), 
-                   trControl = trControl,
-                   metric = "Accuracy")
-
-# SVMs
-set.seed(123)
-SVML.model <- train(frmla, 
-                    Data,
-                    method = "svmLinear",
-                    trControl = trControl,
-                    preProc =  c('center', 'scale'),
-                    metric = "Accuracy",
-                    importance = 'impurity')
-
-set.seed(123)
-SVMR.model <- train(frmla, 
-                    Data,
-                    method = "svmRadial",
-                    preProc =  c('center', 'scale'),
-                    trControl = trControl,
-                    metric = "Accuracy",
-                    importance = 'impurity')
-
-set.seed(123)
-SVMP.model <- train(frmla, 
-                    Data,
-                    method = "svmPoly",
-                    preProc =  c('center', 'scale'),
-                    trControl = trControl,
-                    metric = "Accuracy",
-                    importance = 'impurity')
-
-# Naïve Bayes
-set.seed(123)
-NB.model <- train(frmla, 
-                  Data,
-                  preProc = c("center", "scale"), 
-                  method = "nb",
-                  trControl = trControl,
-                  metric = "Accuracy")
-```
-
-This study was conducted using an R version 4.2.2 in IDE RStudio version
-2022.12 ([Team 2019a](#ref-r_core_team_r_2019); [Team
-2019b](#ref-rstudio_team_rstudio_2019)). The data and graphs were
-managed using the tidyverse v.1.3.2 package ([Wickham et al.
-2019](#ref-wickham_welcome_2019)). The LDA and KNN were trained with the
+2022.12 ([Team 2019b](#ref-rstudio_team_rstudio_2019); [Team
+2019a](#ref-r_core_team_r_2019)). The data and graphs were managed using
+the tidyverse v.1.3.2 package ([Wickham et al.
+2019](#ref-wickham_welcome_2019)). LDA and KNN were trained using the
 MASS (Modern Applied Statistics with S) v.7.3.58.1 package ([Venables
 and Ripley 2002](#ref-venables_modern_2002)). The C5.0 tree was trained
 using the C50 v.0.1.7 package ([Quinlan
 1996](#ref-quinlan_improved_1996); [Quinlan
 2014](#ref-quinlan_c4_2014)). The random forest was trained using the
 ranger v.0.14.1 package ([Wright and Ziegler
-2017](#ref-wright_ranger_2017)). The Generalized Boosted Model was
-trained using package gbm v.2.1.8.1 ([Ridgeway
+2017](#ref-wright_ranger_2017)). The generalized boosted model was
+trained using the gbm v.2.1.8.1 package ([Ridgeway
 2007](#ref-ridgeway_generalized_2007); [Greenwell et al.
-2019](#ref-greenwell_package_2019)). The SVM was trained using the e1071
+2019](#ref-greenwell_package_2019)). SVMs were trained using the e1071
 v.1.7.12 package ([Karatzoglou et al.
 2004](#ref-karatzoglou_kernlab_2004); [Karatzoglou et al.
-2006](#ref-karatzoglou_support_2006)). The Naïve Bayes model was trained
-using package klaR v.1.7.1 ([Weihs et al. 2005](#ref-weihs_klar_2005)).
-The k-fold cross validation of all models, precision metrics, and
-confusion matrix were obtained using the caret v.6.0.93 package ([Kuhn
-2008](#ref-kuhn_building_2008)). Machine learning models also provide
-insights into variable importance for classification. The caret package
-was used to extract variable importance after each k-fold cross
-validation. ROC curves and AUC values are obtained using the package
-pROC v.1.18.0 ([Robin et al. 2011](#ref-robin_proc_2011)).
+2006](#ref-karatzoglou_support_2006)). The naïve Bayes model was trained
+using the klaR v.1.7.1 package ([Weihs et al.
+2005](#ref-weihs_klar_2005)). The k-fold cross validation of all models,
+precision metrics, and confusion matrix were obtained using the caret
+v.6.0.93 package ([Kuhn 2008](#ref-kuhn_building_2008)).Machine learning
+models also provide insight into variable importance for classification.
+The caret package was used to extract variable importance after each
+k-fold cross validation. ROC curves and AUC values were obtained using
+the pROC v.1.18.0 package ([Robin et al. 2011](#ref-robin_proc_2011)).
+
+### **2.5 Training of Machine Learning models**
+
+The following line of code runs the script for training all machine
+learning models described in the methods section. All resultant models
+are available in the \[Data\]\[Report/Data\] section of the compendium.
+
+``` r
+# Train the models
+source("Scripts/11 Model training.R")
+```
 
 ## **3. Results**
 
@@ -2174,6 +1537,15 @@ Archaeological Method and Theory*, **26**, 1243–75.
 
 </div>
 
+<div id="ref-byers_flake_2015" class="csl-entry">
+
+Byers, D. A., Hargiss, E., and Finley, J. B., 2015, [Flake Morphology,
+Fluvial Dynamics, and Debitage Transport Potential: FLAKES, FLUVIAL
+DYNAMICS, AND DEBITAGE TRANSPORT](https://doi.org/10.1002/gea.21524),
+*Geoarchaeology*, **30**(5), 379–92.
+
+</div>
+
 <div id="ref-cabrera_texture_2006" class="csl-entry">
 
 Cabrera, J. E., 2006, [Texture
@@ -2187,14 +1559,6 @@ Calandra, I., 2022, [A workflow for quality control in surface texture
 analysis applied to teeth and
 tools](https://doi.org/10.1016/j.jasrep.2022.103692), *Journal of
 Archaeological Science: Reports*, **46**, 103692.
-
-</div>
-
-<div id="ref-chambers_like_2003" class="csl-entry">
-
-Chambers, J. C., 2003, Like a rolling stone? The identification of
-fluvial transportation damage signatures on secondary context bifaces,
-*Lithics*, **24**, 66–77.
 
 </div>
 
@@ -2322,6 +1686,15 @@ Greenwell, M. B., 2019, Package “gbm,” *R package version*, **2**(5).
 
 </div>
 
+<div id="ref-hand_simple_2001" class="csl-entry">
+
+Hand, D. J., and Till, R. J., 2001, [A simple generalisation of the area
+under the ROC curve for multiple class classification
+problems](https://doi.org/10.1023/A:1010920819831), *Machine learning*,
+**45**(2), 171–86.
+
+</div>
+
 <div id="ref-haralick_textural_1973" class="csl-entry">
 
 Haralick, R. M., Shanmugam, K., and Dinstein, I. H., 1973, Textural
@@ -2338,6 +1711,14 @@ river, In *The Human Uses of Flint and Chert: Proceedings of the Fourth
 International Flint Symposium Held at Brighton Polytechnic* (eds. G.
 Sieveking, and M. Newcomer), 115–26, Cambridge University Press,
 Cambridge.
+
+</div>
+
+<div id="ref-hiscock_quantifying_2002" class="csl-entry">
+
+Hiscock, P., 2002, [Quantifying the Size of Artefact
+Assemblages](https://doi.org/10.1006/jasc.2001.0705), *Journal of
+Archaeological Science*, **29**, 251–8.
 
 </div>
 
@@ -2416,15 +1797,6 @@ Software*, **28**(5).
 
 Lantz, B., 2019, *Machine learning with R: Expert techniques for
 predictive modeling*, Packt publishing ltd.
-
-</div>
-
-<div id="ref-lenoble_fabric_2004" class="csl-entry">
-
-Lenoble, A., and Bertran, P., 2004, [Fabric of Palaeolithic levels:
-Methods and implications for site formation
-processes](https://doi.org/10.1016/j.jas.2003.09.013), *Journal of
-Archaeological Science*, **31**(4), 457–69.
 
 </div>
 
@@ -2567,12 +1939,11 @@ Rust, B. R., 1972, Structure and process in a braided river,
 
 </div>
 
-<div id="ref-schick_experimentally-derived_1987" class="csl-entry">
+<div id="ref-schick_stone_1986" class="csl-entry">
 
-Schick, K. D., 1987, Experimentally-derived criteria for assessing
-hydrologic disturbance of archaeological sites, In *Natural Formation
-Processes and the Archaeological Record* (eds. D. T. Nash, and M. D.
-Petraglia), 86–107, BAR International Series 352.
+Schick, K. D., 1986, *Stone Age sites in the making: Experiments in the
+formation and transformation of archaeological occurrences*, Vol. 319,
+BAR International Series, BAR Publishing, Oxford.
 
 </div>
 
@@ -2672,9 +2043,9 @@ Variables](https://doi.org/10.2307/2333860), *Biometrika*, **54**(1/2),
 
 <div id="ref-weihs_klar_2005" class="csl-entry">
 
-Weihs, C., Ligges, U., Luebke, K., and Raabe, N., 2005, <span
-class="nocase">klaR</span> analyzing German business cycles, In *Data
-analysis and decision support*, 335–43, Springer.
+Weihs, C., Ligges, U., Luebke, K., and Raabe, N., 2005,
+<span class="nocase">klaR</span> analyzing German business cycles, In
+*Data analysis and decision support*, 335–43, Springer.
 
 </div>
 

@@ -11,11 +11,6 @@ output:
     toc_depth: 4
     fig_caption: yes
     number_sections: FALSE
-  bookdown::word_document2:
-    reference_docx: "References_Styles/word-styles-reference.docx"
-    fig_caption: yes
-    number_sections: FALSE
-    code_folding: "hide"
 bibliography: "References_Styles/References.bib"
 csl: "References_Styles/archaeometry.csl"
 link-citations: true
@@ -62,6 +57,7 @@ Use-wear studies have shown that quantification of the surface can offer a highe
 ### **2.1 Experimental sample and setting**   
 
 Two blocks of flint representing two different types (Type I and Type II) were experimentally knapped. Both types are south Madrid Miocene flint [@bustillo_caracterizacion_2012; @bustillo_caracteristicas_2005] although sourced from two different locations. South Madrid Miocene flints were formed by the replacement of sedimentary rocks which had filled the original basin. This replacement of the sedimentary rocks is considered to have taken place under continental conditions such as alluvial plain deposits, shallow lacustrine waters, and marshes [@bustillo_caracterizacion_2012]. The macroscopic analysis of the flints evidences a fine opaque homogeneous surface that is blue/grey and reddish/ocher in color. There is also a relative absence of opal, although geodes and pseudo-morphs can be observed. From these two blocks, three flakes were selected from Type 1, and four flakes.       
+
 !["Experimental sample of flint flakes (photographs by M. D. Guillén)."](Figures/01-Presenting-materials.png)
 
 In order to simulate sedimentary abrasion, the flakes were introduced in pairs into a tumbler machine (KT-3010 SUPER-TUMBLER) along with a mix of sand and water (30/40% water with a total weight of 5 kg). The sediment was obtained from the quaternary levels of the Madrid basin and is made up of fine sands with silt and partial carbonation. The tumbler machine was set to turn in a continuous direction at 83 rpm.          
@@ -71,7 +67,7 @@ All of the flakes were submitted to three cumulative cycles of tumbling with tim
 ```{r}
 # Load and inspect the data
 load("Data/Sequential Data v1.01.RData")
-kableExtra::kable(head(Sequential.Data))
+head(Sequential.Data)
 ```
 ```{r, message=FALSE, warning=FALSE}
 #load packages
@@ -82,11 +78,11 @@ library(tidyverse); library(caret); library(pROC)
 ```{r}
 # Counts of number of images per time of exposure
 # (sequential images taken after the first episode of abrasion are not included)
-kableExtra::kable(Sequential.Data %>% 
+Sequential.Data %>% 
   filter(Photo.Type != "Sequential" | Flake.Time ==  "Fresh" ) %>% 
   group_by(Flake.Time) %>% 
   summarise(
-    N.by.Flakes = n()))
+    N.by.Flakes = n())
 ```
 
 
@@ -176,117 +172,13 @@ This study was conducted using an R version 4.2.2 in IDE RStudio version 2022.12
 
 ### **2.5 Training of Machine Learning models**     
 
-The following code was set to evaluate and train the machine learning models described in the methods section. All resultant models are available in the *Data* section.    
+The following line of code runs the script for training all machine learning models described in the methods section. All resultant models are available in the [Data][Report/Data] section of the compendium.    
 
-```{r, eval=FALSE}
-#### Train the models ####
-# Validation
-library(caret)
-trControl <- trainControl(method  = "repeatedcv",
-                          verboseIter = TRUE,
-                          number  = 10,
-                          repeats = 100,
-                          savePredictions = "final",
-                          classProbs = TRUE)
-
-Data <- Sequential.Data %>% select(-c(Mean, Ra))
-
-frmla <- as.formula(
-  paste("Flake.Time", paste(colnames(Data[,2:14]), collapse = " + "), sep = " ~ "))
-
-# LDA model
-set.seed(123)
-LDA.model <- train(frmla, 
-                   Data,
-                   method = "lda",
-                   preProc = c("center", "scale"),
-                   trControl = trControl)
-
-# Logistic regression model
-set.seed(123)
-logmod <- train(
-  frmla, 
-  Data, 
-  method = "glmnet",                 
-  family = 'multinom',
-  trControl = trControl)
-
-# KNN model
-set.seed(123)
-KNN.model <- train(
-  frmla,
-  Data2,
-  method = "knn",
-  preProc = c("center", "scale"), 
-  trControl = trControl,
-  tuneGrid = expand.grid(k = seq(1, 15, 1)))
-
-# C5.0 Tree 
-set.seed(123)
-C50_Mod <- train(frmla, 
-                 Data,
-                 method = "C5.0",
-                 trControl = trControl,
-                 preProc = c("center", "scale"), 
-                 metric = "Accuracy",
-                 importance = 'impurity')
-
-# Random Forest
-set.seed(123)
-RF.model <- train(frmla, 
-                  Data,
-                  method = "ranger",
-                  trControl = trControl,
-                  preProc = c("center", "scale"), 
-                  metric = "Accuracy",
-                  importance = 'impurity')
-
-# GBM model 
-set.seed(123)
-GBM.model <- train(frmla, 
-                   Data,
-                   method = "gbm",
-                   preProc = c("center", "scale"), 
-                   trControl = trControl,
-                   metric = "Accuracy")
-
-# SVMs
-set.seed(123)
-SVML.model <- train(frmla, 
-                    Data,
-                    method = "svmLinear",
-                    trControl = trControl,
-                    preProc =  c('center', 'scale'),
-                    metric = "Accuracy",
-                    importance = 'impurity')
-
-set.seed(123)
-SVMR.model <- train(frmla, 
-                    Data,
-                    method = "svmRadial",
-                    preProc =  c('center', 'scale'),
-                    trControl = trControl,
-                    metric = "Accuracy",
-                    importance = 'impurity')
-
-set.seed(123)
-SVMP.model <- train(frmla, 
-                    Data,
-                    method = "svmPoly",
-                    preProc =  c('center', 'scale'),
-                    trControl = trControl,
-                    metric = "Accuracy",
-                    importance = 'impurity')
-
-# Naïve Bayes
-set.seed(123)
-NB.model <- train(frmla, 
-                  Data,
-                  preProc = c("center", "scale"), 
-                  method = "nb",
-                  trControl = trControl,
-                  metric = "Accuracy")
+```{r eval=FALSE}
+# Train the models
+source("Scripts/11 Model training.R")
 ```
+
 
 
 ## **3. Results**   
