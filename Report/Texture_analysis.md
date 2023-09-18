@@ -584,8 +584,9 @@ source("Scripts/11 Model training.R")
 
 ### **3.1 Texture metrics**
 
-A general MANOVA considering all groups and variables shows marked
-statistically significant differences between groups.
+A general MANOVA considering all groups and variables showed marked
+statistically significant differences between groups (df = 4; F = 8.947;
+p \< 0.001).
 
 ``` r
 # MANOVA on data
@@ -602,9 +603,24 @@ summary(res.man)
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-MANOVA analysis comparing a category with its subsequent time of
-exposure shows marked statistical differences between fresh materials
-and one hour of rounding
+ 
+
+A MANOVA analysis comparing a category with its subsequent time of
+exposure showed marked statistical differences between fresh materials
+and one hour of rounding (df = 1; F = 5.985; p \< 0.001); one hour of
+rounding and five hours (df = 1; F = 2.761; p \< 0.01); and ten hours
+and neocortex (df = 1; F = 19.799; p \< 0.01). When considering all
+variables, no statistical differences were found between the images of
+materials exposed to five and ten hours of rounding (df = 1; F = 1.55; p
+= 0.09). However, statistical differences between these two categories
+were documented for the mean (df = 1; t = 6.4, p = 0.01), median (df =
+1; t = 4.95, p = 0.03), standard deviation (df = 1; t = 7.34, p \<
+0.01), kurtosis (df = 1; t = 6.53, p = 0.01), skewness (df = 1; t =
+6.29, p = 0.01), Rq (df = 1; t = 6.96, p \< 0.001), Ra (df = 1; t =
+6.65, p = 0.01), Rku (df = 1; t = 4.37, p = 0.04), ASM (df = 1; t =
+6.67, p = 0.01), contrast (df = 1; t = 6.85, p \< 0.01), correlation (df
+= 1; t = 6.96; p = 0.02), IDM (df = 1; t = 6.87, p \< 0.01) and entropy
+(df = 1; t = 6.8, p = 0.01).
 
 ``` r
 # Set different groups
@@ -667,12 +683,6 @@ summary(res.man)
     ## Residuals  89                                             
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-When considering all variables, no statistical differences were found
-between images exposed to five and ten hours rounding. However,
-statistical difference between these two categories are present in the
-mean, median, standard deviation, kurtosis, skewness, Rq, Ra, Rku, ASM,
-contrast, correlation, IDM and entropy.
 
 ``` r
 # MANOVA five hours vs Ten hours
@@ -795,23 +805,23 @@ summary.aov(res.man)
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Exploratory visual analysis shows a series of clear tendencies for the
-three groups of statistics employed. On general terms, as sedimentary
-abrasion increases, images will present increasing values of mean,
-median, standard deviation, Ra, Rq, contrast (CONT) and entropy (ENT).
-By the contrary, as sedimentary abrasion increases, images will present
-decreasing values of kurtosis, skewness, Rku, Rsk, angular second moment
+An exploratory visual analysis revealed a series of clear tendencies for
+the three groups of statistics employed. In general terms, as
+sedimentary abrasion increased, the images presented increasing mean,
+median, standard deviation, Ra, Rq, contrast (CONT) and entropy (ENT)
+values. In contrast, as sedimentary abrasion increased, the images
+presented decreasing kurtosis, skewness, Rku, Rsk, angular second moment
 (ASM), correlation between pixels (CORR) and inverse different moment
-(IDM). Measures of central tendency (mean, median and modal) are the
-less reliable, since the three times of cumulative abrasion show
-important overlapping values for these statistic variables. Effects of
-sedimentary abrasion are especially observable in variables of data
-dispersion (kurtosis, skewness and standard deviation), and in the five
-textural features (angular second moment: ASM; contrast: CONT;
-correlation: CORR; entropy: ENT and inverse different moment: IDM). As
-sedimentary abrasion increases, images will become less homogeneous,
-with increasing amounts of local changes which can be related with an
-increasing roughness.
+(IDM) values. Central tendency measures (mean, median and modal) were
+found to be the least reliable, since the three cumulative abrasion
+times show considerable overlapping values for these statistic
+variables. The effects of sedimentary abrasion were especially
+observable in the data dispersion variables (kurtosis, skewness and
+standard deviation) or in the five textural features (angular second
+moment: ASM; contrast: CONT; correlation: CORR; entropy: ENT and inverse
+different moment: IDM). As sedimentary abrasion increased, the images
+became less homogeneous with increasing amounts of local changes, which
+may be related to increased roughness.
 
 ``` r
 Sequential.Data  %>%
@@ -849,12 +859,13 @@ Sequential.Data  %>%
 
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
-Although trends in surface change by sedimentary abrasion are clear, the
-exploratory visual analysis also indicates important overlapping between
-exposure time categories. A visual evaluation of images shows that,
-within lithic artifacts, the development of sedimentary abrasion is
-heterogeneous. Convex surfaces and areas close to the ridges and edges
-developed abrasion more quickly and intensely than other areas.
+Although the trends in surface changes caused by sedimentary abrasion
+are clear, the exploratory visual analysis also revealed considerable
+overlapping between exposure time categories. A visual evaluation of the
+images showed that the development of sedimentary abrasion is
+heterogeneous on the lithic artifacts. Convex surfaces and areas close
+to the ridges and edges developed abrasion more quickly and more
+intensely than other areas.
 
 <img src="Figures/07-Differential-development.png" data-heigh="300"
 alt="Examples of differential abrasion among the same artifact. Top: images of the fresh surface. Bottom: sequential images of sedimentary abrasion: a) little or no abrasion is developed; b) sedimentary abrasion is moderately developed; c) sedimentary abrasion is heavily developed." />
@@ -863,22 +874,22 @@ alt="Examples of differential abrasion among the same artifact. Top: images of t
 
 ### **3.2 Machine Learning models results**
 
-presents the performance metrics (general precision and AUC) for each of
-the tested machine learning models after the 100x10 fold cross
-validation. Although all models presented general precision values below
-0.5, these values were in all cases substantially higher than the
-“no-information rate” (0.296). Of the ten tested models, the logistic
-regression presented the highest general precision value (0.485), with
-the linear discriminant analysis (LDA) presenting a very similar value
-(0.479). Random Forest and decision tree with C5.0 presented the lowest
-general precision with respective values of 0.381 and 0.402. Use of the
-ROC curves for model evaluation indicates that all models presented good
-or acceptable general AUC values with the exception of the SVM with
-polynomial kernel which presented a poor general AUC (0.68). The linear
-discriminant analysis (LDA) presented the highest AUC value (0.83), and
-substantially higher than the logistic regression (0.819). Thus, it can
-be considered that the LDA model performed the best when differentiating
-degree of sedimentary abrasion.
+The following figure presents the performance metrics (general precision
+and AUC) for each of the machine learning models after the 100x10 fold
+cross validation. Although all of the models presented general precision
+values below 0.5, these values were in all cases substantially higher
+than the “no-information rate” (0.296). Of the 10 models tested,
+logistic regression presented the highest general precision value
+(0.485), though the value of the linear discriminant analysis (LDA) was
+very similar (0.479). The random forest and decision tree with C5.0
+presented the lowest general precision rates with respective values of
+0.381 and 0.402. The use of the ROC curves for model evaluation
+indicated that all of the models presented good or acceptable general
+AUC values with the exception of the SVM with polynomial kernel, which
+presented a poor general AUC (0.68). The linear discriminant analysis
+(LDA) yielded the highest AUC value (0.83), substantially higher than
+the logistic regression analysis (0.819). Thus, the LDA model performed
+the best in differentiating degree of sedimentary abrasion.
 
 ``` r
 # Get Precision and AUC of each model
@@ -934,13 +945,27 @@ data.frame(
 
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
-The following code presents the ROC curves and AUC’s obtained for each
+The following figure presents the ROC curves and AUCs obtained for each
 category of sedimentary abrasion using the LDA model. Individual AUC
-values of fresh surfaces and neocortex were outstanding (respective
-values of 0.9 and 0.98). Individual AUC values of the different times of
-exposure varied from being fair in the case of one (0.71) and ten (0.74)
-hours of exposure, to being poor in the case of five hours (0.62) of
-exposure.
+values for fresh surfaces and neocortex were outstanding (respective
+values of 0.9 and 0.98). Individual AUC values for the different
+exposure times varied from fair for one (0.71) and ten (0.74) hours of
+exposure to poor for five hours (0.62) of exposure. The confusion matrix
+provides insight into the sources and directionality of the confusions.
+As exposure time increased, the number of photographs identified as
+fresh diminished, with a minimum portion (1.66) being identified as
+fresh after ten hours of rounding. Likewise, a small portion of
+photographs of the materials after ten hours of rounding started to
+resemble the photos of neocortex (11.91). The confusion matrix
+reinforces previous observations through exploratory visual analysis and
+direct examination of the photographs that sedimentary abrasion does not
+develop evenly, as some surfaces from the same flake develop abrasion
+faster than others. Nevertheless, we found a clear directionality (as
+sedimentary abrasion increased, the number of photographs identified as
+fresh decreased). Additional training of an LDA model on values from the
+first five PCs (99% of the variance) showed little changes in general
+precision (0.464) or general AUC (0.817) compared to the LDA model
+trained with all non-perfectly collinear variables.
 
 ``` r
 #### Confusion matrix ####
@@ -1146,27 +1171,10 @@ RF.ROCs %>%
 
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
-The confusion matrix provides insights into the sources and
-directionality of the confusions. As time of exposure increased, the
-number of photographs being identified as fresh diminished, with a
-minimum portion (1.66) being identified as fresh after ten hours of
-rounding. In the same way, after ten hours of rounding a small portion
-of photographs were starting to resemble neocortex (11.91). The
-confusion matrix reinforces previous observations through exploratory
-visual analysis and direct examination of photographs that sedimentary
-abrasion is not being developed in a homogeneous way, with some surfaces
-from the same flake developing abrasion faster than others. Despite
-this, a clear directionality (as sedimentary abrasion increases, the
-number of photographs identified as fresh diminishes) is observed.
-Additional training of an LDA model on values from the first five PC
-(99% of the variance) showed little changes in general precision (0.464)
-or general AUC (0.817) regarding the LDA model trained with all
-non-perfectly collinear variables.
-
 ### **3.3. Feature importance**
 
 The following figure presents feature importance according to exposure
-time to time of rounding and average importance.
+time and average importance.
 
 ``` r
 #### Extract variable importance from LDA model ####
@@ -1212,30 +1220,17 @@ Var.Importance %>%
 
 ![](Texture_analysis_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
-On general terms the LDA does not favor any group of statistics over
-other. The three most important features considered by the LDA model
-relate to the distribution of values (kurtosis), texture (contrast) and
-roughness (Rq). Although the rest of variables present similar values of
+In general, the LDA did not favor any group of statistics over another.
+The three most important features considered by the LDA model relate to
+the distribution of values (kurtosis), texture (contrast) and roughness
+(Rq). Although the remaining variables presented similar values of
 importance, it is important to consider the high levels of collinearity
-previously observed between features which are probably affecting the
-interpretation of the rest of the features. Entropy (ENT) and angular
+previously observed between features (Fig. S4), which probably affect
+the interpretation of the other features. Entropy (ENT) and angular
 second moment (ASM) presented clear trends in the visual exploratory
-analysis. However, the LDA model considers them of less important,
+analysis. However, the LDA model considered them less important,
 probably due to intense overlapping of values from different exposure
-time.
-
-The following figure best illustrates the effects of sedimentary
-abrasion on non-collinear variables. Both plots present the relationship
-between the two most important variables considered by the LDA model
-(kurtosis and contrast), and their respective most uncorrelated
-features. In both cases fresh flints presented highest ranges of
-dispersion, and as exposure to sedimentary abrasion increased, the range
-of dispersion progressively decreased. In the case of kurtosis and
-entropy, increasing time of exposure resulted in decreasing values of
-kurtosis and increasing values of entropy. In the case of contrast
-(CONT) and angular second moment (ASM), increasing sedimentary abrasion
-resulted in increasing values of the first and decreasing values of the
-later.
+times.
 
 ``` r
 ggpubr::ggarrange(
@@ -1271,141 +1266,161 @@ ggpubr::ggarrange(
 )
 ```
 
-![](Texture_analysis_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](Texture_analysis_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->  
+
+The previous figure best illustrates the effects of sedimentary abrasion
+on non-collinear variables. Both plots present the relationship between
+the two most important variables considered by the LDA model (kurtosis
+and contrast), and their respective most uncorrelated features (Fig.
+S4). In both cases, fresh flints presented the highest ranges of
+dispersion, and as exposure to sedimentary abrasion increased, the range
+of dispersion progressively decreased. In the case of kurtosis and
+entropy, increased exposure time resulted in decreasing values of
+kurtosis and increasing values of entropy. In the case of contrast
+(CONT) and angular second moment (ASM), increased sedimentary abrasion
+resulted in increasing values of the former and decreasing values of the
+latter.
 
 ## **4. Discussion**
 
-The present work shows that grayscale level images obtained from a
-Dino-Lite Edge 3.0 AM73915MZT USB microscope can effectively be used to
-obtain quantitative values of changes in the surface of flint artefacts
-due to post-depositional alterations. The range of metrics employed to
-analyze the gray scale level images successfully capture surface changes
-and their directionality, effectively serving as discriminatory
-variables to differentiate between time of exposure. Additional to
-showing the effectiveness of the use of gray scale level images, results
-also provide insights into the differential development of sedimentary
-abrasion due to post-depositional processes. The present work indicates
-that convex surfaces (bulb, parts of the dorsal surface, or hinge
-terminations) and surfaces close to the ridge or edges will develop
-post-depositional alterations faster and more intensely.
+TThe present work shows that gray level images can effectively be used
+to obtain quantitative values for the changes on the surface of flint
+artifacts due to post-depositional alterations. The range of metrics
+employed to analyze the gray level images successfully captured surface
+changes and their directionality, effectively serving as discriminatory
+variables to differentiate between times of exposure. Additionally, the
+use of gray level images also provided insights into the differential
+development of sedimentary abrasion due to post-depositional processes.
+Our work shows that convex surfaces (bulb, parts of the dorsal surface,
+or hinge terminations) and surfaces close to the ridge or edges develop
+post-depositional alterations faster and more intensely. Overall, the
+results presented here indicate that increasing abrasion results in more
+heterogeneous surfaces. This can be observed in the evolution of the
+concentration of the statistical values (such as the kurtosis and
+standard deviation). The more heterogeneous nature of the surface is
+also observed in measures which take into consideration the spatial
+distribution of values ([Haralick et al.
+1973](#ref-haralick_textural_1973)). This more heterogeneous nature of
+the surface is well observed in the increased values of contrast and
+entropy, while the values of angular second moment, correlation and
+inverse different moment (homogeneity) decreased.
 
 The general low values of precision from the machine learning models
 were expected given the heterogeneous development of sedimentary
-abrasion. After ten hours of rounding some surfaces did not develop
-abrasion (or it was very lightly developed), resulting in minimal
-changes of the texture metrics, and thus hardly distinguishable from
-fresh surfaces or surfaces undergone less exposure time under rounding.
-The general confusion in the differentiation of sedimentary abrasion
-were not caused by the analytical procedure (use of a Dino-Lite Edge 3.0
-AM73915MZT USB and statistical analysis of grayscale level images), but
-because of the heterogeneous development of sedimentary abrasion.
+abrasion. After 10 hours of exposure, some surfaces had barely been
+abraded, resulting in minimal changes in the texture metrics, and were
+thus hardly distinguishable from fresh surfaces or surfaces exposed for
+a shorter time. The general confusion in the differentiation of
+sedimentary abrasion was not caused by the analytical procedure (use of
+a Dino-Lite Edge 3.0 AM73915MZT USB and gray level images), but by the
+heterogeneous development of sedimentary abrasion.
 
 Previous studies ([Bustos-Pérez et al.
-2019](#ref-bustos-perez_experimental_2019)) indicate that as particle
-size of the sediment decreases, heterogeneity in the development of
-post-depositional process increases. However, this interaction remains
-unresolved. In the present study, particle size of the sediment employed
-to induce sedimentary abrasion was small, and the development of
-sedimentary abrasion was heterogeneous. This more heterogeneous
-development falls in line with previous studies ([Bustos-Pérez et al.
-2019](#ref-bustos-perez_experimental_2019)), were more fine grained
-sediments resulted in increasing variability of ridge width measurement.
-Further research might contemplate subjecting lithic artifacts to
-similar experimental conditions, but using sediments with larger
-particle sizes. This might result in increasing information regarding
-whether if abrasion is developed in a more homogeneous way, and whether
-if the resulting surfaces present different quantifiable features. Use
-wear analysis have shown that the model of polish development results in
-quantifiable differences for different worked materials with time not
-being a factor which blurs or overlaps differences ([Bietti
+2019](#ref-bustos-perez_experimental_2019)) have indicated that as the
+particle size of the sediment decreases, heterogeneity in the
+development of post-depositional process increases. However, this
+interaction remains unresolved. In the present study, the sediment
+particles used to induce sedimentary abrasion were small and the
+development of sedimentary abrasion was heterogeneous. This more
+heterogeneous development falls in line with previous studies
+([Bustos-Pérez et al. 2019](#ref-bustos-perez_experimental_2019)) in
+which more fine-grained sediments resulted in increased ridge-width
+variability. Further research might contemplate subjecting lithic
+artifacts to similar experimental conditions, but using sediments with
+larger particle sizes. Use-wear analyses have shown that different
+worked materials exhibit quantifiable differences, with time not being a
+factor that blurs or causes overlaps in differences ([Bietti
 1996](#ref-bietti_image_1996); [Stemp et al.
 2009](#ref-stemp_quantification_2009); [Ibáñez and Mazzucco
-2021](#ref-ibanez_quantitative_2021)). For post-depositional processes
-it remains untested, weather if different particle size, type of
-transport of particles (fluvial or aeolian), or weathering induces
-quantifiable differentiable surfaces that can be identified with the use
-of greyscale level values.
+2021](#ref-ibanez_quantitative_2021)). For post-depositional processes,
+it remains untested whether different particle sizes, types of transport
+of particles (fluvial or aeolian), or weathering induces quantifiable
+differentiable surfaces that can be identified with the use of greyscale
+images.
 
-Results showing the heterogeneous development of abrasion on a same
-flint artifact are indicative of the need for caution when attributing a
-post-depositional condition. If it is desirable to obtain surface
-metrics of a lithic artifact, several sampling options can be adopted,
-such as only considering metrics from areas which will had potentially
-develop faster, or averaging results from several areas of the same
-artifact. The present work employed the complete photographs for the
-analysis of post-depositional abrasion in lithic artefacts. However,
+Results showing the heterogeneous development of abrasion on the same
+flint artifact are indicative of the need for caution when attributing
+post-depositional conditions. If the surface metrics of a lithic
+artifact are required, several sampling options can be adopted, such as
+only considering metrics from areas which would have potentially
+developed faster, or averaging the results from several areas of the
+same artifact. The present work employed the complete photographs for
+the analysis of post-depositional abrasion in lithic artifacts. However,
 previous research has shown that sampling images on the most developed
 areas ([Ibáñez and Mazzucco 2021](#ref-ibanez_quantitative_2021)) can
-help improve the analysis by focusing in the areas of interest, or
+help improve the analysis by focusing on the areas of interest, or
 avoiding noise generated by irregularities such as fossils or geodes.
-Further research in post-depositional studies in lithic artifacts might
-benefit from applying these sampling procedures and reduce the degree of
-overlapping values observed in the present study. However, the results
-presented here outline the need to consider additional features of a
-lithic artifact, such as the width of the ridges, or the presence of
-alterations in the edges ([Shackley 1974](#ref-shackley_stream_1974);
+Further research into the post-depositional study of lithic artifacts
+might benefit from applying these sampling procedures. However, the
+results presented here underscore the need to consider additional
+features of lithic artifacts, such as the width of the ridges or
+alterations on the edges ([Shackley 1974](#ref-shackley_stream_1974);
 [Panera Gallego and Rubio Jara
 1996](#ref-panera_gallego_propuesta_1996); [Burroni et al.
 2002](#ref-burroni_surface_2002); [Chu et al.
 2015](#ref-chu_micro-abrasion_2015); [Bustos-Pérez et al.
 2019](#ref-bustos-perez_experimental_2019)).
 
-The present study has sampled only two types of flints which were
-considered similar in their surface appearance. Despite the
-heterogeneous development of abrasion within flakes, both flints reacted
-in similar ways to subsequent episodes of rounding. However, caution is
-advisable, since flints with strong imperfections in the form of geodes,
-carbonates, opals or translucid areas might difficult the obtention of
-reliable data. Digital microscopes using LED light, can reflect on the
-imperfections of the surface. The reflection results in white pixels
-which will be interpreted as having the maximum value (255), instead of
-a value corresponding to their surface height.
+In this study, we sampled only two types of flint that were similar in
+their surface appearance. Despite the heterogeneous development of
+abrasion on individual flakes, both flints reacted similarly to
+subsequent episodes of rounding. However, caution is advisable, since
+flints with pronounced imperfections in the form of geodes, carbonates,
+opals or translucid areas might make obtaining reliable data
+challenging. In addition, digital microscopes using LED light can
+reflect the imperfections on the surface of the material, which results
+in white pixels that are interpreted as having the maximum value (255)
+instead of a value corresponding to their surface height.
 
 ## **5. Conclusions**
 
-Determining the degree of post-depositional alteration undergone by
-lithic materials is a key aspect when evaluating the integrity of
-paleolithic archaeological assemblages.  
-Under the presented workflow, grayscale level images can be used to
-obtain quantitative values reflecting changes in surface due to
-sedimentary abrasion. Further, the sequential experimentation shows that
-these quantitative values are also capturing the directionality in
-changes due to increasing sedimentary abrasion. However, under the
-described conditions of this experimentation, not all the surfaces of an
-artifact developed abrasion at the same rhythm. Convex surfaces and
-areas close to the edges developed the alterations faster and more
-intensely (indicating that these areas should be inspected and sampled
-first when evaluating an artifact). Although studies focusing in
-post-depositional alterations of lithic artifacts are not common, the
-present work showcases the potential of using grayscale level images and
-quantitative analysis of the surface of lithic artifacts.
+Determining the degree of post-depositional alteration in lithic
+materials is a key factor when evaluating the integrity of paleolithic
+archaeological assemblages. Using the workflow presented here, gray
+level images can be used to obtain quantitative values reflecting
+surface changes caused by sedimentary abrasion. Further, sequential
+experimentation showed that these quantitative values also capture
+directionality in changes due to increased sedimentary abrasion.
+However, under the described conditions of this experiment, not all the
+surfaces of the artifacts developed abrasion at the same pace. Convex
+surfaces and areas close to the edges developed the alterations faster
+and more intensely (indicating that these areas should be inspected and
+sampled first when evaluating an artifact). Although studies focusing on
+post-depositional alterations of lithic artifacts are scarce, the
+present work highlights the potential of using gray level images and
+quantitative analyses of the surface of lithic artifacts in this area of
+inquiry.
 
 ## **6.Acknowledgments**
 
+The authors wish to thank the editor and the two reviewers for their
+comments and suggestions. The authors would also like to thank Juan Luis
+Fernández-Marchena for his comments and suggestions during the
+development of the present work.  
 The following research has been possible thanks to the Program for the
 Requalification of the University System Margarita Salas
 (CA1/RSUE/2021-00743) financed through the Spanish “Recovery,
 Transformation and Resilience Plan” and managed from the Ministry of
 Universities (Ministerio de Universidades) and the Autonomous University
-of Madrid (Universidad Autónoma de Madrid).  
-This work has been carried out with the financial support of the
-Generalitat de Catalunya, AGAUR agency (2017SGR1040 Research Group), the
-Universitat Rovira i Virgili (2021PFR-URV-126), and the Spanish Ministry
-of Science and Innovation (MICINN/FEDER project
-PID2021-122355NB-C32).The Institut Català de Paleoecologia Humana i
-Evolució Social (IPHES-CERCA) has received financial support from the
-Spanish Ministry of Science and Innovation through the “María de Maeztu”
-program for Units of Excellence (CEX2019-000945-M). The research
-technical support of Maria Dolors Guillén was supported by the Spanish
-Ministry of Science and Innovation through the “María de Maeztu”
-excellence accreditation (CEX2019-000945-M).  
+of Madrid (Universidad Autónoma de Madrid). This work has been carried
+out with the financial support of the Generalitat de Catalunya, AGAUR
+agency (2017SGR1040 Research Group), the Universitat Rovira i Virgili
+(2021PFR-URV-126), and the Spanish Ministry of Science and Innovation
+(MICINN/FEDER project PID2021-122355NB-C32).The Institut Català de
+Paleoecologia Humana i Evolució Social (IPHES-CERCA) has received
+financial support from the Spanish Ministry of Science and Innovation
+through the “María de Maeztu” program for Units of Excellence
+(CEX2019-000945-M). The research technical support of Maria Dolors
+Guillén was supported by the Spanish Ministry of Science and Innovation
+through the “María de Maeztu” excellence accreditation
+(CEX2019-000945-M).  
 This article is the result of the research projects “Como, Quien Y
-Donde?: Variabilidad De Comportamientos En La Captaci´on Y
-Transformaci´on De Los Recursos Liticos Dentro De Grupos Neandertales 2”
-(HAR2016-76760-C3-2-P) financed by Agencia Estatal de Investigaci´on
+Donde?: Variabilidad De Comportamientos En La Captación Y Transformación
+De Los Recursos Liticos Dentro De Grupos Neandertales 2”
+(HAR2016-76760-C3-2-P) financed by Agencia Estatal de Investigación
 (AEI), Fondo Europeo de Desarrollo Regional (FEDER); and “En Los Limites
 De La Diversidad: Comportamiento Neandertal En El Centro Y Sur De La
-Penisula Iberica” (ID2019- 103987 GB-C33) financed by the Programa
+Penisula Iberica” (ID2019-103987 GB-C33) financed by the Programa
 Estatal de Generación de Conocimiento y Fortalecimiento Científico y
 Tecnológico del Sistema de I + D + i y de I + D + i Orientada a los
 Retos de la Sociedad, del Plan Estatal de Investigación Científica y
