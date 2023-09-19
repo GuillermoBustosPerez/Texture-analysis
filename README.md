@@ -96,11 +96,12 @@ using Helicon Focus 7.7.2. to reduce problems due to focus variation.
 
 [Scripts](Scripts) folder contains two R files:
 
--   \[01 Wrangle data\]\[Scripts/01 Wrangle data.R\] gathers the raw
+-   [01 Wrangle data](Scripts/01%20Wrangle%20data.R) gathers the raw
     data from descriptive statistics, roughness metrics and GLCM and
     transforms them into a structured data frame containing the
     variables and metrics of each photograph.  
--   \[11 Model training\]\[Scripts/11 Model training.R\]
+-   [11 Model training](Scripts/11%20Model%20training.R) shows the code
+    employed to train AI models described in the *Methods* section.
 
 The [Scripts](Scripts) folder contains the subfolder [Fiji
 macros](Scripts/Fiji%20macros).
