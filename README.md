@@ -94,6 +94,14 @@ positioned as horizontal as possible and several photographs at
 different distances were taken. The obtained sequences were mounted
 using Helicon Focus 7.7.2. to reduce problems due to focus variation.
 
+[Scripts](Scripts) folder contains two R files:
+
+-   \[01 Wrangle data\]\[Scripts/01 Wrangle data.R\] gathers the raw
+    data from descriptive statistics, roughness metrics and GLCM and
+    transforms them into a structured data frame containing the
+    variables and metrics of each photograph.  
+-   \[11 Model training\]\[Scripts/11 Model training.R\]
+
 The [Scripts](Scripts) folder contains the subfolder [Fiji
 macros](Scripts/Fiji%20macros).
 
@@ -129,9 +137,11 @@ file](Report/Data/Sequential%20Data%20v1.01.csv) or as a
 repository makes use of the later file.
 
 The [Data folder](Report/Data) also contains two files containing the AI
-models trained to identify exposure time to abrasion. The file
-[AI-models-Surface.RData](Report/Data/AI-models-Surface.RData) contains
-all models trained using all non-perfectly colinear variables. The file
+models trained to identify exposure time to abrasion.  
+The file [AI-models-Surface.RData](Report/Data/AI-models-Surface.RData)
+contains all models trained using all non-perfectly colinear
+variables.  
+The file
 [AI-PCA-models-Surface.RData](Report/Data/AI-PCA-models-Surface.RData)
 contains all models trained after reducing the dimensionality of the
 data through the use of a Principal Component Analysis. The models were
