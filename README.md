@@ -14,10 +14,10 @@ Tarragona, Spain.
 <sup>3</sup> Àrea de Prehistoria, Universitat Rovira i Virgili (URV),
 Avinguda de Catalunya 35, 43002 Tarragona, Spain.  
 <sup>(4)</sup> Corresponding authors at: <guillermo.bustos@uam.es> |
-<francesca.romagnoli@uam.es>  
+<aolle@iphes.cat>  
 **ORCID**: 0000-0002-1089-818X
 
-**Abstract**
+**Abstract**  
 
 Lithic artifacts are some of the most common and numerous remains from
 paleolithic archaeological sites. However, after their introduction into
