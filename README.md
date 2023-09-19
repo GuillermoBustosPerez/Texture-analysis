@@ -18,7 +18,6 @@ Avinguda de Catalunya 35, 43002 Tarragona, Spain.
 **ORCID**: 0000-0002-1089-818X
 
 **Abstract**  
-
 Lithic artifacts are some of the most common and numerous remains from
 paleolithic archaeological sites. However, after their introduction into
 the archaeological record they can undergo multiple post-depositional
@@ -79,7 +78,7 @@ Técnica y de Innovación (2017–2020).
 
 **License**  
 The following data and code is publish under a **Non Commercial 4.0
-International (CC BY-NC 4.0) licnse**. For more details, see the
+International (CC BY-NC 4.0) license**. For more details, see the
 [**License**](License.md) file.
 
 ## **Structure of the repository**
