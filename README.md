@@ -84,6 +84,9 @@ The following data and code is publish under a **Non Commercial 4.0
 International (CC BY-NC 4.0) license**. For more details, see the
 [**License**](License.md) file.
 
+Please cite the code using:
+<https://zenodo.org/badge/latestdoi/520889993>
+
 ## **Structure of the repository**
 
 The folder [Raw-images](Raw-Images) contains the original images. These
