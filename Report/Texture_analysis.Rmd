@@ -1,5 +1,4 @@
 ---
-title: "Lithic artifacts and texture analysis: a low magnification approach"
 author: "Guillermo Bustos-Pérez$^{1,2,3}$; Andreu Ollé$^{2,3}$"
 output: 
   md_document:
